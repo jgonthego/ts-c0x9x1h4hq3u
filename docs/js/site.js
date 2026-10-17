@@ -76,6 +76,79 @@
     apply(fromUrl());
   }
 
+  // Hero showcase: featured tees. Auto-advances unless the user prefers reduced motion;
+  // pauses on hover/focus, when the tab is hidden, or via the pause button.
+  var hero = document.querySelector("[data-hero]");
+  if (hero) {
+    var slides = [].slice.call(hero.querySelectorAll(".hs-slide"));
+    var caps = [].slice.call(hero.querySelectorAll(".hs-cap"));
+    var rail = [].slice.call(hero.querySelectorAll(".hr-item"));
+    var N = slides.length, cur = 0, DUR = 5000, timer = null, hoverHold = false, userPaused = false;
+    var rm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)");
+    var reduced = function () { return !!(rm && rm.matches); };
+    var pauseBtn = hero.querySelector("[data-hero-pause]");
+    var ctrl = hero.querySelector("[data-hero-ctrl]");
+    hero.style.setProperty("--hero-dur", DUR + "ms");
+    var show = function (i) {
+      cur = (i + N) % N;
+      slides.forEach(function (s, k) {
+        var d = (k - cur + N) % N;
+        s.classList.toggle("is-active", d === 0);
+        s.classList.toggle("is-next", d === 1);
+        s.classList.toggle("is-next2", d === 2 && N > 3);
+        s.classList.toggle("is-prev", d === N - 1 && N > 2);
+        s.tabIndex = d === 0 ? 0 : -1;
+      });
+      caps.forEach(function (c, k) { c.hidden = k !== cur; c.classList.toggle("is-active", k === cur); });
+      rail.forEach(function (r, k) {
+        r.classList.toggle("is-active", k === cur);
+        if (k === cur) r.setAttribute("aria-current", "true"); else r.removeAttribute("aria-current");
+      });
+      var a = rail[cur]; // restart the progress bar
+      if (a) { a.classList.remove("is-active"); void a.offsetWidth; a.classList.add("is-active"); }
+    };
+    var playing = function () { return !reduced() && !userPaused && !hoverHold && !document.hidden; };
+    var sync = function () {
+      clearInterval(timer); timer = null;
+      var on = playing();
+      hero.classList.toggle("is-playing", on);
+      if (on) timer = setInterval(function () { show(cur + 1); }, DUR);
+      if (pauseBtn) {
+        var stopped = userPaused || reduced();
+        pauseBtn.setAttribute("aria-pressed", stopped ? "true" : "false");
+        pauseBtn.setAttribute("aria-label", stopped ? "Play slideshow" : "Pause slideshow");
+      }
+    };
+    if (ctrl) ctrl.hidden = false;
+    hero.querySelector("[data-hero-prev]").addEventListener("click", function () { show(cur - 1); sync(); });
+    hero.querySelector("[data-hero-next]").addEventListener("click", function () { show(cur + 1); sync(); });
+    if (pauseBtn) pauseBtn.addEventListener("click", function () {
+      if (reduced()) { userPaused = true; return; } // never autoplay for reduced motion
+      userPaused = !userPaused; sync();
+    });
+    var stage = hero.querySelector(".hs-stage");
+    hero.addEventListener("mouseenter", function () { hoverHold = true; sync(); });
+    hero.addEventListener("mouseleave", function () { hoverHold = false; sync(); });
+    hero.addEventListener("focusin", function () { hoverHold = true; sync(); });
+    hero.addEventListener("focusout", function (ev) { if (!hero.contains(ev.relatedTarget)) { hoverHold = false; sync(); } });
+    // Rail thumbs are links to the product page; hovering or focusing one previews it in the stage.
+    rail.forEach(function (r, k) {
+      r.addEventListener("mouseenter", function () { if (k !== cur) show(k); });
+      r.addEventListener("focus", function () { if (k !== cur) show(k); });
+    });
+    // Swipe on touch screens
+    var x0 = null;
+    stage.addEventListener("touchstart", function (ev) { x0 = ev.touches[0].clientX; }, { passive: true });
+    stage.addEventListener("touchend", function (ev) {
+      if (x0 === null) return;
+      var dx = ev.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) { show(cur + (dx < 0 ? 1 : -1)); sync(); }
+    });
+    document.addEventListener("visibilitychange", sync);
+    if (rm && rm.addEventListener) rm.addEventListener("change", sync);
+    show(0); sync();
+  }
+
   // Belt and braces: never submit the signup form when it's not configured
   document.querySelectorAll(".signup-form").forEach(function (f) {
     f.addEventListener("submit", function (ev) { if (!S.formEnabled || !f.getAttribute("action")) ev.preventDefault(); });

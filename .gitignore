@@ -4,3 +4,5 @@ __pycache__/
 # raw, unwatermarked draft art must never be committed
 merch-src/
 *-print.png
+# internal review notes, never commit
+REVIEW.md

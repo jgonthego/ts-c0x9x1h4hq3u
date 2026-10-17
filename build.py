@@ -243,10 +243,68 @@ GLOSSARY = [
 ]
 
 
+def hero(feat):
+    """Homepage hero: the owner's featured tees, lead shirt big, the rest stacked behind + a rail.
+    Works without JS (lead shirt + rail links); site.js adds auto-advance (off for reduced motion)."""
+    n = len(feat)
+    slides, rail = [], []
+    for i, p in enumerate(feat):
+        href = url("products/" + p["slug"] + "/")
+        w, h = p["img_size"]
+        tag = '<span class="hs-18" title="Adult humor">18+</span>' if adult(p) else ""
+        load = 'fetchpriority="high"' if i == 0 else ('loading="eager"' if i < 3 else 'loading="lazy"')
+        state = {0: " is-active", 1: " is-next", 2: " is-next2", n - 1: " is-prev"}.get(i, "")
+        slides.append(
+            f'<a class="hs-slide{state}" href="{href}" data-i="{i}" aria-label="{e(p["title"].title())}: view tee"'
+            f'{"" if i == 0 else " tabindex=-1"}>'
+            f'<img src="{url(p["images"]["main"])}" alt="Mockup: black tee printed “{e(p["slogan"])}”" width="{w}" height="{h}" decoding="async" {load}>'
+            f'</a>')
+        rail.append(
+            f'<li><a class="hr-item{" is-active" if i == 0 else ""}" href="{href}" data-i="{i}"{" aria-current=true" if i == 0 else ""}>'
+            f'<img src="{url(p["images"]["main"])}" alt="" width="{w}" height="{h}" loading="lazy" decoding="async">'
+            f'<span class="hr-no">{i + 1:02d}</span>{tag}<span class="sr">{e(p["title"].title())}</span></a></li>')
+    lead = feat[0]
+    caps = "".join(
+        f'<div class="hs-cap{" is-active" if i == 0 else ""}" data-i="{i}"{"" if i == 0 else " hidden"}>'
+        f'<span class="hs-count">{i + 1:02d} <i>/ {n:02d}</i></span>'
+        f'<span class="hs-title">{e(p["title"])}{" <em class=hs-18>18+</em>" if adult(p) else ""}</span>'
+        f'<a class="hs-view" href="{url("products/" + p["slug"] + "/")}">View tee <span aria-hidden="true">→</span></a></div>'
+        for i, p in enumerate(feat))
+    return f"""
+<section class="hero" id="featured" aria-label="Featured tees">
+  {candles_svg()}
+  <div class="hero-inner">
+    <div class="hero-copy">
+      {stamp(CFG['DROP_NAME'], 'LIMITED', 'SMALL RUNS', 'stamp-hero')}
+      <h1 class="hero-title">
+        <span class="ht-1 distress slab">EXPIRED</span>
+        <span class="ht-2 distress script">worthless</span>
+        <span class="ht-3 distress">&amp; dressed for it.</span>
+      </h1>
+      <p class="hero-sub">{e(CFG['TAGLINE'])} Black tees for 0DTE degenerates, theta gang, gym rats, night-shift nurses, dachshund people, and anyone with too many tabs open.</p>
+    </div>
+    <div class="hero-ctas"><a class="btn btn-red btn-lg" href="#shop">Shop the preview</a><a class="btn btn-ghost btn-lg" href="#drop-list">Join the drop list</a></div>
+    <div class="hero-cd">{countdown_block()}</div>
+    <div class="hero-show" data-hero aria-roledescription="carousel" aria-label="Featured tees, {n} designs">
+      <div class="hs-stage">
+        <span class="hs-bgno" aria-hidden="true">{e(CFG['DROP_NAME'].split()[-1])}</span>
+        {"".join(slides)}
+        <div class="hs-ctrl" data-hero-ctrl hidden>
+          <button type="button" class="hs-btn" data-hero-prev aria-label="Previous tee">‹</button>
+          <button type="button" class="hs-btn" data-hero-pause aria-label="Pause slideshow" aria-pressed="false"><span class="ic-pause" aria-hidden="true"></span></button>
+          <button type="button" class="hs-btn" data-hero-next aria-label="Next tee">›</button>
+        </div>
+      </div>
+      <div class="hs-caps" aria-live="polite">{caps}</div>
+      <ol class="hero-rail" aria-label="All featured tees">{"".join(rail)}</ol>
+    </div>
+  </div>
+</section>"""
+
+
 def home():
     cards = "\n".join(product_card(p) for p in PRODUCTS)
     feat = sorted((p for p in PRODUCTS if p.get("featured")), key=lambda p: p["featured"])
-    feat_cards = "\n".join(product_card(p, True) for p in feat)
     counts = {c["key"]: sum(1 for p in PRODUCTS if p.get("category") == c["key"]) for c in CATEGORIES}
     chips = f'<a class="ftab" href="?#shop" data-filter="all" aria-current="true">All <span>{len(PRODUCTS)}</span></a>' + "".join(
         f'<a class="ftab" href="?cat={e(c["slug"])}#shop" data-filter="{e(c["slug"])}">{e(c["name"])}'
@@ -258,35 +316,7 @@ def home():
         for c in CATEGORIES if counts[c["key"]])
     gloss = "".join(f'<div class="gl-item"><dt>{e(t)}</dt><dd>{e(d)}</dd></div>' for t, d in GLOSSARY)
     body = f"""
-<section class="hero">
-  {candles_svg()}
-  <div class="hero-inner">
-    <div class="hero-copy">
-      {stamp(CFG['DROP_NAME'], 'LIMITED', 'SMALL RUNS', 'stamp-hero')}
-      <h1 class="hero-title">
-        <span class="ht-1 distress slab">EXPIRED</span>
-        <span class="ht-2 distress script">worthless</span>
-        <span class="ht-3 distress">&amp; dressed for it.</span>
-      </h1>
-      <p class="hero-sub">{e(CFG['TAGLINE'])} Black tees for 0DTE degenerates, theta gang, gym rats, night-shift nurses, dachshund people, and anyone with too many tabs open.</p>
-      <div class="hero-ctas"><a class="btn btn-red btn-lg" href="#shop">Shop the preview</a><a class="btn btn-ghost btn-lg" href="#drop-list">Join the drop list</a></div>
-    </div>
-    <aside class="hero-side">
-      <div class="hero-skull">{SKULL}</div>
-      {countdown_block()}
-    </aside>
-  </div>
-</section>
-
-<section class="drop featured" id="featured">
-  <div class="section-head">
-    <p class="kicker">{e(CFG['DROP_NAME'])} · top 8</p>
-    <h2 class="distress slab">Featured</h2>
-  </div>
-  <div class="feat-row">
-{feat_cards}
-  </div>
-</section>
+{hero(feat)}
 
 <section class="drop" id="shop">
   <div class="section-head">
