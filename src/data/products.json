@@ -1,0 +1,81 @@
+{
+  "_comment": "One object per product. status: 'draft' renders a DRAFT watermark/badge and keeps buying disabled. Set status 'approved', replace images, and fill pod_url (Printful/Printify/Shopify/Etsy product link) to enable the Buy button. target_price/edition_size are proposals, not live data.",
+  "products": [
+    {
+      "id": "d02",
+      "slug": "kept-the-car",
+      "status": "draft",
+      "draft_source": "02-kept-the-car",
+      "title": "Kept The Car",
+      "slogan_top": "Wife's boyfriend got the house.",
+      "slogan_bottom": "I kept the car.",
+      "blurb": "The settlement was brutal. The 0DTE strategy was worse. But the convertible? The convertible is still yours, drifting past Mars with the top down and no destination.",
+      "tags": ["0DTE", "divorce-core", "space"],
+      "target_price": 38,
+      "edition_size": 150,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/kept-the-car-mockup.jpg",
+        "print": "img/products/kept-the-car-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "d03",
+      "slug": "exploded-on-the-pad",
+      "status": "draft",
+      "draft_source": "03-exploded-on-the-pad",
+      "title": "Exploded On The Pad",
+      "slogan_top": "Exploded on the pad.",
+      "slogan_bottom": "Just like my IRA.",
+      "blurb": "T-minus zero. Full send on far-OTM calls with retirement money. A vintage launch-pad fireball for everyone whose long-term plan didn't survive the first candle.",
+      "tags": ["IRA", "IV crush", "space"],
+      "target_price": 40,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/exploded-on-the-pad-mockup.jpg",
+        "print": "img/products/exploded-on-the-pad-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "d04",
+      "slug": "diamond-hands-no-pulse",
+      "status": "draft",
+      "draft_source": "04-diamond-hands-no-pulse",
+      "title": "Diamond Hands. No Pulse.",
+      "slogan_top": "Diamond hands.",
+      "slogan_bottom": "No pulse.",
+      "blurb": "Never sold. Never stopped out. Never breathed again. A cracked-helmet skull with a death grip on the wheel, for the bagholder who took 'hold forever' literally.",
+      "tags": ["diamond hands", "max pain", "skull"],
+      "target_price": 45,
+      "edition_size": 69,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/diamond-hands-no-pulse-mockup.jpg",
+        "print": "img/products/diamond-hands-no-pulse-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "d06",
+      "slug": "every-rocket-lands",
+      "status": "draft",
+      "draft_source": "06-every-rocket-lands",
+      "title": "Every Rocket Lands",
+      "slogan_top": "Every rocket lands eventually.",
+      "slogan_bottom": "My calls did not.",
+      "blurb": "Gravity always wins. So does theta. For anyone who watched their calls go to the moon in the premarket and expire worthless by 4:00.",
+      "tags": ["calls", "theta gang", "space"],
+      "target_price": 34,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/every-rocket-lands-mockup.jpg",
+        "print": "img/products/every-rocket-lands-print.jpg"
+      },
+      "pod_url": ""
+    }
+  ]
+}

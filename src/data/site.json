@@ -1,0 +1,16 @@
+{
+  "_comment": "Edit this file to configure the site. BRAND is the ONLY place the brand name lives.",
+  "BRAND": "[Brand TBD]",
+  "TAGLINE": "Merch for people who should not be trading.",
+  "SITE_URL": "",
+  "PATH_PREFIX": "",
+  "DROP_NAME": "Drop 001",
+  "DROP_SUBTITLE": "The Expired Worthless Collection",
+  "DROP_AT": "",
+  "_DROP_AT_help": "ISO 8601 with offset, e.g. 2026-11-20T21:00:00-05:00. Empty = countdown shows 'Date TBA'.",
+  "FORM_ID": "",
+  "FORM_ACTION_TEMPLATE": "https://formspree.io/f/{FORM_ID}",
+  "_FORM_help": "Email form stays disabled until FORM_ID is set. Any provider that accepts a POST with an 'email' field works; change FORM_ACTION_TEMPLATE to match.",
+  "CONTACT_EMAIL": "",
+  "CURRENCY": "USD"
+}
