@@ -17,7 +17,8 @@ python3 -m http.server 8473 -d docs --bind 127.0.0.1   # open http://localhost:8
 | **Brand name** (placeholder `[Brand TBD]`) | `src/data/site.json` → `BRAND` (the only place) |
 | Drop date / countdown | `site.json` → `DROP_AT` (ISO 8601 with offset; empty = "Date TBA") |
 | Email signup | `site.json` → `FORM_ID` (empty = form disabled). `FORM_ACTION_TEMPLATE` defaults to Formspree |
-| Products | `src/data/products.json` |
+| Products | `src/data/products.json` (`collection`, `art`: `artwork`/`typographic`, optional `tm_check`, `type_spec`) |
+| Collections / filter tabs | `site.json` → `COLLECTIONS` |
 | Buy button | per product: `status: "approved"` **and** `pod_url` set (Printful/Printify/Shopify/Etsy link). Otherwise the button reads "Coming soon" and is disabled |
 | Hosting path | `PATH_PREFIX` / `SITE_URL` (env vars or `site.json`). GitHub Actions sets these automatically |
 
@@ -28,9 +29,14 @@ python3 -m http.server 8473 -d docs --bind 127.0.0.1   # open http://localhost:8
    if an image is missing, or if anyone tries to use blocked drafts #01/#05.
 
 ## Draft placeholders
-`tools/make_draft_images.py` reads the raw mockups from `/workspace/merch/space-roadster-v2/`
-(kept **outside** the repo) and writes watermarked "DRAFT — NOT APPROVED" JPGs. Designs #01
-and #05 are hard-blocked (car resembles a Corvette, trademark risk).
+`tools/make_draft_images.py` reads the raw mockups named by each product's `draft_source` under
+`/workspace/merch/` (kept **outside** the repo) and writes watermarked "DRAFT — NOT APPROVED" JPGs.
+`tools/make_type_mockups.py` renders free typographic black-tee mockups (Python/PIL, open fonts,
+simple vector shapes, no AI/paid tools, no real-person likenesses) for text-only concepts from
+`type_spec`, with the same watermark.
+Space Roadster v2 #01/#05 (car resembles a Corvette) and v1 #03/#07 (drone-ship landing) carry
+`tm_check` and show an internal "trademark check needed" badge; `build.py` refuses to approve a
+product while `tm_check` is set.
 
 ## Deploy later (not done)
 `.github/workflows/pages.yml` builds and deploys `docs/` to GitHub Pages once the repo is

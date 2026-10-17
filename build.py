@@ -23,7 +23,8 @@ BRAND = CFG["BRAND"]
 PREFIX = os.environ.get("PATH_PREFIX", CFG.get("PATH_PREFIX", "")).rstrip("/")
 SITE_URL = os.environ.get("SITE_URL", CFG.get("SITE_URL", "")).rstrip("/")
 FORM_ID = os.environ.get("FORM_ID", CFG.get("FORM_ID", "")).strip()
-BLOCKED_SOURCES = {"01", "05"}  # Corvette-like car: trademark risk. Never publish.
+COLLECTIONS = CFG.get("COLLECTIONS", [])
+COLL = {c["key"]: c for c in COLLECTIONS}
 
 e = html.escape
 
@@ -183,7 +184,15 @@ def signup_block(heading="Join the drop list"):
 
 
 def badge(p):
-    return '<span class="badge-draft">Draft · not approved</span>' if p["status"] != "approved" else ""
+    out = '<span class="badge-draft">Draft · not approved</span>' if p["status"] != "approved" else ""
+    if p.get("tm_check"):
+        out += f'<span class="badge-tm" title="{e(p["tm_check"])}">Internal: trademark check needed</span>'
+    return out
+
+
+def coll_name(p, short=False):
+    c = COLL.get(p.get("collection"), {})
+    return c.get("short", c.get("name", "")) if short else c.get("name", "")
 
 
 def buy_button(p, big=False):
@@ -194,13 +203,14 @@ def buy_button(p, big=False):
 
 
 def product_card(p, i):
-    return f"""<article class="card">
+    return f"""<article class="card" data-collection="{e(p.get('collection', ''))}">
   <a class="card-link" href="{url('products/' + p['slug'] + '/')}">
     <div class="card-img">
       <img src="{url(p['images']['mockup'])}" alt="Draft mockup: black tee printed '{e(p['slogan_top'])} {e(p['slogan_bottom'])}'" loading="lazy" width="1000" height="1149">
     </div>
     <div class="card-body">
       <div class="card-tags"><span class="card-no">No. {i:02d}</span>{badge(p)}</div>
+      <p class="card-coll">{e(coll_name(p, True))}{' · type mockup' if p.get('art') == 'typographic' else ''}</p>
       <h3 class="card-title">{e(p['title'])}</h3>
       <p class="card-slogan">“{e(p['slogan_top'])} {e(p['slogan_bottom'])}”</p>
       <div class="card-meta"><span>Target {money(p['target_price'])}<small> · not final</small></span><span class="edition">Planned run /{p['edition_size']}</span></div>
@@ -221,6 +231,10 @@ GLOSSARY = [
 
 def home():
     cards = "\n".join(product_card(p, i + 1) for i, p in enumerate(PRODUCTS))
+    counts = {c["key"]: sum(1 for p in PRODUCTS if p.get("collection") == c["key"]) for c in COLLECTIONS}
+    tabs = f'<button type="button" class="ftab" data-filter="all" aria-pressed="true">All <span>{len(PRODUCTS)}</span></button>' + "".join(
+        f'<button type="button" class="ftab" data-filter="{e(c["key"])}" aria-pressed="false">{e(c.get("short", c["name"]))} <span>{counts[c["key"]]}</span></button>'
+        for c in COLLECTIONS if counts[c["key"]])
     gloss = "".join(f'<div class="gl-item"><dt>{e(t)}</dt><dd>{e(d)}</dd></div>' for t, d in GLOSSARY)
     body = f"""
 <section class="hero">
@@ -247,9 +261,11 @@ def home():
   <div class="section-head">
     <p class="kicker">{e(CFG['DROP_NAME'])} · preview</p>
     <h2 class="distress slab">{e(CFG['DROP_SUBTITLE'])}</h2>
-    <p class="muted">Placeholder lineup. These are <strong>draft concepts, not approved designs</strong>, shown so the layout can be reviewed. Prices and run sizes are proposals.</p>
+    <p class="muted">Placeholder lineup. These are <strong>draft concepts, not approved designs</strong>, shown so the layout can be reviewed. Prices and run sizes are proposals. Designs marked “type mockup” are slogan-only placeholders: the illustration hasn't been drawn yet.</p>
   </div>
-  <div class="grid">
+  <div class="filters" role="group" aria-label="Filter by collection" data-filters>{tabs}</div>
+  <p class="filter-note muted small" data-filter-note aria-live="polite"></p>
+  <div class="grid" data-grid>
 {cards}
   </div>
 </section>
@@ -278,10 +294,14 @@ def product_page(p, i):
     draft_note = ""
     if p["status"] != "approved":
         draft_note = """<div class="draft-note"><strong>Draft, not approved.</strong> This artwork is a placeholder concept and is watermarked on purpose. It may change completely or never be produced.</div>"""
+        if p.get("art") == "typographic":
+            draft_note += """<div class="draft-note"><strong>Type-only mockup.</strong> This concept has no finished illustration yet. The image is a quick slogan layout with simple placeholder shapes.</div>"""
+    if p.get("tm_check"):
+        draft_note += f"""<div class="draft-note tm-note"><strong>Internal note: trademark check needed.</strong> {e((lambda t: t[:1].upper() + t[1:])(p["tm_check"].split(": ", 1)[-1]))}. Not cleared for sale.</div>"""
     sizes = "".join(f"<option>{s}</option>" for s in ["S", "M", "L", "XL", "2XL", "3XL"])
     body = f"""
 <section class="product">
-  <nav class="crumbs"><a href="{url()}">Drop</a> / <span>{e(p['title'])}</span></nav>
+  <nav class="crumbs"><a href="{url()}">Drop</a> / <span>{e(coll_name(p))}</span> / <span>{e(p['title'])}</span></nav>
   <div class="product-grid">
     <div class="gallery" data-gallery>
       <div class="gallery-main">
@@ -425,9 +445,10 @@ def validate():
         if p.get("slug") in slugs:
             errs.append(f"duplicate slug {p['slug']}")
         slugs.add(p.get("slug"))
-        src = (p.get("draft_source") or "")[:2]
-        if src in BLOCKED_SOURCES:
-            errs.append(f"{p['id']}: draft source #{src} is blocked (trademark risk)")
+        if COLLECTIONS and p.get("collection") not in COLL:
+            errs.append(f"{p['id']}: unknown collection {p.get('collection')!r}")
+        if p.get("status") == "approved" and p.get("tm_check"):
+            errs.append(f"{p['id']}: approved product still has an open trademark check")
         for img in p.get("images", {}).values():
             if not (SRC / img).exists():
                 errs.append(f"{p['id']}: missing image {img}")

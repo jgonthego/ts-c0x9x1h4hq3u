@@ -2,9 +2,12 @@
 """Make WATERMARKED web placeholders from unapproved draft mockups.
 
 Only run locally. The unwatermarked originals stay outside the repo
-(/workspace/merch/space-roadster-v2 by default); only watermarked JPGs land in
-src/img/products/. Designs #01 and #05 are hard-blocked (car resembles a
-Corvette = trademark risk).
+(/workspace/merch by default; each product's draft_source is a path under it,
+without extension); only watermarked JPGs land in src/img/products/.
+Designs that need a trademark check (e.g. v2 #01/#05, car resembles a Corvette)
+carry tm_check in products.json and show an internal badge; build.py refuses to
+approve them until it is cleared. If a design has no "-print.png", the print
+view is cropped from the chest of the mockup.
 
     python3 tools/make_draft_images.py [SOURCE_DIR]
 """
@@ -13,9 +16,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("/workspace/merch/space-roadster-v2")
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("/workspace/merch")
 OUT = ROOT / "src" / "img" / "products"
-BLOCKED = {"01", "05"}
 FONT = "/usr/share/fonts/truetype/sand-box/google/Anton/Anton-Regular.ttf"
 MARK = "DRAFT — NOT APPROVED"
 
@@ -59,11 +61,13 @@ def main():
         src = p.get("draft_source")
         if not src:
             continue
-        num = src[:2]
-        if num in BLOCKED:
-            sys.exit(f"REFUSING: source design #{num} is blocked (trademark risk)")
         for suffix, kind, bg in (("", "mockup", None), ("-print", "print", (10, 10, 10))):
-            im = Image.open(SRC / f"{src}{suffix}.png")
+            f = SRC / f"{src}{suffix}.png"
+            if not f.exists() and kind == "print":  # no separate print file: crop the chest
+                m = Image.open(SRC / f"{src}.png").convert("RGBA")
+                w, h = m.size
+                f = m.crop((int(w * .25), int(h * .2), int(w * .75), int(h * .86)))
+            im = f if isinstance(f, Image.Image) else Image.open(f)
             if bg:  # flatten transparent print file onto near-black, pad to 4:5
                 im = im.convert("RGBA")
                 H = int(im.height * 1.3)

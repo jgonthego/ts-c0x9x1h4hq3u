@@ -1,16 +1,50 @@
 {
-  "_comment": "One object per product. status: 'draft' renders a DRAFT watermark/badge and keeps buying disabled. Set status 'approved', replace images, and fill pod_url (Printful/Printify/Shopify/Etsy product link) to enable the Buy button. target_price/edition_size are proposals, not live data.",
+  "_comment": "One object per product. status: 'draft' renders a DRAFT watermark/badge and keeps buying disabled. Set status 'approved', replace images, and fill pod_url (Printful/Printify/Shopify/Etsy product link) to enable the Buy button. target_price/edition_size are proposals, not live data. collection: one of the keys in site.json COLLECTIONS. art: 'artwork' (real draft art from draft_source under /workspace/merch) or 'typographic' (code-rendered from type_spec by tools/make_type_mockups.py). tm_check: internal note shown as a badge; must be cleared before approval.",
   "products": [
+    {
+      "id": "d01",
+      "slug": "no-one-can-hear-you-sell-the-bottom",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster-v2/designs.md #1",
+      "draft_source": "space-roadster-v2/01-no-one-can-hear-you-sell-the-bottom",
+      "title": "Sell The Bottom",
+      "slogan_top": "In space, no one can hear",
+      "slogan_bottom": "you sell the bottom.",
+      "blurb": "A slumped, faceless astronaut in a red convertible drifts past Earth, still refreshing the order screen. Out here the panic is silent. The loss is not.",
+      "tags": [
+        "capitulation",
+        "space",
+        "red candles"
+      ],
+      "target_price": 42,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/no-one-can-hear-you-sell-the-bottom-mockup.jpg",
+        "print": "img/products/no-one-can-hear-you-sell-the-bottom-print.jpg"
+      },
+      "pod_url": "",
+      "tm_check": "Trademark check needed: car resembles a Corvette"
+    },
     {
       "id": "d02",
       "slug": "kept-the-car",
       "status": "draft",
-      "draft_source": "02-kept-the-car",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster-v2/designs.md #2",
+      "draft_source": "space-roadster-v2/02-kept-the-car",
       "title": "Kept The Car",
       "slogan_top": "Wife's boyfriend got the house.",
       "slogan_bottom": "I kept the car.",
       "blurb": "The settlement was brutal. The 0DTE strategy was worse. But the convertible? The convertible is still yours, drifting past Mars with the top down and no destination.",
-      "tags": ["0DTE", "divorce-core", "space"],
+      "tags": [
+        "0DTE",
+        "divorce-core",
+        "space"
+      ],
       "target_price": 38,
       "edition_size": 150,
       "tee_color": "Black",
@@ -24,12 +58,19 @@
       "id": "d03",
       "slug": "exploded-on-the-pad",
       "status": "draft",
-      "draft_source": "03-exploded-on-the-pad",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster-v2/designs.md #3",
+      "draft_source": "space-roadster-v2/03-exploded-on-the-pad",
       "title": "Exploded On The Pad",
       "slogan_top": "Exploded on the pad.",
       "slogan_bottom": "Just like my IRA.",
       "blurb": "T-minus zero. Full send on far-OTM calls with retirement money. A vintage launch-pad fireball for everyone whose long-term plan didn't survive the first candle.",
-      "tags": ["IRA", "IV crush", "space"],
+      "tags": [
+        "IRA",
+        "IV crush",
+        "space"
+      ],
       "target_price": 40,
       "edition_size": 100,
       "tee_color": "Black",
@@ -43,12 +84,19 @@
       "id": "d04",
       "slug": "diamond-hands-no-pulse",
       "status": "draft",
-      "draft_source": "04-diamond-hands-no-pulse",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster-v2/designs.md #4",
+      "draft_source": "space-roadster-v2/04-diamond-hands-no-pulse",
       "title": "Diamond Hands. No Pulse.",
       "slogan_top": "Diamond hands.",
       "slogan_bottom": "No pulse.",
       "blurb": "Never sold. Never stopped out. Never breathed again. A cracked-helmet skull with a death grip on the wheel, for the bagholder who took 'hold forever' literally.",
-      "tags": ["diamond hands", "max pain", "skull"],
+      "tags": [
+        "diamond hands",
+        "max pain",
+        "skull"
+      ],
       "target_price": 45,
       "edition_size": 69,
       "tee_color": "Black",
@@ -59,15 +107,49 @@
       "pod_url": ""
     },
     {
+      "id": "d05",
+      "slug": "sold-puts-space-debris",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster-v2/designs.md #5",
+      "draft_source": "space-roadster-v2/05-sold-puts-space-debris",
+      "title": "Space Debris",
+      "slogan_top": "Some of us sold naked puts.",
+      "slogan_bottom": "Some of us became space debris.",
+      "blurb": "Unlimited downside, zero gravity. The same lonely roadster, now tumbling end over end, for everyone who sold naked puts because the premium looked free.",
+      "tags": [
+        "naked puts",
+        "assigned",
+        "space"
+      ],
+      "target_price": 36,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/sold-puts-space-debris-mockup.jpg",
+        "print": "img/products/sold-puts-space-debris-print.jpg"
+      },
+      "pod_url": "",
+      "tm_check": "Trademark check needed: car resembles a Corvette"
+    },
+    {
       "id": "d06",
       "slug": "every-rocket-lands",
       "status": "draft",
-      "draft_source": "06-every-rocket-lands",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster-v2/designs.md #6",
+      "draft_source": "space-roadster-v2/06-every-rocket-lands",
       "title": "Every Rocket Lands",
       "slogan_top": "Every rocket lands eventually.",
       "slogan_bottom": "My calls did not.",
       "blurb": "Gravity always wins. So does theta. For anyone who watched their calls go to the moon in the premarket and expire worthless by 4:00.",
-      "tags": ["calls", "theta gang", "space"],
+      "tags": [
+        "calls",
+        "theta gang",
+        "space"
+      ],
       "target_price": 34,
       "edition_size": 100,
       "tee_color": "Black",
@@ -76,6 +158,1306 @@
         "print": "img/products/every-rocket-lands-print.jpg"
       },
       "pod_url": ""
+    },
+    {
+      "id": "v1-01",
+      "slug": "long-vol-short-gravity",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster/designs.md #01",
+      "draft_source": "space-roadster/01-long-vol-short-gravity",
+      "title": "Long Volatility, Short Gravity",
+      "slogan_top": "Long volatility.",
+      "slogan_bottom": "Short gravity.",
+      "blurb": "A red wedge convertible drifting past Earth. Long the chaos, short the ground.",
+      "tags": [
+        "volatility",
+        "space"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/long-vol-short-gravity-mockup.jpg",
+        "print": "img/products/long-vol-short-gravity-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "v1-02",
+      "slug": "to-the-moon-expires-friday",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster/designs.md #02",
+      "draft_source": "space-roadster/02-to-the-moon-expires-friday",
+      "title": "To The Moon (Expires Friday)",
+      "slogan_top": "To the moon.",
+      "slogan_bottom": "(Expires Friday.)",
+      "blurb": "Launch, convertible, moon. Every great thesis has an expiration date. Yours is in four days.",
+      "tags": [
+        "calls",
+        "expiry",
+        "space"
+      ],
+      "target_price": 36,
+      "edition_size": 150,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/to-the-moon-expires-friday-mockup.jpg",
+        "print": "img/products/to-the-moon-expires-friday-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "v1-03",
+      "slug": "stuck-the-landing",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster/designs.md #03",
+      "draft_source": "space-roadster/03-stuck-the-landing",
+      "title": "Stuck The Landing",
+      "slogan_top": "Stuck the",
+      "slogan_bottom": "landing.",
+      "blurb": "A booster touches down on an unmarked drone ship. Your portfolio did not, but one of you nailed it.",
+      "tags": [
+        "space",
+        "comeback"
+      ],
+      "target_price": 40,
+      "edition_size": 75,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/stuck-the-landing-mockup.jpg",
+        "print": "img/products/stuck-the-landing-print.jpg"
+      },
+      "pod_url": "",
+      "tm_check": "Trademark check needed: drone-ship landing evokes a real launch program"
+    },
+    {
+      "id": "v1-04",
+      "slug": "holding-since-liftoff",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster/designs.md #04",
+      "draft_source": "space-roadster/04-holding-since-liftoff",
+      "title": "Holding Since Liftoff",
+      "slogan_top": "Holding since",
+      "slogan_bottom": "liftoff.",
+      "blurb": "A rocket over 70s sunset stripes. Bought at the launch, still holding, still hoping.",
+      "tags": [
+        "diamond hands",
+        "space"
+      ],
+      "target_price": 36,
+      "edition_size": 120,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/holding-since-liftoff-mockup.jpg",
+        "print": "img/products/holding-since-liftoff-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "v1-05",
+      "slug": "theta-decay-orbital",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster/designs.md #05",
+      "draft_source": "space-roadster/05-theta-decay-orbital",
+      "title": "Theta Decay Is Orbital Mechanics",
+      "slogan_top": "Theta decay",
+      "slogan_bottom": "is just orbital mechanics.",
+      "blurb": "Everything falls eventually. Option value just does it on a schedule.",
+      "tags": [
+        "theta gang",
+        "space"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/theta-decay-orbital-mockup.jpg",
+        "print": "img/products/theta-decay-orbital-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "v1-06",
+      "slug": "pnl-in-orbit",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster/designs.md #06",
+      "draft_source": "space-roadster/06-pnl-in-orbit",
+      "title": "My P&L Is Also In Orbit",
+      "slogan_top": "My P&L is also in orbit.",
+      "slogan_bottom": "No way back down.",
+      "blurb": "A convertible looping on orbit trails, like your unrealized losses. No re-entry planned.",
+      "tags": [
+        "P&L",
+        "space"
+      ],
+      "target_price": 45,
+      "edition_size": 50,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/pnl-in-orbit-mockup.jpg",
+        "print": "img/products/pnl-in-orbit-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "v1-07",
+      "slug": "bought-the-dip-landing",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster/designs.md #07",
+      "draft_source": "space-roadster/07-bought-the-dip-landing",
+      "title": "Bought The Dip (Once)",
+      "slogan_top": "Bought the dip,",
+      "slogan_bottom": "nailed the landing. (Once.)",
+      "blurb": "A booster landing and a launch, side by side. It worked one time and you've been chasing it since.",
+      "tags": [
+        "buy the dip",
+        "space"
+      ],
+      "target_price": 34,
+      "edition_size": 150,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/bought-the-dip-landing-mockup.jpg",
+        "print": "img/products/bought-the-dip-landing-print.jpg"
+      },
+      "pod_url": "",
+      "tm_check": "Trademark check needed: drone-ship landing evokes a real launch program"
+    },
+    {
+      "id": "v1-08",
+      "slug": "max-pain-zero-atmosphere",
+      "status": "draft",
+      "collection": "space-roadster",
+      "art": "artwork",
+      "concept_source": "space-roadster/designs.md #08",
+      "draft_source": "space-roadster/08-max-pain-zero-atmosphere",
+      "title": "Max Pain, Zero Atmosphere",
+      "slogan_top": "Max pain.",
+      "slogan_bottom": "Zero atmosphere.",
+      "blurb": "A convertible diving past Earth toward the strike where everything expires worthless.",
+      "tags": [
+        "max pain",
+        "space"
+      ],
+      "target_price": 42,
+      "edition_size": 80,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/max-pain-zero-atmosphere-mockup.jpg",
+        "print": "img/products/max-pain-zero-atmosphere-print.jpg"
+      },
+      "pod_url": ""
+    },
+    {
+      "id": "its-not-gambling-honey",
+      "slug": "its-not-gambling-honey",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-evergreen-v2.md #1",
+      "title": "It's Not Gambling, Honey",
+      "slogan_top": "It's not gambling, honey.",
+      "slogan_bottom": "It has Greeks.",
+      "blurb": "For every trader who has explained to a spouse that a 0DTE call is \"basically investing.\" Strikes on the roulette wheel, a delta for a ball.",
+      "tags": [
+        "0DTE",
+        "spouse approval",
+        "greeks"
+      ],
+      "target_price": 36,
+      "edition_size": 150,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/its-not-gambling-honey-mockup.jpg",
+        "print": "img/products/its-not-gambling-honey-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "IT'S NOT GAMBLING,",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "HONEY.",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "IT HAS GREEKS.",
+            "anton",
+            "red",
+            1
+          ]
+        ],
+        "motif": "roulette",
+        "motif_at": 2,
+        "scarcity": "No. ___/150. Spousal approval not included."
+      }
+    },
+    {
+      "id": "three-fifty-nine",
+      "slug": "three-fifty-nine",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-evergreen-v2.md #2",
+      "title": "3:59",
+      "slogan_top": "3:59",
+      "slogan_bottom": "Personal record for holding my breath.",
+      "blurb": "The last minute before the close. Every 0DTE trader knows it. Nobody else will get it, which is exactly the point.",
+      "tags": [
+        "0DTE",
+        "the close"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/three-fifty-nine-mockup.jpg",
+        "print": "img/products/three-fifty-nine-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "3:59",
+            "spacemono",
+            "red",
+            1.0
+          ],
+          [
+            "personal record for",
+            "elite",
+            "bone",
+            0.6
+          ],
+          [
+            "holding my breath",
+            "elite",
+            "bone",
+            0.6
+          ]
+        ],
+        "motif": "drip",
+        "motif_at": 1,
+        "scarcity": "Printed until the bell. No. ___/100."
+      }
+    },
+    {
+      "id": "professional-penny-colle",
+      "slug": "professional-penny-collector",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-evergreen-v2.md #3",
+      "title": "Professional Penny Collector",
+      "slogan_top": "Professional penny collector.",
+      "slogan_bottom": "Steamroller sold separately.",
+      "blurb": "A union badge for put sellers and wheel runners. Premium Sellers Local 100: picking up pennies, professionally, in front of you-know-what.",
+      "tags": [
+        "wheel",
+        "cash-secured puts",
+        "theta gang"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/professional-penny-collector-mockup.jpg",
+        "print": "img/products/professional-penny-collector-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "PROFESSIONAL",
+            "anton",
+            "bone",
+            1
+          ],
+          [
+            "PENNY COLLECTOR",
+            "anton",
+            "red",
+            1
+          ],
+          [
+            "PREMIUM SELLERS LOCAL 100",
+            "elite",
+            "bone",
+            0.55
+          ],
+          [
+            "steamroller sold separately",
+            "elite",
+            "bone",
+            0.5
+          ]
+        ],
+        "motif": "penny",
+        "motif_at": 2,
+        "scarcity": "Local 100: 100 members, numbered."
+      }
+    },
+    {
+      "id": "rolling-forever",
+      "slug": "rolling-forever",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-evergreen-v2.md #4",
+      "title": "Rolling Forever",
+      "slogan_top": "Rolling forever.",
+      "slogan_bottom": "I don't take losses. I take extensions.",
+      "blurb": "Next week. Next month. LEAPS. My grandkids. For the wheel trader who has never once closed a loser, only moved it.",
+      "tags": [
+        "rolling",
+        "wheel",
+        "bagholder"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/rolling-forever-mockup.jpg",
+        "print": "img/products/rolling-forever-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "ROLLING",
+            "shrikhand",
+            "red",
+            1
+          ],
+          [
+            "FOREVER",
+            "shrikhand",
+            "red",
+            1
+          ],
+          [
+            "I don't take losses.",
+            "elite",
+            "bone",
+            0.55
+          ],
+          [
+            "I take extensions.",
+            "elite",
+            "bone",
+            0.55
+          ]
+        ],
+        "motif": "wheel",
+        "motif_at": 2,
+        "scarcity": "No. ___/100. Rolled to a later date."
+      }
+    },
+    {
+      "id": "iv-crushed-me",
+      "slug": "iv-crushed-me",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-evergreen-v2.md #5",
+      "title": "IV Crushed Me",
+      "slogan_top": "IV crushed me",
+      "slogan_bottom": "and I said thank you.",
+      "blurb": "Called the earnings beat. Nailed the direction. Down 40% anyway. A crushed can for everyone who learned what implied volatility means the expensive way.",
+      "tags": [
+        "IV crush",
+        "earnings"
+      ],
+      "target_price": 42,
+      "edition_size": 75,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/iv-crushed-me-mockup.jpg",
+        "print": "img/products/iv-crushed-me-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "IV CRUSHED ME",
+            "anton",
+            "bone",
+            1
+          ],
+          [
+            "and I said thank you.",
+            "shrikhand",
+            "red",
+            0.8
+          ]
+        ],
+        "motif": "can",
+        "motif_at": 1,
+        "scarcity": "75 cans. Crushed after the call."
+      }
+    },
+    {
+      "id": "max-pain-friday-traditio",
+      "slug": "max-pain-friday-tradition",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-evergreen-v2.md #6",
+      "title": "Max Pain: A Friday Tradition",
+      "slogan_top": "Max pain.",
+      "slogan_bottom": "A Friday tradition.",
+      "blurb": "Bowling league energy for the weekly ritual of watching price get pinned to the exact strike that hurts you most.",
+      "tags": [
+        "max pain",
+        "expiry",
+        "OPEX"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/max-pain-friday-tradition-mockup.jpg",
+        "print": "img/products/max-pain-friday-tradition-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "MAX PAIN",
+            "alfa",
+            "bone",
+            1.1
+          ],
+          [
+            "A FRIDAY TRADITION",
+            "anton",
+            "red",
+            0.8
+          ]
+        ],
+        "motif": "pin",
+        "motif_at": 1,
+        "scarcity": "Pinned at No. ___/100."
+      }
+    },
+    {
+      "id": "diamond-hands-paper-resu",
+      "slug": "diamond-hands-paper-results",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-evergreen-v2.md #7",
+      "title": "Diamond Hands, Paper Results",
+      "slogan_top": "Diamond hands.",
+      "slogan_bottom": "Paper results.",
+      "blurb": "Held through everything. Held all the way to zero. The self-aware sequel to the diamond-hands meme.",
+      "tags": [
+        "diamond hands",
+        "bagholder"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/diamond-hands-paper-results-mockup.jpg",
+        "print": "img/products/diamond-hands-paper-results-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "DIAMOND HANDS",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "PAPER RESULTS",
+            "alfa",
+            "red",
+            1
+          ]
+        ],
+        "motif": "candles",
+        "motif_at": 1,
+        "scarcity": "Held to No. ___/100."
+      }
+    },
+    {
+      "id": "short-gamma-short-temper",
+      "slug": "short-gamma-short-temper",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-evergreen-v2.md #8",
+      "title": "Short Gamma, Short Temper",
+      "slogan_top": "Short gamma.",
+      "slogan_bottom": "Short temper.",
+      "blurb": "A 70s fight-night poster. Main event: me vs. the tape. Every. Single. Day. The most insider shirt of the bunch.",
+      "tags": [
+        "gamma",
+        "greeks"
+      ],
+      "target_price": 42,
+      "edition_size": 75,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/short-gamma-short-temper-mockup.jpg",
+        "print": "img/products/short-gamma-short-temper-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "SHORT GAMMA",
+            "anton",
+            "bone",
+            1
+          ],
+          [
+            "SHORT TEMPER",
+            "anton",
+            "red",
+            1
+          ],
+          [
+            "MAIN EVENT: ME VS. THE TAPE",
+            "elite",
+            "bone",
+            0.55
+          ],
+          [
+            "EVERY. SINGLE. DAY.",
+            "elite",
+            "bone",
+            0.55
+          ]
+        ],
+        "motif": "gamma",
+        "motif_at": 1,
+        "scarcity": "75 tickets. No refunds."
+      }
+    },
+    {
+      "id": "theta-gang-unemployed",
+      "slug": "theta-gang-unemployed",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-2026-10-15.md #1",
+      "title": "Theta Gang: Unemployed",
+      "slogan_top": "Theta gang:",
+      "slogan_bottom": "Unemployed.",
+      "blurb": "Volatility so low that selling premium barely pays. A skull in a hard hat, a flatline chart, and a sign: will sell premium for food.",
+      "tags": [
+        "theta gang",
+        "low vol",
+        "VIX"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/theta-gang-unemployed-mockup.jpg",
+        "print": "img/products/theta-gang-unemployed-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "THETA GANG",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "UNEMPLOYED",
+            "anton",
+            "red",
+            1
+          ],
+          [
+            "VIX < 18 · SEND HELP",
+            "spacemono",
+            "bone",
+            0.55
+          ]
+        ],
+        "motif": "flatline",
+        "motif_at": 1,
+        "scarcity": "Printed for one dead week only: No. ___/100."
+      }
+    },
+    {
+      "id": "hot-cpi-survivor",
+      "slug": "hot-cpi-survivor",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-2026-10-15.md #2",
+      "title": "Hot CPI Survivor",
+      "slogan_top": "Hot CPI survivor.",
+      "slogan_bottom": "Class of Oct 14 2026.",
+      "blurb": "A varsity patch for the hot CPI print: 3.7% against a 3.6% forecast and a coin-flip on a hike. Dated, so it can't be reprinted.",
+      "tags": [
+        "CPI",
+        "macro",
+        "event"
+      ],
+      "target_price": 42,
+      "edition_size": 75,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/hot-cpi-survivor-mockup.jpg",
+        "print": "img/products/hot-cpi-survivor-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "3.7%",
+            "anton",
+            "red",
+            1
+          ],
+          [
+            "HOT CPI",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "SURVIVOR",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "50/50 ON A HIKE",
+            "spacemono",
+            "red",
+            0.55
+          ],
+          [
+            "CLASS OF OCT 14 2026",
+            "elite",
+            "bone",
+            0.55
+          ]
+        ],
+        "motif": "thermo",
+        "motif_at": 1,
+        "scarcity": "One print run. Dated. Never reprinted."
+      }
+    },
+    {
+      "id": "gamma-squeeze-in-bonds",
+      "slug": "gamma-squeeze-in-bonds",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-2026-10-15.md #3",
+      "title": "Gamma Squeeze (In Bonds?!)",
+      "slogan_top": "Gamma squeeze",
+      "slogan_bottom": "(in bonds?!)",
+      "blurb": "Record Treasury call volume and a timeline full of people asking for a gamma squeeze in bonds. Duration risk included.",
+      "tags": [
+        "gamma",
+        "bonds",
+        "macro"
+      ],
+      "target_price": 42,
+      "edition_size": 75,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/gamma-squeeze-in-bonds-mockup.jpg",
+        "print": "img/products/gamma-squeeze-in-bonds-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "GAMMA",
+            "shrikhand",
+            "red",
+            1
+          ],
+          [
+            "SQUEEZE",
+            "shrikhand",
+            "red",
+            1
+          ],
+          [
+            "(in bonds?!)",
+            "elite",
+            "bone",
+            0.6
+          ],
+          [
+            "RECORD CALL VOLUME · OCT '26",
+            "spacemono",
+            "bone",
+            0.45
+          ]
+        ],
+        "motif": "bond",
+        "motif_at": 2,
+        "scarcity": "No. ___/75. Duration risk included."
+      }
+    },
+    {
+      "id": "everything-is-a-gamma-sq",
+      "slug": "everything-is-a-gamma-squeeze",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-2026-10-15.md #4",
+      "title": "Everything Is A Gamma Squeeze",
+      "slogan_top": "Everything is a gamma squeeze",
+      "slogan_bottom": "if you believe.",
+      "blurb": "A distressed motivational poster for the timeline that calls a gamma squeeze on every ticker, every day. Small print: not a squeeze.",
+      "tags": [
+        "gamma",
+        "memes"
+      ],
+      "target_price": 34,
+      "edition_size": 150,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/everything-is-a-gamma-squeeze-mockup.jpg",
+        "print": "img/products/everything-is-a-gamma-squeeze-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "EVERYTHING IS A",
+            "anton",
+            "bone",
+            0.8
+          ],
+          [
+            "GAMMA SQUEEZE",
+            "anton",
+            "red",
+            1
+          ],
+          [
+            "if you believe",
+            "shrikhand",
+            "bone",
+            0.7
+          ],
+          [
+            "not a squeeze.",
+            "elite",
+            "bone",
+            0.4
+          ]
+        ],
+        "motif": "arch",
+        "motif_at": 0,
+        "scarcity": "Believers only: No. ___/150."
+      }
+    },
+    {
+      "id": "pennies-steamroller-repe",
+      "slug": "pennies-steamroller-repeat",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-2026-10-15.md #5",
+      "title": "Pennies · Steamroller · Repeat",
+      "slogan_top": "Pennies. Steamroller.",
+      "slogan_bottom": "Repeat.",
+      "blurb": "Week 1: +$300. Week 3: +$310. Week 5: ——. The wheel strategy, told in three panels.",
+      "tags": [
+        "wheel",
+        "cash-secured puts"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/pennies-steamroller-repeat-mockup.jpg",
+        "print": "img/products/pennies-steamroller-repeat-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "PENNIES · STEAMROLLER",
+            "anton",
+            "bone",
+            1
+          ],
+          [
+            "REPEAT",
+            "anton",
+            "red",
+            1
+          ],
+          [
+            "THE WHEEL STRATEGY",
+            "alfa",
+            "bone",
+            0.7
+          ]
+        ],
+        "motif": "panels",
+        "motif_at": 2,
+        "scarcity": "Collected premium: 100 shirts. No. ___/100."
+      }
+    },
+    {
+      "id": "0dte-lotto-club",
+      "slug": "0dte-lotto-club",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-2026-10-15.md #6",
+      "title": "0DTE Lotto Club",
+      "slogan_top": "0DTE Lotto Club.",
+      "slogan_bottom": "Odds: yes.",
+      "blurb": "A half-scratched lottery ticket that reveals an option chain row: 390C, 0DTE, $0.92. Draw time 3:59. Odds: yes.",
+      "tags": [
+        "0DTE",
+        "lotto calls"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/0dte-lotto-club-mockup.jpg",
+        "print": "img/products/0dte-lotto-club-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "0DTE",
+            "alfa",
+            "red",
+            1.1
+          ],
+          [
+            "LOTTO CLUB",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "Odds: yes.",
+            "elite",
+            "bone",
+            0.6
+          ]
+        ],
+        "motif": "ticket",
+        "motif_at": 2,
+        "scarcity": "Expires worthless at 4:00 PM. No. ___/100."
+      }
+    },
+    {
+      "id": "school-of-hard-strikes",
+      "slug": "school-of-hard-strikes",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-2026-10-15.md #7",
+      "title": "School Of Hard Strikes",
+      "slogan_top": "School of hard strikes.",
+      "slogan_bottom": "Major: bagholding. Minor: rolling forever.",
+      "blurb": "A collegiate crest with an ASSIGNED stamp. Est. every Friday.",
+      "tags": [
+        "assigned",
+        "wheel"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/school-of-hard-strikes-mockup.jpg",
+        "print": "img/products/school-of-hard-strikes-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "SCHOOL OF",
+            "alfa",
+            "bone",
+            0.8
+          ],
+          [
+            "HARD STRIKES",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "MAJOR: BAGHOLDING",
+            "spacemono",
+            "bone",
+            0.5
+          ],
+          [
+            "MINOR: ROLLING FOREVER",
+            "spacemono",
+            "bone",
+            0.5
+          ]
+        ],
+        "motif": "shield",
+        "motif_at": 2,
+        "scarcity": "Assigned to 100 owners only."
+      }
+    },
+    {
+      "id": "iv-crush-support-group",
+      "slug": "iv-crush-support-group",
+      "status": "draft",
+      "collection": "trader-pain",
+      "art": "typographic",
+      "concept_source": "drop-concepts-2026-10-15.md #8",
+      "title": "IV Crush Support Group",
+      "slogan_top": "IV crush support group.",
+      "slogan_bottom": "Meets after earnings.",
+      "blurb": "A church-basement flyer: folding chairs in a circle around a crushed can labeled IV. Mondays to Fridays, after the call. Bring your own copium.",
+      "tags": [
+        "IV crush",
+        "earnings"
+      ],
+      "target_price": 42,
+      "edition_size": 75,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/iv-crush-support-group-mockup.jpg",
+        "print": "img/products/iv-crush-support-group-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "IV CRUSH",
+            "anton",
+            "red",
+            1
+          ],
+          [
+            "SUPPORT GROUP",
+            "anton",
+            "bone",
+            1
+          ],
+          [
+            "meets after earnings",
+            "elite",
+            "bone",
+            0.55
+          ],
+          [
+            "bring your own copium",
+            "elite",
+            "bone",
+            0.5
+          ]
+        ],
+        "motif": "chairs",
+        "motif_at": 2,
+        "scarcity": "Group size capped at 75."
+      }
+    },
+    {
+      "id": "i-dont-share",
+      "slug": "i-dont-share",
+      "status": "draft",
+      "collection": "pizza",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #1",
+      "title": "I Don't Share",
+      "slogan_top": "I don't share.",
+      "slogan_bottom": "I'm not your therapist.",
+      "blurb": "One slice, one bear trap, zero exceptions. Nobody gets the last slice.",
+      "tags": [
+        "pizza",
+        "boundaries"
+      ],
+      "target_price": 36,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/i-dont-share-mockup.jpg",
+        "print": "img/products/i-dont-share-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "I DON'T SHARE.",
+            "anton",
+            "bone",
+            1
+          ],
+          [
+            "I'M NOT YOUR THERAPIST.",
+            "anton",
+            "red",
+            0.75
+          ]
+        ],
+        "motif": "trap",
+        "motif_at": 1,
+        "scarcity": "No. ___/100. Nobody gets the last slice."
+      }
+    },
+    {
+      "id": "pineapple-is-a-war-crime",
+      "slug": "pineapple-is-a-war-crime",
+      "status": "draft",
+      "collection": "pizza",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #2",
+      "title": "Pineapple Is A War Crime",
+      "slogan_top": "Pineapple",
+      "slogan_bottom": "is a war crime.",
+      "blurb": "A courtroom sketch of the accused, stamped GUILTY. The tribunal sits once.",
+      "tags": [
+        "pizza",
+        "pineapple"
+      ],
+      "target_price": 34,
+      "edition_size": 150,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/pineapple-is-a-war-crime-mockup.jpg",
+        "print": "img/products/pineapple-is-a-war-crime-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "PINEAPPLE",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "IS A WAR CRIME",
+            "alfa",
+            "red",
+            0.9
+          ]
+        ],
+        "motif": "pineapple",
+        "motif_at": 2,
+        "scarcity": "The tribunal sits once."
+      }
+    },
+    {
+      "id": "died-folding-it-in-half",
+      "slug": "died-folding-it-in-half",
+      "status": "draft",
+      "collection": "pizza",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #3",
+      "title": "Folding It In Half",
+      "slogan_top": "Died doing what I loved:",
+      "slogan_bottom": "Folding it in half.",
+      "blurb": "A skull with a folded slice, a candle, and a tombstone that reads HE ATE THE CRUST.",
+      "tags": [
+        "pizza",
+        "skull"
+      ],
+      "target_price": 38,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/died-folding-it-in-half-mockup.jpg",
+        "print": "img/products/died-folding-it-in-half-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "DIED DOING WHAT I LOVED:",
+            "anton",
+            "bone",
+            0.7
+          ],
+          [
+            "FOLDING IT",
+            "shrikhand",
+            "red",
+            1
+          ],
+          [
+            "IN HALF",
+            "shrikhand",
+            "red",
+            1
+          ]
+        ],
+        "motif": "tomb",
+        "motif_at": 1,
+        "scarcity": "Limited, unlike my self-control."
+      }
+    },
+    {
+      "id": "blood-type-marinara",
+      "slug": "blood-type-marinara",
+      "status": "draft",
+      "collection": "pizza",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #4",
+      "title": "My Blood Type Is Marinara",
+      "slogan_top": "My blood type is",
+      "slogan_bottom": "marinara.",
+      "blurb": "An IV bag of sauce, hung and ready. No refills.",
+      "tags": [
+        "pizza",
+        "sauce"
+      ],
+      "target_price": 36,
+      "edition_size": 120,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/blood-type-marinara-mockup.jpg",
+        "print": "img/products/blood-type-marinara-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "MY BLOOD TYPE IS",
+            "anton",
+            "bone",
+            0.8
+          ],
+          [
+            "MARINARA",
+            "shrikhand",
+            "red",
+            1
+          ]
+        ],
+        "motif": "ivbag",
+        "motif_at": 2,
+        "scarcity": "No refills."
+      }
+    },
+    {
+      "id": "emotionally-available-fo",
+      "slug": "emotionally-available-for-pizza",
+      "status": "draft",
+      "collection": "pizza",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #5",
+      "title": "Emotionally Available For Pizza",
+      "slogan_top": "Emotionally available",
+      "slogan_bottom": "for pizza only.",
+      "blurb": "An empty, greasy box with a sticky note on the lid: I'm fine.",
+      "tags": [
+        "pizza",
+        "feelings"
+      ],
+      "target_price": 36,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/emotionally-available-for-pizza-mockup.jpg",
+        "print": "img/products/emotionally-available-for-pizza-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "EMOTIONALLY AVAILABLE",
+            "anton",
+            "bone",
+            0.85
+          ],
+          [
+            "FOR PIZZA ONLY",
+            "anton",
+            "red",
+            1
+          ]
+        ],
+        "motif": "box",
+        "motif_at": 2,
+        "scarcity": "100 boxes. Then I go quiet."
+      }
+    },
+    {
+      "id": "crust-decay",
+      "slug": "crust-decay",
+      "status": "draft",
+      "collection": "pizza",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #6",
+      "title": "Crust Decay",
+      "slogan_top": "Crust decay:",
+      "slogan_bottom": "The slice is worth less every minute.",
+      "blurb": "An option-style decay chart for a slice of pizza, plus a melting clock. Expires cold.",
+      "tags": [
+        "pizza",
+        "theta"
+      ],
+      "target_price": 40,
+      "edition_size": 75,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/crust-decay-mockup.jpg",
+        "print": "img/products/crust-decay-print.jpg"
+      },
+      "pod_url": "",
+      "type_spec": {
+        "lines": [
+          [
+            "CRUST DECAY",
+            "alfa",
+            "red",
+            1
+          ],
+          [
+            "THE SLICE IS WORTH LESS",
+            "anton",
+            "bone",
+            0.7
+          ],
+          [
+            "EVERY MINUTE",
+            "anton",
+            "bone",
+            0.7
+          ]
+        ],
+        "motif": "decay",
+        "motif_at": 1,
+        "scarcity": "Expires cold."
+      }
     }
   ]
 }

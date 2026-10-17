@@ -12,5 +12,23 @@
   "FORM_ACTION_TEMPLATE": "https://formspree.io/f/{FORM_ID}",
   "_FORM_help": "Email form stays disabled until FORM_ID is set. Any provider that accepts a POST with an 'email' field works; change FORM_ACTION_TEMPLATE to match.",
   "CONTACT_EMAIL": "",
-  "CURRENCY": "USD"
+  "CURRENCY": "USD",
+  "COLLECTIONS": [
+    {
+      "key": "space-roadster",
+      "name": "Space Roadster",
+      "blurb": "Lost in orbit with a red convertible and a bad position."
+    },
+    {
+      "key": "trader-pain",
+      "name": "Trader Pain / Expired Worthless",
+      "short": "Trader Pain",
+      "blurb": "0DTE, the wheel, IV crush, max pain. Weekly suffering, wearable."
+    },
+    {
+      "key": "pizza",
+      "name": "Pizza",
+      "blurb": "Feelings, boundaries, and marinara."
+    }
+  ]
 }
