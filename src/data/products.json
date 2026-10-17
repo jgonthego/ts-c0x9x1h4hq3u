@@ -1,1750 +1,3194 @@
 {
-  "_comment": "One object per product. status: 'draft' renders a DRAFT watermark/badge and keeps buying disabled. Set status 'approved', replace images, and fill pod_url (Printful/Printify/Shopify/Etsy product link) to enable the Buy button. target_price/edition_size are proposals, not live data. collection: one of the keys in site.json COLLECTIONS. art: 'artwork' (real draft art from draft_source under /workspace/merch) or 'typographic' (code-rendered from type_spec by tools/make_type_mockups.py). tm_check: internal note shown as a badge; must be cleared before approval.",
-  "products": [
-    {
-      "id": "d01",
-      "slug": "no-one-can-hear-you-sell-the-bottom",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster-v2/designs.md #1",
-      "draft_source": "space-roadster-v2/01-no-one-can-hear-you-sell-the-bottom",
-      "title": "Sell The Bottom",
-      "slogan_top": "In space, no one can hear",
-      "slogan_bottom": "you sell the bottom.",
-      "blurb": "A slumped, faceless astronaut in a red convertible drifts past Earth, still refreshing the order screen. Out here the panic is silent. The loss is not.",
-      "tags": [
-        "capitulation",
-        "space",
-        "red candles"
-      ],
-      "target_price": 42,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/no-one-can-hear-you-sell-the-bottom-mockup.jpg",
-        "print": "img/products/no-one-can-hear-you-sell-the-bottom-print.jpg"
-      },
-      "pod_url": "",
-      "tm_check": "Trademark check needed: car resembles a Corvette"
-    },
-    {
-      "id": "d02",
-      "slug": "kept-the-car",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster-v2/designs.md #2",
-      "draft_source": "space-roadster-v2/02-kept-the-car",
-      "title": "Kept The Car",
-      "slogan_top": "Wife's boyfriend got the house.",
-      "slogan_bottom": "I kept the car.",
-      "blurb": "The settlement was brutal. The 0DTE strategy was worse. But the convertible? The convertible is still yours, drifting past Mars with the top down and no destination.",
-      "tags": [
-        "0DTE",
-        "divorce-core",
-        "space"
-      ],
-      "target_price": 38,
-      "edition_size": 150,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/kept-the-car-mockup.jpg",
-        "print": "img/products/kept-the-car-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "d03",
-      "slug": "exploded-on-the-pad",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster-v2/designs.md #3",
-      "draft_source": "space-roadster-v2/03-exploded-on-the-pad",
-      "title": "Exploded On The Pad",
-      "slogan_top": "Exploded on the pad.",
-      "slogan_bottom": "Just like my IRA.",
-      "blurb": "T-minus zero. Full send on far-OTM calls with retirement money. A vintage launch-pad fireball for everyone whose long-term plan didn't survive the first candle.",
-      "tags": [
-        "IRA",
-        "IV crush",
-        "space"
-      ],
-      "target_price": 40,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/exploded-on-the-pad-mockup.jpg",
-        "print": "img/products/exploded-on-the-pad-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "d04",
-      "slug": "diamond-hands-no-pulse",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster-v2/designs.md #4",
-      "draft_source": "space-roadster-v2/04-diamond-hands-no-pulse",
-      "title": "Diamond Hands. No Pulse.",
-      "slogan_top": "Diamond hands.",
-      "slogan_bottom": "No pulse.",
-      "blurb": "Never sold. Never stopped out. Never breathed again. A cracked-helmet skull with a death grip on the wheel, for the bagholder who took 'hold forever' literally.",
-      "tags": [
-        "diamond hands",
-        "max pain",
-        "skull"
-      ],
-      "target_price": 45,
-      "edition_size": 69,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/diamond-hands-no-pulse-mockup.jpg",
-        "print": "img/products/diamond-hands-no-pulse-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "d05",
-      "slug": "sold-puts-space-debris",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster-v2/designs.md #5",
-      "draft_source": "space-roadster-v2/05-sold-puts-space-debris",
-      "title": "Space Debris",
-      "slogan_top": "Some of us sold naked puts.",
-      "slogan_bottom": "Some of us became space debris.",
-      "blurb": "Unlimited downside, zero gravity. The same lonely roadster, now tumbling end over end, for everyone who sold naked puts because the premium looked free.",
-      "tags": [
-        "naked puts",
-        "assigned",
-        "space"
-      ],
-      "target_price": 36,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/sold-puts-space-debris-mockup.jpg",
-        "print": "img/products/sold-puts-space-debris-print.jpg"
-      },
-      "pod_url": "",
-      "tm_check": "Trademark check needed: car resembles a Corvette"
-    },
-    {
-      "id": "d06",
-      "slug": "every-rocket-lands",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster-v2/designs.md #6",
-      "draft_source": "space-roadster-v2/06-every-rocket-lands",
-      "title": "Every Rocket Lands",
-      "slogan_top": "Every rocket lands eventually.",
-      "slogan_bottom": "My calls did not.",
-      "blurb": "Gravity always wins. So does theta. For anyone who watched their calls go to the moon in the premarket and expire worthless by 4:00.",
-      "tags": [
-        "calls",
-        "theta gang",
-        "space"
-      ],
-      "target_price": 34,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/every-rocket-lands-mockup.jpg",
-        "print": "img/products/every-rocket-lands-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "v1-01",
-      "slug": "long-vol-short-gravity",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster/designs.md #01",
-      "draft_source": "space-roadster/01-long-vol-short-gravity",
-      "title": "Long Volatility, Short Gravity",
-      "slogan_top": "Long volatility.",
-      "slogan_bottom": "Short gravity.",
-      "blurb": "A red wedge convertible drifting past Earth. Long the chaos, short the ground.",
-      "tags": [
-        "volatility",
-        "space"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/long-vol-short-gravity-mockup.jpg",
-        "print": "img/products/long-vol-short-gravity-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "v1-02",
-      "slug": "to-the-moon-expires-friday",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster/designs.md #02",
-      "draft_source": "space-roadster/02-to-the-moon-expires-friday",
-      "title": "To The Moon (Expires Friday)",
-      "slogan_top": "To the moon.",
-      "slogan_bottom": "(Expires Friday.)",
-      "blurb": "Launch, convertible, moon. Every great thesis has an expiration date. Yours is in four days.",
-      "tags": [
-        "calls",
-        "expiry",
-        "space"
-      ],
-      "target_price": 36,
-      "edition_size": 150,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/to-the-moon-expires-friday-mockup.jpg",
-        "print": "img/products/to-the-moon-expires-friday-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "v1-03",
-      "slug": "stuck-the-landing",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster/designs.md #03",
-      "draft_source": "space-roadster/03-stuck-the-landing",
-      "title": "Stuck The Landing",
-      "slogan_top": "Stuck the",
-      "slogan_bottom": "landing.",
-      "blurb": "A booster touches down on an unmarked drone ship. Your portfolio did not, but one of you nailed it.",
-      "tags": [
-        "space",
-        "comeback"
-      ],
-      "target_price": 40,
-      "edition_size": 75,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/stuck-the-landing-mockup.jpg",
-        "print": "img/products/stuck-the-landing-print.jpg"
-      },
-      "pod_url": "",
-      "tm_check": "Trademark check needed: drone-ship landing evokes a real launch program"
-    },
-    {
-      "id": "v1-04",
-      "slug": "holding-since-liftoff",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster/designs.md #04",
-      "draft_source": "space-roadster/04-holding-since-liftoff",
-      "title": "Holding Since Liftoff",
-      "slogan_top": "Holding since",
-      "slogan_bottom": "liftoff.",
-      "blurb": "A rocket over 70s sunset stripes. Bought at the launch, still holding, still hoping.",
-      "tags": [
-        "diamond hands",
-        "space"
-      ],
-      "target_price": 36,
-      "edition_size": 120,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/holding-since-liftoff-mockup.jpg",
-        "print": "img/products/holding-since-liftoff-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "v1-05",
-      "slug": "theta-decay-orbital",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster/designs.md #05",
-      "draft_source": "space-roadster/05-theta-decay-orbital",
-      "title": "Theta Decay Is Orbital Mechanics",
-      "slogan_top": "Theta decay",
-      "slogan_bottom": "is just orbital mechanics.",
-      "blurb": "Everything falls eventually. Option value just does it on a schedule.",
-      "tags": [
-        "theta gang",
-        "space"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/theta-decay-orbital-mockup.jpg",
-        "print": "img/products/theta-decay-orbital-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "v1-06",
-      "slug": "pnl-in-orbit",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster/designs.md #06",
-      "draft_source": "space-roadster/06-pnl-in-orbit",
-      "title": "My P&L Is Also In Orbit",
-      "slogan_top": "My P&L is also in orbit.",
-      "slogan_bottom": "No way back down.",
-      "blurb": "A convertible looping on orbit trails, like your unrealized losses. No re-entry planned.",
-      "tags": [
-        "P&L",
-        "space"
-      ],
-      "target_price": 45,
-      "edition_size": 50,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/pnl-in-orbit-mockup.jpg",
-        "print": "img/products/pnl-in-orbit-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "v1-07",
-      "slug": "bought-the-dip-landing",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster/designs.md #07",
-      "draft_source": "space-roadster/07-bought-the-dip-landing",
-      "title": "Bought The Dip (Once)",
-      "slogan_top": "Bought the dip,",
-      "slogan_bottom": "nailed the landing. (Once.)",
-      "blurb": "A booster landing and a launch, side by side. It worked one time and you've been chasing it since.",
-      "tags": [
-        "buy the dip",
-        "space"
-      ],
-      "target_price": 34,
-      "edition_size": 150,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/bought-the-dip-landing-mockup.jpg",
-        "print": "img/products/bought-the-dip-landing-print.jpg"
-      },
-      "pod_url": "",
-      "tm_check": "Trademark check needed: drone-ship landing evokes a real launch program"
-    },
-    {
-      "id": "v1-08",
-      "slug": "max-pain-zero-atmosphere",
-      "status": "draft",
-      "collection": "space-roadster",
-      "art": "artwork",
-      "concept_source": "space-roadster/designs.md #08",
-      "draft_source": "space-roadster/08-max-pain-zero-atmosphere",
-      "title": "Max Pain, Zero Atmosphere",
-      "slogan_top": "Max pain.",
-      "slogan_bottom": "Zero atmosphere.",
-      "blurb": "A convertible diving past Earth toward the strike where everything expires worthless.",
-      "tags": [
-        "max pain",
-        "space"
-      ],
-      "target_price": 42,
-      "edition_size": 80,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/max-pain-zero-atmosphere-mockup.jpg",
-        "print": "img/products/max-pain-zero-atmosphere-print.jpg"
-      },
-      "pod_url": ""
-    },
-    {
-      "id": "its-not-gambling-honey",
-      "slug": "its-not-gambling-honey",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-evergreen-v2.md #1",
-      "title": "It's Not Gambling, Honey",
-      "slogan_top": "It's not gambling, honey.",
-      "slogan_bottom": "It has Greeks.",
-      "blurb": "For every trader who has explained to a spouse that a 0DTE call is \"basically investing.\" Strikes on the roulette wheel, a delta for a ball.",
-      "tags": [
-        "0DTE",
-        "spouse approval",
-        "greeks"
-      ],
-      "target_price": 36,
-      "edition_size": 150,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/its-not-gambling-honey-mockup.jpg",
-        "print": "img/products/its-not-gambling-honey-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "IT'S NOT GAMBLING,",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "HONEY.",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "IT HAS GREEKS.",
-            "anton",
-            "red",
-            1
-          ]
-        ],
-        "motif": "roulette",
-        "motif_at": 2,
-        "scarcity": "No. ___/150. Spousal approval not included."
-      }
-    },
-    {
-      "id": "three-fifty-nine",
-      "slug": "three-fifty-nine",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-evergreen-v2.md #2",
-      "title": "3:59",
-      "slogan_top": "3:59",
-      "slogan_bottom": "Personal record for holding my breath.",
-      "blurb": "The last minute before the close. Every 0DTE trader knows it. Nobody else will get it, which is exactly the point.",
-      "tags": [
-        "0DTE",
-        "the close"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/three-fifty-nine-mockup.jpg",
-        "print": "img/products/three-fifty-nine-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "3:59",
-            "spacemono",
-            "red",
-            1.0
-          ],
-          [
-            "personal record for",
-            "elite",
-            "bone",
-            0.6
-          ],
-          [
-            "holding my breath",
-            "elite",
-            "bone",
-            0.6
-          ]
-        ],
-        "motif": "drip",
-        "motif_at": 1,
-        "scarcity": "Printed until the bell. No. ___/100."
-      }
-    },
-    {
-      "id": "professional-penny-colle",
-      "slug": "professional-penny-collector",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-evergreen-v2.md #3",
-      "title": "Professional Penny Collector",
-      "slogan_top": "Professional penny collector.",
-      "slogan_bottom": "Steamroller sold separately.",
-      "blurb": "A union badge for put sellers and wheel runners. Premium Sellers Local 100: picking up pennies, professionally, in front of you-know-what.",
-      "tags": [
-        "wheel",
-        "cash-secured puts",
-        "theta gang"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/professional-penny-collector-mockup.jpg",
-        "print": "img/products/professional-penny-collector-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "PROFESSIONAL",
-            "anton",
-            "bone",
-            1
-          ],
-          [
-            "PENNY COLLECTOR",
-            "anton",
-            "red",
-            1
-          ],
-          [
-            "PREMIUM SELLERS LOCAL 100",
-            "elite",
-            "bone",
-            0.55
-          ],
-          [
-            "steamroller sold separately",
-            "elite",
-            "bone",
-            0.5
-          ]
-        ],
-        "motif": "penny",
-        "motif_at": 2,
-        "scarcity": "Local 100: 100 members, numbered."
-      }
-    },
-    {
-      "id": "rolling-forever",
-      "slug": "rolling-forever",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-evergreen-v2.md #4",
-      "title": "Rolling Forever",
-      "slogan_top": "Rolling forever.",
-      "slogan_bottom": "I don't take losses. I take extensions.",
-      "blurb": "Next week. Next month. LEAPS. My grandkids. For the wheel trader who has never once closed a loser, only moved it.",
-      "tags": [
-        "rolling",
-        "wheel",
-        "bagholder"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/rolling-forever-mockup.jpg",
-        "print": "img/products/rolling-forever-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "ROLLING",
-            "shrikhand",
-            "red",
-            1
-          ],
-          [
-            "FOREVER",
-            "shrikhand",
-            "red",
-            1
-          ],
-          [
-            "I don't take losses.",
-            "elite",
-            "bone",
-            0.55
-          ],
-          [
-            "I take extensions.",
-            "elite",
-            "bone",
-            0.55
-          ]
-        ],
-        "motif": "wheel",
-        "motif_at": 2,
-        "scarcity": "No. ___/100. Rolled to a later date."
-      }
-    },
-    {
-      "id": "iv-crushed-me",
-      "slug": "iv-crushed-me",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-evergreen-v2.md #5",
-      "title": "IV Crushed Me",
-      "slogan_top": "IV crushed me",
-      "slogan_bottom": "and I said thank you.",
-      "blurb": "Called the earnings beat. Nailed the direction. Down 40% anyway. A crushed can for everyone who learned what implied volatility means the expensive way.",
-      "tags": [
-        "IV crush",
-        "earnings"
-      ],
-      "target_price": 42,
-      "edition_size": 75,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/iv-crushed-me-mockup.jpg",
-        "print": "img/products/iv-crushed-me-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "IV CRUSHED ME",
-            "anton",
-            "bone",
-            1
-          ],
-          [
-            "and I said thank you.",
-            "shrikhand",
-            "red",
-            0.8
-          ]
-        ],
-        "motif": "can",
-        "motif_at": 1,
-        "scarcity": "75 cans. Crushed after the call."
-      }
-    },
-    {
-      "id": "max-pain-friday-traditio",
-      "slug": "max-pain-friday-tradition",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-evergreen-v2.md #6",
-      "title": "Max Pain: A Friday Tradition",
-      "slogan_top": "Max pain.",
-      "slogan_bottom": "A Friday tradition.",
-      "blurb": "Bowling league energy for the weekly ritual of watching price get pinned to the exact strike that hurts you most.",
-      "tags": [
-        "max pain",
-        "expiry",
-        "OPEX"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/max-pain-friday-tradition-mockup.jpg",
-        "print": "img/products/max-pain-friday-tradition-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "MAX PAIN",
-            "alfa",
-            "bone",
-            1.1
-          ],
-          [
-            "A FRIDAY TRADITION",
-            "anton",
-            "red",
-            0.8
-          ]
-        ],
-        "motif": "pin",
-        "motif_at": 1,
-        "scarcity": "Pinned at No. ___/100."
-      }
-    },
-    {
-      "id": "diamond-hands-paper-resu",
-      "slug": "diamond-hands-paper-results",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-evergreen-v2.md #7",
-      "title": "Diamond Hands, Paper Results",
-      "slogan_top": "Diamond hands.",
-      "slogan_bottom": "Paper results.",
-      "blurb": "Held through everything. Held all the way to zero. The self-aware sequel to the diamond-hands meme.",
-      "tags": [
-        "diamond hands",
-        "bagholder"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/diamond-hands-paper-results-mockup.jpg",
-        "print": "img/products/diamond-hands-paper-results-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "DIAMOND HANDS",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "PAPER RESULTS",
-            "alfa",
-            "red",
-            1
-          ]
-        ],
-        "motif": "candles",
-        "motif_at": 1,
-        "scarcity": "Held to No. ___/100."
-      }
-    },
-    {
-      "id": "short-gamma-short-temper",
-      "slug": "short-gamma-short-temper",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-evergreen-v2.md #8",
-      "title": "Short Gamma, Short Temper",
-      "slogan_top": "Short gamma.",
-      "slogan_bottom": "Short temper.",
-      "blurb": "A 70s fight-night poster. Main event: me vs. the tape. Every. Single. Day. The most insider shirt of the bunch.",
-      "tags": [
-        "gamma",
-        "greeks"
-      ],
-      "target_price": 42,
-      "edition_size": 75,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/short-gamma-short-temper-mockup.jpg",
-        "print": "img/products/short-gamma-short-temper-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "SHORT GAMMA",
-            "anton",
-            "bone",
-            1
-          ],
-          [
-            "SHORT TEMPER",
-            "anton",
-            "red",
-            1
-          ],
-          [
-            "MAIN EVENT: ME VS. THE TAPE",
-            "elite",
-            "bone",
-            0.55
-          ],
-          [
-            "EVERY. SINGLE. DAY.",
-            "elite",
-            "bone",
-            0.55
-          ]
-        ],
-        "motif": "gamma",
-        "motif_at": 1,
-        "scarcity": "75 tickets. No refunds."
-      }
-    },
-    {
-      "id": "theta-gang-unemployed",
-      "slug": "theta-gang-unemployed",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-2026-10-15.md #1",
-      "title": "Theta Gang: Unemployed",
-      "slogan_top": "Theta gang:",
-      "slogan_bottom": "Unemployed.",
-      "blurb": "Volatility so low that selling premium barely pays. A skull in a hard hat, a flatline chart, and a sign: will sell premium for food.",
-      "tags": [
-        "theta gang",
-        "low vol",
-        "VIX"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/theta-gang-unemployed-mockup.jpg",
-        "print": "img/products/theta-gang-unemployed-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "THETA GANG",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "UNEMPLOYED",
-            "anton",
-            "red",
-            1
-          ],
-          [
-            "VIX < 18 · SEND HELP",
-            "spacemono",
-            "bone",
-            0.55
-          ]
-        ],
-        "motif": "flatline",
-        "motif_at": 1,
-        "scarcity": "Printed for one dead week only: No. ___/100."
-      }
-    },
-    {
-      "id": "hot-cpi-survivor",
-      "slug": "hot-cpi-survivor",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-2026-10-15.md #2",
-      "title": "Hot CPI Survivor",
-      "slogan_top": "Hot CPI survivor.",
-      "slogan_bottom": "Class of Oct 14 2026.",
-      "blurb": "A varsity patch for the hot CPI print: 3.7% against a 3.6% forecast and a coin-flip on a hike. Dated, so it can't be reprinted.",
-      "tags": [
-        "CPI",
-        "macro",
-        "event"
-      ],
-      "target_price": 42,
-      "edition_size": 75,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/hot-cpi-survivor-mockup.jpg",
-        "print": "img/products/hot-cpi-survivor-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "3.7%",
-            "anton",
-            "red",
-            1
-          ],
-          [
-            "HOT CPI",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "SURVIVOR",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "50/50 ON A HIKE",
-            "spacemono",
-            "red",
-            0.55
-          ],
-          [
-            "CLASS OF OCT 14 2026",
-            "elite",
-            "bone",
-            0.55
-          ]
-        ],
-        "motif": "thermo",
-        "motif_at": 1,
-        "scarcity": "One print run. Dated. Never reprinted."
-      }
-    },
-    {
-      "id": "gamma-squeeze-in-bonds",
-      "slug": "gamma-squeeze-in-bonds",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-2026-10-15.md #3",
-      "title": "Gamma Squeeze (In Bonds?!)",
-      "slogan_top": "Gamma squeeze",
-      "slogan_bottom": "(in bonds?!)",
-      "blurb": "Record Treasury call volume and a timeline full of people asking for a gamma squeeze in bonds. Duration risk included.",
-      "tags": [
-        "gamma",
-        "bonds",
-        "macro"
-      ],
-      "target_price": 42,
-      "edition_size": 75,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/gamma-squeeze-in-bonds-mockup.jpg",
-        "print": "img/products/gamma-squeeze-in-bonds-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "GAMMA",
-            "shrikhand",
-            "red",
-            1
-          ],
-          [
-            "SQUEEZE",
-            "shrikhand",
-            "red",
-            1
-          ],
-          [
-            "(in bonds?!)",
-            "elite",
-            "bone",
-            0.6
-          ],
-          [
-            "RECORD CALL VOLUME · OCT '26",
-            "spacemono",
-            "bone",
-            0.45
-          ]
-        ],
-        "motif": "bond",
-        "motif_at": 2,
-        "scarcity": "No. ___/75. Duration risk included."
-      }
-    },
-    {
-      "id": "everything-is-a-gamma-sq",
-      "slug": "everything-is-a-gamma-squeeze",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-2026-10-15.md #4",
-      "title": "Everything Is A Gamma Squeeze",
-      "slogan_top": "Everything is a gamma squeeze",
-      "slogan_bottom": "if you believe.",
-      "blurb": "A distressed motivational poster for the timeline that calls a gamma squeeze on every ticker, every day. Small print: not a squeeze.",
-      "tags": [
-        "gamma",
-        "memes"
-      ],
-      "target_price": 34,
-      "edition_size": 150,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/everything-is-a-gamma-squeeze-mockup.jpg",
-        "print": "img/products/everything-is-a-gamma-squeeze-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "EVERYTHING IS A",
-            "anton",
-            "bone",
-            0.8
-          ],
-          [
-            "GAMMA SQUEEZE",
-            "anton",
-            "red",
-            1
-          ],
-          [
-            "if you believe",
-            "shrikhand",
-            "bone",
-            0.7
-          ],
-          [
-            "not a squeeze.",
-            "elite",
-            "bone",
-            0.4
-          ]
-        ],
-        "motif": "arch",
-        "motif_at": 0,
-        "scarcity": "Believers only: No. ___/150."
-      }
-    },
-    {
-      "id": "pennies-steamroller-repe",
-      "slug": "pennies-steamroller-repeat",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-2026-10-15.md #5",
-      "title": "Pennies · Steamroller · Repeat",
-      "slogan_top": "Pennies. Steamroller.",
-      "slogan_bottom": "Repeat.",
-      "blurb": "Week 1: +$300. Week 3: +$310. Week 5: ——. The wheel strategy, told in three panels.",
-      "tags": [
-        "wheel",
-        "cash-secured puts"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/pennies-steamroller-repeat-mockup.jpg",
-        "print": "img/products/pennies-steamroller-repeat-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "PENNIES · STEAMROLLER",
-            "anton",
-            "bone",
-            1
-          ],
-          [
-            "REPEAT",
-            "anton",
-            "red",
-            1
-          ],
-          [
-            "THE WHEEL STRATEGY",
-            "alfa",
-            "bone",
-            0.7
-          ]
-        ],
-        "motif": "panels",
-        "motif_at": 2,
-        "scarcity": "Collected premium: 100 shirts. No. ___/100."
-      }
-    },
-    {
-      "id": "0dte-lotto-club",
-      "slug": "0dte-lotto-club",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-2026-10-15.md #6",
-      "title": "0DTE Lotto Club",
-      "slogan_top": "0DTE Lotto Club.",
-      "slogan_bottom": "Odds: yes.",
-      "blurb": "A half-scratched lottery ticket that reveals an option chain row: 390C, 0DTE, $0.92. Draw time 3:59. Odds: yes.",
-      "tags": [
-        "0DTE",
-        "lotto calls"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/0dte-lotto-club-mockup.jpg",
-        "print": "img/products/0dte-lotto-club-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "0DTE",
-            "alfa",
-            "red",
-            1.1
-          ],
-          [
-            "LOTTO CLUB",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "Odds: yes.",
-            "elite",
-            "bone",
-            0.6
-          ]
-        ],
-        "motif": "ticket",
-        "motif_at": 2,
-        "scarcity": "Expires worthless at 4:00 PM. No. ___/100."
-      }
-    },
-    {
-      "id": "school-of-hard-strikes",
-      "slug": "school-of-hard-strikes",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-2026-10-15.md #7",
-      "title": "School Of Hard Strikes",
-      "slogan_top": "School of hard strikes.",
-      "slogan_bottom": "Major: bagholding. Minor: rolling forever.",
-      "blurb": "A collegiate crest with an ASSIGNED stamp. Est. every Friday.",
-      "tags": [
-        "assigned",
-        "wheel"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/school-of-hard-strikes-mockup.jpg",
-        "print": "img/products/school-of-hard-strikes-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "SCHOOL OF",
-            "alfa",
-            "bone",
-            0.8
-          ],
-          [
-            "HARD STRIKES",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "MAJOR: BAGHOLDING",
-            "spacemono",
-            "bone",
-            0.5
-          ],
-          [
-            "MINOR: ROLLING FOREVER",
-            "spacemono",
-            "bone",
-            0.5
-          ]
-        ],
-        "motif": "shield",
-        "motif_at": 2,
-        "scarcity": "Assigned to 100 owners only."
-      }
-    },
-    {
-      "id": "iv-crush-support-group",
-      "slug": "iv-crush-support-group",
-      "status": "draft",
-      "collection": "trader-pain",
-      "art": "typographic",
-      "concept_source": "drop-concepts-2026-10-15.md #8",
-      "title": "IV Crush Support Group",
-      "slogan_top": "IV crush support group.",
-      "slogan_bottom": "Meets after earnings.",
-      "blurb": "A church-basement flyer: folding chairs in a circle around a crushed can labeled IV. Mondays to Fridays, after the call. Bring your own copium.",
-      "tags": [
-        "IV crush",
-        "earnings"
-      ],
-      "target_price": 42,
-      "edition_size": 75,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/iv-crush-support-group-mockup.jpg",
-        "print": "img/products/iv-crush-support-group-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "IV CRUSH",
-            "anton",
-            "red",
-            1
-          ],
-          [
-            "SUPPORT GROUP",
-            "anton",
-            "bone",
-            1
-          ],
-          [
-            "meets after earnings",
-            "elite",
-            "bone",
-            0.55
-          ],
-          [
-            "bring your own copium",
-            "elite",
-            "bone",
-            0.5
-          ]
-        ],
-        "motif": "chairs",
-        "motif_at": 2,
-        "scarcity": "Group size capped at 75."
-      }
-    },
-    {
-      "id": "i-dont-share",
-      "slug": "i-dont-share",
-      "status": "draft",
-      "collection": "pizza",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #1",
-      "title": "I Don't Share",
-      "slogan_top": "I don't share.",
-      "slogan_bottom": "I'm not your therapist.",
-      "blurb": "One slice, one bear trap, zero exceptions. Nobody gets the last slice.",
-      "tags": [
-        "pizza",
-        "boundaries"
-      ],
-      "target_price": 36,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/i-dont-share-mockup.jpg",
-        "print": "img/products/i-dont-share-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "I DON'T SHARE.",
-            "anton",
-            "bone",
-            1
-          ],
-          [
-            "I'M NOT YOUR THERAPIST.",
-            "anton",
-            "red",
-            0.75
-          ]
-        ],
-        "motif": "trap",
-        "motif_at": 1,
-        "scarcity": "No. ___/100. Nobody gets the last slice."
-      }
-    },
-    {
-      "id": "pineapple-is-a-war-crime",
-      "slug": "pineapple-is-a-war-crime",
-      "status": "draft",
-      "collection": "pizza",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #2",
-      "title": "Pineapple Is A War Crime",
-      "slogan_top": "Pineapple",
-      "slogan_bottom": "is a war crime.",
-      "blurb": "A courtroom sketch of the accused, stamped GUILTY. The tribunal sits once.",
-      "tags": [
-        "pizza",
-        "pineapple"
-      ],
-      "target_price": 34,
-      "edition_size": 150,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/pineapple-is-a-war-crime-mockup.jpg",
-        "print": "img/products/pineapple-is-a-war-crime-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "PINEAPPLE",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "IS A WAR CRIME",
-            "alfa",
-            "red",
-            0.9
-          ]
-        ],
-        "motif": "pineapple",
-        "motif_at": 2,
-        "scarcity": "The tribunal sits once."
-      }
-    },
-    {
-      "id": "died-folding-it-in-half",
-      "slug": "died-folding-it-in-half",
-      "status": "draft",
-      "collection": "pizza",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #3",
-      "title": "Folding It In Half",
-      "slogan_top": "Died doing what I loved:",
-      "slogan_bottom": "Folding it in half.",
-      "blurb": "A skull with a folded slice, a candle, and a tombstone that reads HE ATE THE CRUST.",
-      "tags": [
-        "pizza",
-        "skull"
-      ],
-      "target_price": 38,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/died-folding-it-in-half-mockup.jpg",
-        "print": "img/products/died-folding-it-in-half-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "DIED DOING WHAT I LOVED:",
-            "anton",
-            "bone",
-            0.7
-          ],
-          [
-            "FOLDING IT",
-            "shrikhand",
-            "red",
-            1
-          ],
-          [
-            "IN HALF",
-            "shrikhand",
-            "red",
-            1
-          ]
-        ],
-        "motif": "tomb",
-        "motif_at": 1,
-        "scarcity": "Limited, unlike my self-control."
-      }
-    },
-    {
-      "id": "blood-type-marinara",
-      "slug": "blood-type-marinara",
-      "status": "draft",
-      "collection": "pizza",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #4",
-      "title": "My Blood Type Is Marinara",
-      "slogan_top": "My blood type is",
-      "slogan_bottom": "marinara.",
-      "blurb": "An IV bag of sauce, hung and ready. No refills.",
-      "tags": [
-        "pizza",
-        "sauce"
-      ],
-      "target_price": 36,
-      "edition_size": 120,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/blood-type-marinara-mockup.jpg",
-        "print": "img/products/blood-type-marinara-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "MY BLOOD TYPE IS",
-            "anton",
-            "bone",
-            0.8
-          ],
-          [
-            "MARINARA",
-            "shrikhand",
-            "red",
-            1
-          ]
-        ],
-        "motif": "ivbag",
-        "motif_at": 2,
-        "scarcity": "No refills."
-      }
-    },
-    {
-      "id": "emotionally-available-fo",
-      "slug": "emotionally-available-for-pizza",
-      "status": "draft",
-      "collection": "pizza",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #5",
-      "title": "Emotionally Available For Pizza",
-      "slogan_top": "Emotionally available",
-      "slogan_bottom": "for pizza only.",
-      "blurb": "An empty, greasy box with a sticky note on the lid: I'm fine.",
-      "tags": [
-        "pizza",
-        "feelings"
-      ],
-      "target_price": 36,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/emotionally-available-for-pizza-mockup.jpg",
-        "print": "img/products/emotionally-available-for-pizza-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "EMOTIONALLY AVAILABLE",
-            "anton",
-            "bone",
-            0.85
-          ],
-          [
-            "FOR PIZZA ONLY",
-            "anton",
-            "red",
-            1
-          ]
-        ],
-        "motif": "box",
-        "motif_at": 2,
-        "scarcity": "100 boxes. Then I go quiet."
-      }
-    },
-    {
-      "id": "crust-decay",
-      "slug": "crust-decay",
-      "status": "draft",
-      "collection": "pizza",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, pizza set (Oct 17 1:37 AM ET) #6",
-      "title": "Crust Decay",
-      "slogan_top": "Crust decay:",
-      "slogan_bottom": "The slice is worth less every minute.",
-      "blurb": "An option-style decay chart for a slice of pizza, plus a melting clock. Expires cold.",
-      "tags": [
-        "pizza",
-        "theta"
-      ],
-      "target_price": 40,
-      "edition_size": 75,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/crust-decay-mockup.jpg",
-        "print": "img/products/crust-decay-print.jpg"
-      },
-      "pod_url": "",
-      "type_spec": {
-        "lines": [
-          [
-            "CRUST DECAY",
-            "alfa",
-            "red",
-            1
-          ],
-          [
-            "THE SLICE IS WORTH LESS",
-            "anton",
-            "bone",
-            0.7
-          ],
-          [
-            "EVERY MINUTE",
-            "anton",
-            "bone",
-            0.7
-          ]
-        ],
-        "motif": "decay",
-        "motif_at": 1,
-        "scarcity": "Expires cold."
-      }
-    },
-    {
-      "id": "pol-01",
-      "slug": "let-trump-manage-my-roth",
-      "status": "draft",
-      "collection": "political-pain",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, Trump/midterms set #1",
-      "title": "I Let Trump Manage My Roth",
-      "slogan_top": "I let Trump",
-      "slogan_bottom": "manage my Roth.",
-      "blurb": "A skull in a too-long red tie at a cracked trading desk, three monitors dripping red candles. Account value: $0.00.",
-      "tags": [
-        "politics",
-        "retirement",
-        "red candles"
-      ],
-      "target_price": null,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/let-trump-manage-my-roth-mockup.jpg",
-        "print": "img/products/let-trump-manage-my-roth-print.jpg"
-      },
-      "pod_url": "",
-      "notes": [
-        "Uses a candidate's name — check print-on-demand/Shopify rules before uploading"
-      ],
-      "type_spec": {
-        "lines": [
-          [
-            "I LET TRUMP",
-            "anton",
-            "bone",
-            1
-          ],
-          [
-            "MANAGE MY ROTH",
-            "anton",
-            "red",
-            1
-          ]
-        ],
-        "motif": "desk",
-        "motif_at": 2,
-        "scarcity": "No. ___/100. No refunds. No bailouts."
-      }
-    },
-    {
-      "id": "pol-02",
-      "slug": "midterm-max-pain",
-      "status": "draft",
-      "collection": "political-pain",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, Trump/midterms set #2",
-      "title": "Midterm Max Pain",
-      "slogan_top": "Midterm",
-      "slogan_bottom": "max pain.",
-      "blurb": "A coffin-shaped ballot box with a giant red candlestick driven through the lid like a stake.",
-      "tags": [
-        "midterms",
-        "max pain",
-        "expiry"
-      ],
-      "target_price": null,
-      "edition_size": 150,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/midterm-max-pain-mockup.jpg",
-        "print": "img/products/midterm-max-pain-print.jpg"
-      },
-      "pod_url": "",
-      "notes": [
-        "Election-dated: stops selling after Nov 3, 2026"
-      ],
-      "type_spec": {
-        "lines": [
-          [
-            "MIDTERM",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "MAX PAIN",
-            "alfa",
-            "red",
-            1.05
-          ]
-        ],
-        "motif": "coffin",
-        "motif_at": 2,
-        "scarcity": "Expires 11/03. Just like my calls."
-      }
-    },
-    {
-      "id": "pol-03",
-      "slug": "vote-red-my-account-did",
-      "status": "draft",
-      "collection": "political-pain",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, Trump/midterms set #3",
-      "title": "Vote Red. My Account Already Did.",
-      "slogan_top": "Vote red.",
-      "slogan_bottom": "My account already did.",
-      "blurb": "An empty wallet nailed to a wall of red candles, a skull peeking out of the cash slot. Series 01.",
-      "tags": [
-        "politics",
-        "red candles"
-      ],
-      "target_price": null,
-      "edition_size": 100,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/vote-red-my-account-did-mockup.jpg",
-        "print": "img/products/vote-red-my-account-did-print.jpg"
-      },
-      "pod_url": "",
-      "notes": [],
-      "type_spec": {
-        "lines": [
-          [
-            "VOTE RED.",
-            "shrikhand",
-            "red",
-            1
-          ],
-          [
-            "MY ACCOUNT",
-            "anton",
-            "bone",
-            0.85
-          ],
-          [
-            "ALREADY DID.",
-            "anton",
-            "bone",
-            0.85
-          ]
-        ],
-        "motif": "wallet",
-        "motif_at": 1,
-        "scarcity": "One run. Then it's liquidated."
-      }
-    },
-    {
-      "id": "pol-04",
-      "slug": "assigned-by-the-president",
-      "status": "draft",
-      "collection": "political-pain",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, Trump/midterms set #4",
-      "title": "Assigned By The President",
-      "slogan_top": "Assigned",
-      "slogan_bottom": "by the president.",
-      "blurb": "A suburban house in chains with a red ASSIGNED stamp on the door and a skull with a candle in the window.",
-      "tags": [
-        "assigned",
-        "politics"
-      ],
-      "target_price": null,
-      "edition_size": 75,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/assigned-by-the-president-mockup.jpg",
-        "print": "img/products/assigned-by-the-president-print.jpg"
-      },
-      "pod_url": "",
-      "notes": [],
-      "type_spec": {
-        "lines": [
-          [
-            "ASSIGNED",
-            "alfa",
-            "bone",
-            1
-          ],
-          [
-            "BY THE PRESIDENT",
-            "alfa",
-            "red",
-            0.8
-          ]
-        ],
-        "motif": "house",
-        "motif_at": 2,
-        "scarcity": "75 contracts. All exercised."
-      }
-    },
-    {
-      "id": "pol-05",
-      "slug": "trump-said-buy-the-dip",
-      "status": "draft",
-      "collection": "political-pain",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, Trump/midterms set #5",
-      "title": "Trump Said Buy The Dip",
-      "slogan_top": "Trump said buy the dip.",
-      "slogan_bottom": "I did. Every. Single. One.",
-      "blurb": "One tiny green candle, then a red cliff, and a cartoon skull skydiving off it without a parachute.",
-      "tags": [
-        "buy the dip",
-        "politics"
-      ],
-      "target_price": null,
-      "edition_size": 120,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/trump-said-buy-the-dip-mockup.jpg",
-        "print": "img/products/trump-said-buy-the-dip-print.jpg"
-      },
-      "pod_url": "",
-      "notes": [
-        "Uses a candidate's name — check print-on-demand/Shopify rules before uploading"
-      ],
-      "type_spec": {
-        "lines": [
-          [
-            "TRUMP SAID",
-            "anton",
-            "bone",
-            0.9
-          ],
-          [
-            "BUY THE DIP",
-            "anton",
-            "red",
-            1
-          ],
-          [
-            "I DID. EVERY. SINGLE. ONE.",
-            "spacemono",
-            "bone",
-            0.6
-          ]
-        ],
-        "motif": "cliff",
-        "motif_at": 2,
-        "scarcity": "Numbered on the way down."
-      }
-    },
-    {
-      "id": "pol-06",
-      "slug": "0dte-on-election-night",
-      "status": "draft",
-      "collection": "political-pain",
-      "art": "typographic",
-      "concept_source": "Merch Drop Designer chat, Trump/midterms set #6",
-      "title": "0DTE On Election Night",
-      "slogan_top": "0DTE",
-      "slogan_bottom": "on election night.",
-      "blurb": "A skull in a party hat with a sparkler, and red candles stuck in a ballot-box birthday cake.",
-      "tags": [
-        "0DTE",
-        "election",
-        "expiry"
-      ],
-      "target_price": null,
-      "edition_size": 69,
-      "tee_color": "Black",
-      "images": {
-        "mockup": "img/products/0dte-on-election-night-mockup.jpg",
-        "print": "img/products/0dte-on-election-night-print.jpg"
-      },
-      "pod_url": "",
-      "notes": [
-        "Election-dated: stops selling after Nov 3, 2026"
-      ],
-      "type_spec": {
-        "lines": [
-          [
-            "0DTE",
-            "alfa",
-            "red",
-            1.1
-          ],
-          [
-            "ON ELECTION NIGHT",
-            "anton",
-            "bone",
-            0.85
-          ]
-        ],
-        "motif": "cake",
-        "motif_at": 2,
-        "scarcity": "Expired worthless at 11:59 PM."
-      }
-    }
-  ]
+ "_comment": "GENERATED by tools/import_library.py from /workspace/merch/library/catalog.csv. Edit the import rules, not this file. '_review' is internal and never rendered.",
+ "products": [
+  {
+   "id": "9P2Ix",
+   "slug": "assigned-again",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "9P2Ix.jpg",
+   "title": "ASSIGNED AGAIN",
+   "subtitle": "Now I Own the Stock My Wife Wanted",
+   "slogan": "ASSIGNED AGAIN / Now I Own the Stock My Wife Wanted",
+   "slogan_as_printed": "ASSIGNED AGAIN / Now I Own the Stock My Wife Wanted",
+   "series": "loss",
+   "group": "G01 ASSIGNED AGAIN",
+   "featured": 3,
+   "images": {
+    "main": "img/products/assigned-again.webp",
+    "detail": "img/products/assigned-again-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "L08uL",
+   "slug": "assigned-and-broke",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "L08uL.jpg",
+   "title": "ASSIGNED AND BROKE",
+   "subtitle": "Cash Secured... Barely",
+   "slogan": "ASSIGNED AND BROKE / Cash Secured... Barely",
+   "slogan_as_printed": "ASSIGNED AND BROKE / Cash Secured... Barely",
+   "series": "loss",
+   "group": "G02 ASSIGNED AND BROKE",
+   "featured": null,
+   "images": {
+    "main": "img/products/assigned-and-broke.webp",
+    "detail": "img/products/assigned-and-broke-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "GGDrT",
+   "slug": "assigned-by-trump",
+   "status": "preview",
+   "category": "political",
+   "source_file": "GGDrT.jpg",
+   "title": "ASSIGNED BY TRUMP",
+   "subtitle": "Max Pain Incoming",
+   "slogan": "ASSIGNED BY TRUMP / Max Pain Incoming",
+   "slogan_as_printed": "ASSIGNED BY TRUMP / Max Pain Incoming",
+   "series": "other",
+   "group": "G03 ASSIGNED BY (POLITICAL)",
+   "featured": null,
+   "images": {
+    "main": "img/products/assigned-by-trump.webp",
+    "detail": "img/products/assigned-by-trump-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "fmURR",
+   "slug": "big-green-candle",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "fmURR.jpg",
+   "title": "BIG GREEN CANDLE",
+   "subtitle": "",
+   "slogan": "BIG GREEN CANDLE",
+   "slogan_as_printed": "BIG GREEN CANDLE",
+   "series": "innuendo",
+   "group": "G04 BIG GREEN",
+   "featured": null,
+   "images": {
+    "main": "img/products/big-green-candle.webp",
+    "detail": "img/products/big-green-candle-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "IWiHl",
+   "slug": "i-bought-the-dip",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "IWiHl.jpg",
+   "title": "I BOUGHT THE DIP",
+   "subtitle": "It Was a Trap.",
+   "slogan": "I BOUGHT THE DIP / It Was a Trap.",
+   "slogan_as_printed": "I BOUGHT THE DIP / It Was a Trap.",
+   "series": "loss",
+   "group": "G05 BOUGHT THE DIP",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-bought-the-dip.webp",
+    "detail": "img/products/i-bought-the-dip-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "zc3Yh",
+   "slug": "bought-calls-now-i-m-calling-my-mom",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "zc3Yh.jpg",
+   "title": "BOUGHT CALLS, NOW I'M CALLING MY MOM",
+   "subtitle": "",
+   "slogan": "BOUGHT CALLS, NOW I'M CALLING MY MOM",
+   "slogan_as_printed": "BOUGHT CALLS, NOW I'M CALLING MY MOM",
+   "series": "loss",
+   "group": "G06 CALLING MY MOM",
+   "featured": 4,
+   "images": {
+    "main": "img/products/bought-calls-now-i-m-calling-my-mom.webp",
+    "detail": "img/products/bought-calls-now-i-m-calling-my-mom-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "MIlYT",
+   "slug": "0dte-candle-sucker",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "MIlYT.jpg",
+   "title": "0DTE CANDLE SUCKER",
+   "subtitle": "",
+   "slogan": "0DTE CANDLE SUCKER",
+   "slogan_as_printed": "ODTE CANDLE SUCKER",
+   "series": "innuendo",
+   "group": "G07 CANDLE SUCKER",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-candle-sucker.webp",
+    "detail": "img/products/0dte-candle-sucker-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "SUCK (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "CpZRu",
+   "slug": "green-candle-whore-0dte",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "CpZRu.jpg",
+   "title": "GREEN CANDLE WHORE 0DTE",
+   "subtitle": "",
+   "slogan": "GREEN CANDLE WHORE 0DTE",
+   "slogan_as_printed": "GREEN CANDLE WHORE ODTE",
+   "series": "innuendo",
+   "group": "G08 CANDLE WHORE",
+   "featured": null,
+   "images": {
+    "main": "img/products/green-candle-whore-0dte.webp",
+    "detail": "img/products/green-candle-whore-0dte-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "WHORE (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "9rz6l",
+   "slug": "my-account-is-a-crime-scene",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "9rz6l.jpg",
+   "title": "MY ACCOUNT IS A CRIME SCENE",
+   "subtitle": "",
+   "slogan": "MY ACCOUNT IS A CRIME SCENE",
+   "slogan_as_printed": "MY ACCOUNT IS A CRIME SCENE",
+   "series": "loss",
+   "group": "G09 CRIME SCENE",
+   "featured": 1,
+   "images": {
+    "main": "img/products/my-account-is-a-crime-scene.webp",
+    "detail": "img/products/my-account-is-a-crime-scene-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "yes (stamp cropped at top-right edge)",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "2RbvR",
+   "slug": "deadlift-or-die",
+   "status": "preview",
+   "category": "gym",
+   "source_file": "2RbvR.jpg",
+   "title": "DEADLIFT OR DIE",
+   "subtitle": "No Spotter Needed",
+   "slogan": "DEADLIFT OR DIE / No Spotter Needed",
+   "slogan_as_printed": "DEADLIFT OR DIE / No Spotter Needed",
+   "series": "other",
+   "group": "G10 DEADLIFT OR DIE",
+   "featured": null,
+   "images": {
+    "main": "img/products/deadlift-or-die.webp",
+    "detail": "img/products/deadlift-or-die-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "NwtP7",
+   "slug": "i-have-a-problem",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "NwtP7.jpg",
+   "title": "I HAVE A PROBLEM",
+   "subtitle": "It's Called Edge",
+   "slogan": "I HAVE A PROBLEM / It's Called Edge",
+   "slogan_as_printed": "I HAVE A PROBLEM / It's Called Edge",
+   "series": "loss",
+   "group": "G11 EDGE (IRONIC)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-have-a-problem.webp",
+    "detail": "img/products/i-have-a-problem-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "print_quality=busy"
+    ]
+   }
+  },
+  {
+   "id": "YPCmp",
+   "slug": "my-edge-is-negative",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "YPCmp.jpg",
+   "title": "MY EDGE IS NEGATIVE",
+   "subtitle": "But I Keep Playing",
+   "slogan": "MY EDGE IS NEGATIVE / But I Keep Playing",
+   "slogan_as_printed": "MY EDGE IS NEGATIVE / But I Keep Playing",
+   "series": "loss",
+   "group": "G12 EDGE NEGATIVE",
+   "featured": null,
+   "images": {
+    "main": "img/products/my-edge-is-negative.webp",
+    "detail": "img/products/my-edge-is-negative-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "print_quality=busy"
+    ]
+   }
+  },
+  {
+   "id": "Pe7H2",
+   "slug": "fintwit-said-buy-the-dip",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "Pe7H2.jpg",
+   "title": "FINTWIT SAID BUY THE DIP",
+   "subtitle": "Classic Advice",
+   "slogan": "FINTWIT SAID BUY THE DIP / Classic Advice",
+   "slogan_as_printed": "FINTWIT SAID BUY THE DIP / Classic Advice",
+   "series": "loss",
+   "group": "G13 FINTWIT ADVICE",
+   "featured": null,
+   "images": {
+    "main": "img/products/fintwit-said-buy-the-dip.webp",
+    "detail": "img/products/fintwit-said-buy-the-dip-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "LRnPR",
+   "slug": "my-portfolio-manager-is-fintwit",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "LRnPR.jpg",
+   "title": "MY PORTFOLIO MANAGER IS FINTWIT",
+   "subtitle": "What Could Go Wrong",
+   "slogan": "MY PORTFOLIO MANAGER IS FINTWIT / What Could Go Wrong",
+   "slogan_as_printed": "MY PORTFOLIO MANAGER IS FINTWIT / What Could Go Wrong",
+   "series": "loss",
+   "group": "G14 FINTWIT PORTFOLIO MANAGER",
+   "featured": null,
+   "images": {
+    "main": "img/products/my-portfolio-manager-is-fintwit.webp",
+    "detail": "img/products/my-portfolio-manager-is-fintwit-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "1MYKl",
+   "slug": "i-let-fintwit-run-my-account",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "1MYKl.jpg",
+   "title": "I LET FINTWIT RUN MY ACCOUNT",
+   "subtitle": "DOWN 40%",
+   "slogan": "I LET FINTWIT RUN MY ACCOUNT / DOWN 40%",
+   "slogan_as_printed": "I LET FINTWIT RUN MY ACCOUNT / DOWN 40%",
+   "series": "loss",
+   "group": "G15 FINTWIT RAN MY ACCOUNT",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-let-fintwit-run-my-account.webp",
+    "detail": "img/products/i-let-fintwit-run-my-account-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "InEsW",
+   "slug": "full-send-0dte",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "InEsW.jpg",
+   "title": "FULL SEND 0DTE",
+   "subtitle": "",
+   "slogan": "FULL SEND 0DTE",
+   "slogan_as_printed": "FULL SEND ODTE",
+   "series": "innuendo",
+   "group": "G16 FULL SEND",
+   "featured": null,
+   "images": {
+    "main": "img/products/full-send-0dte.webp",
+    "detail": "img/products/full-send-0dte-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "dqTX5",
+   "slug": "gamma-squeeze",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "dqTX5.jpg",
+   "title": "GAMMA SQUEEZE",
+   "subtitle": "Vol Crush Survivor",
+   "slogan": "GAMMA SQUEEZE / Vol Crush Survivor",
+   "slogan_as_printed": "GAMMA SQUEEZE / Vol Crush Survivor",
+   "series": "other",
+   "group": "G17 GAMMA SQUEEZE",
+   "featured": null,
+   "images": {
+    "main": "img/products/gamma-squeeze.webp",
+    "detail": "img/products/gamma-squeeze-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "ZazVL",
+   "slug": "0dte-made-me-hard",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "ZazVL.jpg",
+   "title": "0DTE MADE ME HARD",
+   "subtitle": "",
+   "slogan": "0DTE MADE ME HARD",
+   "slogan_as_printed": "ODTE MADE ME HARD",
+   "series": "innuendo",
+   "group": "G18 HARD/GROWING CANDLE",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-made-me-hard.webp",
+    "detail": "img/products/0dte-made-me-hard-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "MADE ME HARD (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "mADKx",
+   "slug": "0dte-liquidation",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "mADKx.jpg",
+   "title": "0DTE LIQUIDATION",
+   "subtitle": "",
+   "slogan": "0DTE LIQUIDATION",
+   "slogan_as_printed": "ODTE LIQUIDATION",
+   "series": "loss",
+   "group": "G19 LIQUIDATED",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-liquidation.webp",
+    "detail": "img/products/0dte-liquidation-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "0PFbs",
+   "slug": "long-dog-energy",
+   "status": "preview",
+   "category": "dachshund",
+   "source_file": "0PFbs.jpg",
+   "title": "LONG DOG ENERGY",
+   "subtitle": "ONLY 250 MADE",
+   "slogan": "LONG DOG ENERGY / ONLY 250 MADE",
+   "slogan_as_printed": "LONG DOG ENERGY / ONLY 250 MADE",
+   "series": "other",
+   "group": "G20 LONG DOG ENERGY",
+   "featured": null,
+   "images": {
+    "main": "img/products/long-dog-energy.webp",
+    "detail": "img/products/long-dog-energy-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "9xr3w",
+   "slug": "i-lost-it-all-on-0dte",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "9xr3w.jpg",
+   "title": "I LOST IT ALL ON 0DTE",
+   "subtitle": "Again",
+   "slogan": "I LOST IT ALL ON 0DTE / Again",
+   "slogan_as_printed": "I LOST IT ALL ON ODTE / Again",
+   "series": "loss",
+   "group": "G21 LOST IT ALL",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-lost-it-all-on-0dte.webp",
+    "detail": "img/products/i-lost-it-all-on-0dte-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "QItRK",
+   "slug": "max-pain",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "QItRK.jpg",
+   "title": "MAX PAIN",
+   "subtitle": "",
+   "slogan": "MAX PAIN",
+   "slogan_as_printed": "MAX PAIN",
+   "series": "loss",
+   "group": "G22 MAX PAIN",
+   "featured": null,
+   "images": {
+    "main": "img/products/max-pain.webp",
+    "detail": "img/products/max-pain-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "ejB9d",
+   "slug": "max-pain-fridays",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "ejB9d.jpg",
+   "title": "MAX PAIN FRIDAYS",
+   "subtitle": "We Don't Miss",
+   "slogan": "MAX PAIN FRIDAYS / We Don't Miss",
+   "slogan_as_printed": "MAX PAIN FRIDAYS / We Don't Miss",
+   "series": "loss",
+   "group": "G23 MAX PAIN CLUB/FRIDAYS",
+   "featured": null,
+   "images": {
+    "main": "img/products/max-pain-fridays.webp",
+    "detail": "img/products/max-pain-fridays-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "print_quality=busy"
+    ]
+   }
+  },
+  {
+   "id": "4SeF2",
+   "slug": "midterm-bloodbath",
+   "status": "preview",
+   "category": "political",
+   "source_file": "4SeF2.jpg",
+   "title": "MIDTERM BLOODBATH",
+   "subtitle": "",
+   "slogan": "MIDTERM BLOODBATH",
+   "slogan_as_printed": "MIDTERM BLOODBATH",
+   "series": "other",
+   "group": "G25 MIDTERM BLOODBATH/SLAUGHTER",
+   "featured": null,
+   "images": {
+    "main": "img/products/midterm-bloodbath.webp",
+    "detail": "img/products/midterm-bloodbath-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "wunLU",
+   "slug": "midterm-max-pain",
+   "status": "preview",
+   "category": "political",
+   "source_file": "wunLU.jpg",
+   "title": "MIDTERM MAX PAIN",
+   "subtitle": "",
+   "slogan": "MIDTERM MAX PAIN",
+   "slogan_as_printed": "MIDTERM MAX PAIN",
+   "series": "other",
+   "group": "G26 MIDTERM MAX PAIN",
+   "featured": null,
+   "images": {
+    "main": "img/products/midterm-max-pain.webp",
+    "detail": "img/products/midterm-max-pain-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "hkamt",
+   "slug": "midterms-will-bleed-you",
+   "status": "preview",
+   "category": "political",
+   "source_file": "hkamt.jpg",
+   "title": "MIDTERMS WILL BLEED YOU",
+   "subtitle": "",
+   "slogan": "MIDTERMS WILL BLEED YOU",
+   "slogan_as_printed": "MIDTERMS WILL BLEED YOU",
+   "series": "other",
+   "group": "G27 MIDTERMS BLEED/HURT",
+   "featured": null,
+   "images": {
+    "main": "img/products/midterms-will-bleed-you.webp",
+    "detail": "img/products/midterms-will-bleed-you-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "4Tnuh",
+   "slug": "0dte-murdered-my-account",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "4Tnuh.jpg",
+   "title": "0DTE MURDERED MY ACCOUNT",
+   "subtitle": "",
+   "slogan": "0DTE MURDERED MY ACCOUNT",
+   "slogan_as_printed": "ODTE MURDERED MY ACCOUNT",
+   "series": "loss",
+   "group": "G28 MURDERED/ATE MY ACCOUNT",
+   "featured": 2,
+   "images": {
+    "main": "img/products/0dte-murdered-my-account.webp",
+    "detail": "img/products/0dte-murdered-my-account-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "oFwqc",
+   "slug": "i-work-nights-so-you-can-live",
+   "status": "preview",
+   "category": "night-nurse",
+   "source_file": "oFwqc.jpg",
+   "title": "I WORK NIGHTS SO YOU CAN LIVE",
+   "subtitle": "Night Shift Club",
+   "slogan": "I WORK NIGHTS SO YOU CAN LIVE / Night Shift Club",
+   "slogan_as_printed": "I WORK NIGHTS SO YOU CAN LIVE / Night Shift Club",
+   "series": "other",
+   "group": "G29 NIGHT SHIFT",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-work-nights-so-you-can-live.webp",
+    "detail": "img/products/i-work-nights-so-you-can-live-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "fJOJ1",
+   "slug": "no-more-edge",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "fJOJ1.jpg",
+   "title": "NO MORE EDGE",
+   "subtitle": "But I Keep Clicking",
+   "slogan": "NO MORE EDGE / But I Keep Clicking",
+   "slogan_as_printed": "NO MORE EDGE / But I Keep Clicking",
+   "series": "loss",
+   "group": "G30 NO EDGE",
+   "featured": null,
+   "images": {
+    "main": "img/products/no-more-edge.webp",
+    "detail": "img/products/no-more-edge-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "2V9dn",
+   "slug": "0dte-or-broke",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "2V9dn.jpg",
+   "title": "0DTE OR BROKE",
+   "subtitle": "",
+   "slogan": "0DTE OR BROKE",
+   "slogan_as_printed": "ODTE OR BROKE",
+   "series": "loss",
+   "group": "G31 ODTE OR BROKE",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-or-broke.webp",
+    "detail": "img/products/0dte-or-broke-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "W9i3j",
+   "slug": "0dte-or-die",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "W9i3j.jpg",
+   "title": "0DTE OR DIE",
+   "subtitle": "Zero Days to Expiration Club",
+   "slogan": "0DTE OR DIE / Zero Days to Expiration Club",
+   "slogan_as_printed": "ODTE OR DIE / Zero Days to Expiration Club",
+   "series": "loss",
+   "group": "G32 ODTE OR DIE",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-or-die.webp",
+    "detail": "img/products/0dte-or-die-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "wsdNu",
+   "slug": "paper-hands",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "wsdNu.jpg",
+   "title": "PAPER HANDS",
+   "subtitle": "Flushed the Position",
+   "slogan": "PAPER HANDS / Flushed the Position",
+   "slogan_as_printed": "PAPER HANDS / Flushed the Position",
+   "series": "loss",
+   "group": "G33 PAPER HANDS",
+   "featured": 6,
+   "images": {
+    "main": "img/products/paper-hands.webp",
+    "detail": "img/products/paper-hands-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "iOfZD",
+   "slug": "pin-risk",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "iOfZD.jpg",
+   "title": "PIN RISK",
+   "subtitle": "Max Pain Never Sleeps",
+   "slogan": "PIN RISK / Max Pain Never Sleeps",
+   "slogan_as_printed": "PIN RISK / Max Pain Never Sleeps",
+   "series": "loss",
+   "group": "G34 PINNED",
+   "featured": null,
+   "images": {
+    "main": "img/products/pin-risk.webp",
+    "detail": "img/products/pin-risk-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "yE48F",
+   "slug": "0dte-ruined-me",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "yE48F.jpg",
+   "title": "0DTE RUINED ME",
+   "subtitle": "Worth It",
+   "slogan": "0DTE RUINED ME / Worth It",
+   "slogan_as_printed": "ODTE RUINED ME / Worth It",
+   "series": "loss",
+   "group": "G35 RUINED ME",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-ruined-me.webp",
+    "detail": "img/products/0dte-ruined-me-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "rExbm",
+   "slug": "size-matters",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "rExbm.jpg",
+   "title": "SIZE MATTERS",
+   "subtitle": "",
+   "slogan": "SIZE MATTERS",
+   "slogan_as_printed": "SIZE MATTERS",
+   "series": "innuendo",
+   "group": "G37 SIZE MATTERS",
+   "featured": null,
+   "images": {
+    "main": "img/products/size-matters.webp",
+    "detail": "img/products/size-matters-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "UKUJf",
+   "slug": "0dte-bloodbath",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "UKUJf.jpg",
+   "title": "0DTE BLOODBATH",
+   "subtitle": "",
+   "slogan": "0DTE BLOODBATH",
+   "slogan_as_printed": "ODTE BLOODBATH",
+   "series": "loss",
+   "group": "G38 SLAUGHTER/BLOODBATH",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-bloodbath.webp",
+    "detail": "img/products/0dte-bloodbath-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "viqAM",
+   "slug": "0dte-therapy",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "viqAM.jpg",
+   "title": "0DTE THERAPY",
+   "subtitle": "",
+   "slogan": "0DTE THERAPY",
+   "slogan_as_printed": "ODTE THERAPY",
+   "series": "loss",
+   "group": "G39 THERAPY",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-therapy.webp",
+    "detail": "img/products/0dte-therapy-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "DMUuz",
+   "slug": "theta-ate-my-lunch",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "DMUuz.jpg",
+   "title": "THETA ATE MY LUNCH",
+   "subtitle": "Premium Collector Problems",
+   "slogan": "THETA ATE MY LUNCH / Premium Collector Problems",
+   "slogan_as_printed": "THETA ATE MY LUNCH / Premium Collector Problems",
+   "series": "loss",
+   "group": "G40 THETA ATE MY LUNCH",
+   "featured": null,
+   "images": {
+    "main": "img/products/theta-ate-my-lunch.webp",
+    "detail": "img/products/theta-ate-my-lunch-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "p7HGm",
+   "slug": "theta-gang",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "p7HGm.jpg",
+   "title": "THETA GANG",
+   "subtitle": "",
+   "slogan": "THETA GANG",
+   "slogan_as_printed": "THETA GANG",
+   "series": "other",
+   "group": "G41 THETA GANG",
+   "featured": null,
+   "images": {
+    "main": "img/products/theta-gang.webp",
+    "detail": "img/products/theta-gang-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "r6lJB",
+   "slug": "too-many-tabs-open",
+   "status": "preview",
+   "category": "adhd",
+   "source_file": "r6lJB.jpg",
+   "title": "TOO MANY TABS OPEN",
+   "subtitle": "Brain.exe has stopped responding",
+   "slogan": "TOO MANY TABS OPEN / Brain.exe has stopped responding",
+   "slogan_as_printed": "TOO MANY TABS OPEN / Brain.exe has stopped responding",
+   "series": "other",
+   "group": "G42 TOO MANY TABS",
+   "featured": null,
+   "images": {
+    "main": "img/products/too-many-tabs-open.webp",
+    "detail": "img/products/too-many-tabs-open-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "CC3Yd",
+   "slug": "0dte-took-everything",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "CC3Yd.jpg",
+   "title": "0DTE TOOK EVERYTHING",
+   "subtitle": "",
+   "slogan": "0DTE TOOK EVERYTHING",
+   "slogan_as_printed": "ODTE TOOK EVERYTHING",
+   "series": "loss",
+   "group": "G43 TOOK EVERYTHING",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-took-everything.webp",
+    "detail": "img/products/0dte-took-everything-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "QGIf5",
+   "slug": "i-gave-trump-the-keys",
+   "status": "preview",
+   "category": "political",
+   "source_file": "QGIf5.jpg",
+   "title": "I GAVE TRUMP THE KEYS",
+   "subtitle": "ACCOUNT: DEAD",
+   "slogan": "I GAVE TRUMP THE KEYS / ACCOUNT: DEAD",
+   "slogan_as_printed": "I GAVE TRUMP THE KEYS / ACCOUNT: DEAD",
+   "series": "other",
+   "group": "G44 TRUMP MANAGED MY ACCOUNT",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-gave-trump-the-keys.webp",
+    "detail": "img/products/i-gave-trump-the-keys-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "lHxOV",
+   "slug": "trump-or-broke",
+   "status": "preview",
+   "category": "political",
+   "source_file": "lHxOV.jpg",
+   "title": "TRUMP OR BROKE",
+   "subtitle": "",
+   "slogan": "TRUMP OR BROKE",
+   "slogan_as_printed": "TRUMP OR BROKE",
+   "series": "other",
+   "group": "G45 TRUMP OR BROKE",
+   "featured": null,
+   "images": {
+    "main": "img/products/trump-or-broke.webp",
+    "detail": "img/products/trump-or-broke-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "4k3IK",
+   "slug": "my-pm-is-still-trump",
+   "status": "preview",
+   "category": "political",
+   "source_file": "4k3IK.jpg",
+   "title": "MY PM IS STILL TRUMP",
+   "subtitle": "Down Bad Again",
+   "slogan": "MY PM IS STILL TRUMP / Down Bad Again",
+   "slogan_as_printed": "MY PM IS STILL TRUMP / Down Bad Again",
+   "series": "other",
+   "group": "G46 TRUMP PM",
+   "featured": null,
+   "images": {
+    "main": "img/products/my-pm-is-still-trump.webp",
+    "detail": "img/products/my-pm-is-still-trump-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "ID2TO",
+   "slug": "trump-said-buy-the-dip",
+   "status": "preview",
+   "category": "political",
+   "source_file": "ID2TO.jpg",
+   "title": "TRUMP SAID BUY THE DIP",
+   "subtitle": "Classic Advice",
+   "slogan": "TRUMP SAID BUY THE DIP / Classic Advice",
+   "slogan_as_printed": "TRUMP SAID BUY THE DIP / Classic Advice",
+   "series": "other",
+   "group": "G47 TRUMP SAID",
+   "featured": null,
+   "images": {
+    "main": "img/products/trump-said-buy-the-dip.webp",
+    "detail": "img/products/trump-said-buy-the-dip-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "4xGmv",
+   "slug": "vote-red-or-stay-broke",
+   "status": "preview",
+   "category": "political",
+   "source_file": "4xGmv.jpg",
+   "title": "VOTE RED OR STAY BROKE",
+   "subtitle": "",
+   "slogan": "VOTE RED OR STAY BROKE",
+   "slogan_as_printed": "VOTE RED OR STAY BROKE",
+   "series": "other",
+   "group": "G48 VOTE RED",
+   "featured": null,
+   "images": {
+    "main": "img/products/vote-red-or-stay-broke.webp",
+    "detail": "img/products/vote-red-or-stay-broke-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "0j2rG",
+   "slug": "0dte-deep-throat-destroyer",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "0j2rG.jpg",
+   "title": "0DTE DEEP THROAT DESTROYER",
+   "subtitle": "",
+   "slogan": "0DTE DEEP THROAT DESTROYER",
+   "slogan_as_printed": "ODTE DEEP THROAT DESTROYER",
+   "series": "innuendo",
+   "group": "unique (DEEP THROAT DESTROYER)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-deep-throat-destroyer.webp",
+    "detail": "img/products/0dte-deep-throat-destroyer-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "DEEP THROAT, THROAT (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "0WSei",
+   "slug": "trump-2026",
+   "status": "preview",
+   "category": "political",
+   "source_file": "0WSei.jpg",
+   "title": "TRUMP 2026",
+   "subtitle": "MIDTERMS OR BUST",
+   "slogan": "TRUMP 2026 / MIDTERMS OR BUST",
+   "slogan_as_printed": "TRUMP 2026 / MIDTERMS OR BUST",
+   "series": "other",
+   "group": "unique (TRUMP 2026)",
+   "featured": null,
+   "images": {
+    "main": "img/products/trump-2026.webp",
+    "detail": "img/products/trump-2026-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "2G2qn",
+   "slug": "bought-the-top",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "2G2qn.jpg",
+   "title": "BOUGHT THE TOP",
+   "subtitle": "Again.",
+   "slogan": "BOUGHT THE TOP / Again.",
+   "slogan_as_printed": "BOUGHT THE TOP / Again.",
+   "series": "loss",
+   "group": "unique (BOUGHT THE TOP)",
+   "featured": null,
+   "images": {
+    "main": "img/products/bought-the-top.webp",
+    "detail": "img/products/bought-the-top-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "2Ndm0",
+   "slug": "0dte-mouth-destroyed",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "2Ndm0.jpg",
+   "title": "0DTE MOUTH DESTROYED",
+   "subtitle": "",
+   "slogan": "0DTE MOUTH DESTROYED",
+   "slogan_as_printed": "ODTE MOUTH DESTROYED",
+   "series": "innuendo",
+   "group": "unique (MOUTH DESTROYED)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-mouth-destroyed.webp",
+    "detail": "img/products/0dte-mouth-destroyed-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "MOUTH (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "4o1Wg",
+   "slug": "hyrox-or-die",
+   "status": "preview",
+   "category": "gym",
+   "source_file": "4o1Wg.jpg",
+   "title": "HYROX OR DIE",
+   "subtitle": "No Excuses",
+   "slogan": "HYROX OR DIE / No Excuses",
+   "slogan_as_printed": "HYROX OR DIE / No Excuses",
+   "series": "other",
+   "group": "unique (HYROX OR DIE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/hyrox-or-die.webp",
+    "detail": "img/products/hyrox-or-die-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "5idhW",
+   "slug": "0dte-deep-throat-special",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "5idhW.jpg",
+   "title": "0DTE DEEP THROAT SPECIAL",
+   "subtitle": "",
+   "slogan": "0DTE DEEP THROAT SPECIAL",
+   "slogan_as_printed": "ODTE DEEP THROAT SPECIAL",
+   "series": "innuendo",
+   "group": "unique (DEEP THROAT SPECIAL)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-deep-throat-special.webp",
+    "detail": "img/products/0dte-deep-throat-special-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "DEEP THROAT, THROAT (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "8QBc5",
+   "slug": "my-calls-expired-worthless",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "8QBc5.jpg",
+   "title": "MY CALLS EXPIRED WORTHLESS",
+   "subtitle": "",
+   "slogan": "MY CALLS EXPIRED WORTHLESS",
+   "slogan_as_printed": "MY CALLS EXPIRED WORTHLESS",
+   "series": "loss",
+   "group": "unique (CALLS EXPIRED WORTHLESS)",
+   "featured": null,
+   "images": {
+    "main": "img/products/my-calls-expired-worthless.webp",
+    "detail": "img/products/my-calls-expired-worthless-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "9WnlF",
+   "slug": "my-chart-is-bleeding",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "9WnlF.jpg",
+   "title": "MY CHART IS BLEEDING",
+   "subtitle": "",
+   "slogan": "MY CHART IS BLEEDING",
+   "slogan_as_printed": "MY CHART IS BLEEDING",
+   "series": "loss",
+   "group": "unique (CHART BLEEDING)",
+   "featured": null,
+   "images": {
+    "main": "img/products/my-chart-is-bleeding.webp",
+    "detail": "img/products/my-chart-is-bleeding-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "BJ3gC",
+   "slug": "green-candle-only",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "BJ3gC.jpg",
+   "title": "GREEN CANDLE ONLY",
+   "subtitle": "",
+   "slogan": "GREEN CANDLE ONLY",
+   "slogan_as_printed": "GREEN CANDLE ONLY",
+   "series": "innuendo",
+   "group": "unique (GREEN CANDLE ONLY)",
+   "featured": null,
+   "images": {
+    "main": "img/products/green-candle-only.webp",
+    "detail": "img/products/green-candle-only-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "Bvlws",
+   "slug": "i-choke-on-green-candles",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "Bvlws.jpg",
+   "title": "I CHOKE ON GREEN CANDLES",
+   "subtitle": "",
+   "slogan": "I CHOKE ON GREEN CANDLES",
+   "slogan_as_printed": "I CHOKE ON GREEN CANDLES",
+   "series": "innuendo",
+   "group": "unique (CHOKE ON GREEN CANDLES)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-choke-on-green-candles.webp",
+    "detail": "img/products/i-choke-on-green-candles-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "CHOKE (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "c25YU",
+   "slug": "green-day",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "c25YU.jpg",
+   "title": "GREEN DAY",
+   "subtitle": "",
+   "slogan": "GREEN DAY",
+   "slogan_as_printed": "GREEN DAY",
+   "series": "innuendo",
+   "group": "unique (GREEN DAY)",
+   "featured": null,
+   "images": {
+    "main": "img/products/green-day.webp",
+    "detail": "img/products/green-day-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "C6XIM",
+   "slug": "i-suck-at-0dte",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "C6XIM.jpg",
+   "title": "I SUCK AT 0DTE",
+   "subtitle": "",
+   "slogan": "I SUCK AT 0DTE",
+   "slogan_as_printed": "I SUCK AT ODTE",
+   "series": "innuendo",
+   "group": "unique (I SUCK AT ODTE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-suck-at-0dte.webp",
+    "detail": "img/products/i-suck-at-0dte-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "SUCK (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "CAm4L",
+   "slug": "iron-condor",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "CAm4L.jpg",
+   "title": "IRON CONDOR",
+   "subtitle": "DEFINED RISK ONLY",
+   "slogan": "IRON CONDOR / DEFINED RISK ONLY",
+   "slogan_as_printed": "IRON CONDOR / DEFINED RISK ONLY",
+   "series": "other",
+   "group": "unique (IRON CONDOR)",
+   "featured": null,
+   "images": {
+    "main": "img/products/iron-condor.webp",
+    "detail": "img/products/iron-condor-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "D3nVC",
+   "slug": "sell-premium-or-die",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "D3nVC.jpg",
+   "title": "SELL PREMIUM OR DIE $$",
+   "subtitle": "",
+   "slogan": "SELL PREMIUM OR DIE $$",
+   "slogan_as_printed": "SELL PREMIUM OR DIE $$",
+   "series": "other",
+   "group": "unique (SELL PREMIUM)",
+   "featured": null,
+   "images": {
+    "main": "img/products/sell-premium-or-die.webp",
+    "detail": "img/products/sell-premium-or-die-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "daEwE",
+   "slug": "theta-gang-i-m-the-victim",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "daEwE.jpg",
+   "title": "THETA GANG... I'M THE VICTIM",
+   "subtitle": "Time Decay Hurts",
+   "slogan": "THETA GANG... I'M THE VICTIM / Time Decay Hurts",
+   "slogan_as_printed": "THETA GANG... I'M THE VICTIM / Time Decay Hurts",
+   "series": "loss",
+   "group": "unique (THETA VICTIM)",
+   "featured": null,
+   "images": {
+    "main": "img/products/theta-gang-i-m-the-victim.webp",
+    "detail": "img/products/theta-gang-i-m-the-victim-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "dsP8C",
+   "slug": "up-only",
+   "status": "preview",
+   "category": "other",
+   "source_file": "dsP8C.jpg",
+   "title": "UP ONLY",
+   "subtitle": "",
+   "slogan": "UP ONLY",
+   "slogan_as_printed": "UP ONLY",
+   "series": "other",
+   "group": "unique (UP ONLY)",
+   "featured": null,
+   "images": {
+    "main": "img/products/up-only.webp",
+    "detail": "img/products/up-only-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "ebQXA",
+   "slug": "that-s-the-one",
+   "status": "preview",
+   "category": "other",
+   "source_file": "ebQXA.jpg",
+   "title": "THAT'S THE ONE",
+   "subtitle": "",
+   "slogan": "THAT'S THE ONE",
+   "slogan_as_printed": "THAT'S THE ONE",
+   "series": "other",
+   "group": "unique (THAT'S THE ONE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/that-s-the-one.webp",
+    "detail": "img/products/that-s-the-one-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "EhF6B",
+   "slug": "green-light",
+   "status": "preview",
+   "category": "other",
+   "source_file": "EhF6B.jpg",
+   "title": "GREEN LIGHT",
+   "subtitle": "",
+   "slogan": "GREEN LIGHT",
+   "slogan_as_printed": "GREEN LIGHT",
+   "series": "other",
+   "group": "unique (GREEN LIGHT)",
+   "featured": null,
+   "images": {
+    "main": "img/products/green-light.webp",
+    "detail": "img/products/green-light-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "eKECc",
+   "slug": "assigned-on-friday",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "eKECc.jpg",
+   "title": "ASSIGNED ON FRIDAY",
+   "subtitle": "Divorced by Monday.",
+   "slogan": "ASSIGNED ON FRIDAY / Divorced by Monday.",
+   "slogan_as_printed": "ASSIGNED ON FRIDAY / Divorced by Monday.",
+   "series": "loss",
+   "group": "unique (ASSIGNED ON FRIDAY)",
+   "featured": null,
+   "images": {
+    "main": "img/products/assigned-on-friday.webp",
+    "detail": "img/products/assigned-on-friday-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "F1Pdq",
+   "slug": "0dte-sent-me-to-zero",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "F1Pdq.jpg",
+   "title": "0DTE SENT ME TO ZERO",
+   "subtitle": "",
+   "slogan": "0DTE SENT ME TO ZERO",
+   "slogan_as_printed": "ODTE SENT ME TO ZERO",
+   "series": "loss",
+   "group": "unique (SENT ME TO ZERO)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-sent-me-to-zero.webp",
+    "detail": "img/products/0dte-sent-me-to-zero-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "f6Bfl",
+   "slug": "make-the-midterms-great-again",
+   "status": "preview",
+   "category": "political",
+   "source_file": "f6Bfl.jpg",
+   "title": "MAKE THE MIDTERMS GREAT AGAIN",
+   "subtitle": "",
+   "slogan": "MAKE THE MIDTERMS GREAT AGAIN",
+   "slogan_as_printed": "MAKE THE MIDTERMS GREAT AGAIN",
+   "series": "other",
+   "group": "unique (MIDTERMS GREAT AGAIN)",
+   "featured": null,
+   "images": {
+    "main": "img/products/make-the-midterms-great-again.webp",
+    "detail": "img/products/make-the-midterms-great-again-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "fGInC",
+   "slug": "long-and-strong",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "fGInC.jpg",
+   "title": "LONG AND STRONG",
+   "subtitle": "",
+   "slogan": "LONG AND STRONG",
+   "slogan_as_printed": "LONG AND STRONG",
+   "series": "innuendo",
+   "group": "unique (LONG AND STRONG)",
+   "featured": null,
+   "images": {
+    "main": "img/products/long-and-strong.webp",
+    "detail": "img/products/long-and-strong-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "FrsML",
+   "slug": "theta-is-my-only-friend",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "FrsML.jpg",
+   "title": "THETA IS MY ONLY FRIEND",
+   "subtitle": "EVERYONE ELSE LEFT",
+   "slogan": "THETA IS MY ONLY FRIEND / EVERYONE ELSE LEFT",
+   "slogan_as_printed": "THETA IS MY ONLY FRIEND / EVERYONE ELSE LEFT",
+   "series": "loss",
+   "group": "unique (THETA FRIEND)",
+   "featured": null,
+   "images": {
+    "main": "img/products/theta-is-my-only-friend.webp",
+    "detail": "img/products/theta-is-my-only-friend-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "FxTQG",
+   "slug": "momentum",
+   "status": "preview",
+   "category": "other",
+   "source_file": "FxTQG.jpg",
+   "title": "MOMENTUM",
+   "subtitle": "",
+   "slogan": "MOMENTUM",
+   "slogan_as_printed": "MOMENTUM",
+   "series": "other",
+   "group": "unique (MOMENTUM)",
+   "featured": null,
+   "images": {
+    "main": "img/products/momentum.webp",
+    "detail": "img/products/momentum-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "gj8dr",
+   "slug": "i-died-on-0dte",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "gj8dr.jpg",
+   "title": "I DIED ON 0DTE",
+   "subtitle": "",
+   "slogan": "I DIED ON 0DTE",
+   "slogan_as_printed": "I DIED ON ODTE",
+   "series": "loss",
+   "group": "unique (I DIED ON ODTE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-died-on-0dte.webp",
+    "detail": "img/products/i-died-on-0dte-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "gOd7v",
+   "slug": "i-voted-for-the-green-candle",
+   "status": "preview",
+   "category": "political",
+   "source_file": "gOd7v.jpg",
+   "title": "I VOTED FOR THE GREEN CANDLE",
+   "subtitle": "Trump Era",
+   "slogan": "I VOTED FOR THE GREEN CANDLE / Trump Era",
+   "slogan_as_printed": "I VOTED FOR THE GREEN CANDLE / Trump Era",
+   "series": "other",
+   "group": "unique (VOTED GREEN CANDLE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-voted-for-the-green-candle.webp",
+    "detail": "img/products/i-voted-for-the-green-candle-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "GS3kp",
+   "slug": "trump-will-fix-it",
+   "status": "preview",
+   "category": "political",
+   "source_file": "GS3kp.jpg",
+   "title": "TRUMP WILL FIX IT",
+   "subtitle": "Or You'll Be Broke",
+   "slogan": "TRUMP WILL FIX IT / Or You'll Be Broke",
+   "slogan_as_printed": "TRUMP WILL FIX IT / Or You'll Be Broke",
+   "series": "other",
+   "group": "unique (TRUMP WILL FIX IT)",
+   "featured": null,
+   "images": {
+    "main": "img/products/trump-will-fix-it.webp",
+    "detail": "img/products/trump-will-fix-it-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "GXSnZ",
+   "slug": "candle-deep-throat",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "GXSnZ.jpg",
+   "title": "CANDLE DEEP THROAT",
+   "subtitle": "",
+   "slogan": "CANDLE DEEP THROAT",
+   "slogan_as_printed": "CANDLE DEEP THROAT",
+   "series": "innuendo",
+   "group": "unique (CANDLE DEEP THROAT)",
+   "featured": null,
+   "images": {
+    "main": "img/products/candle-deep-throat.webp",
+    "detail": "img/products/candle-deep-throat-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "DEEP THROAT, THROAT (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "HONfK",
+   "slug": "my-account-died-with-trump",
+   "status": "preview",
+   "category": "political",
+   "source_file": "HONfK.jpg",
+   "title": "MY ACCOUNT DIED WITH TRUMP",
+   "subtitle": "Max Pain Achieved",
+   "slogan": "MY ACCOUNT DIED WITH TRUMP / Max Pain Achieved",
+   "slogan_as_printed": "MY ACCOUNT DIED WITH TRUMP / Max Pain Achieved",
+   "series": "other",
+   "group": "unique (TRUMP KILLED MY ACCOUNT)",
+   "featured": null,
+   "images": {
+    "main": "img/products/my-account-died-with-trump.webp",
+    "detail": "img/products/my-account-died-with-trump-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "real-person name (Trump): POD/marketplace policy check, unverified"
+    ]
+   }
+  },
+  {
+   "id": "ibJgu",
+   "slug": "0dte-candle-slut",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "ibJgu.jpg",
+   "title": "0DTE CANDLE SLUT",
+   "subtitle": "",
+   "slogan": "0DTE CANDLE SLUT",
+   "slogan_as_printed": "ODTE CANDLE SLUT",
+   "series": "innuendo",
+   "group": "unique (CANDLE SLUT)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-candle-slut.webp",
+    "detail": "img/products/0dte-candle-slut-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "SLUT (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "j9nE6",
+   "slug": "gamma-gang",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "j9nE6.jpg",
+   "title": "GAMMA GANG",
+   "subtitle": "Squeeze Me",
+   "slogan": "GAMMA GANG / Squeeze Me",
+   "slogan_as_printed": "GAMMA GANG / Squeeze Me",
+   "series": "other",
+   "group": "unique (GAMMA GANG)",
+   "featured": null,
+   "images": {
+    "main": "img/products/gamma-gang.webp",
+    "detail": "img/products/gamma-gang-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "jACcr",
+   "slug": "standing-tall",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "jACcr.jpg",
+   "title": "STANDING TALL",
+   "subtitle": "",
+   "slogan": "STANDING TALL",
+   "slogan_as_printed": "STANDING TALL",
+   "series": "innuendo",
+   "group": "unique (STANDING TALL)",
+   "featured": null,
+   "images": {
+    "main": "img/products/standing-tall.webp",
+    "detail": "img/products/standing-tall-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "JFb9o",
+   "slug": "i-sold-the-bottom",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "JFb9o.jpg",
+   "title": "I SOLD THE BOTTOM",
+   "subtitle": "Classic Me",
+   "slogan": "I SOLD THE BOTTOM / Classic Me",
+   "slogan_as_printed": "I SOLD THE BOTTOM / Classic Me",
+   "series": "loss",
+   "group": "unique (SOLD THE BOTTOM)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-sold-the-bottom.webp",
+    "detail": "img/products/i-sold-the-bottom-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "jsmJO",
+   "slug": "vega-gang",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "jsmJO.jpg",
+   "title": "VEGA GANG",
+   "subtitle": "IV Crush Survivor",
+   "slogan": "VEGA GANG / IV Crush Survivor",
+   "slogan_as_printed": "VEGA GANG / IV Crush Survivor",
+   "series": "other",
+   "group": "unique (VEGA GANG)",
+   "featured": null,
+   "images": {
+    "main": "img/products/vega-gang.webp",
+    "detail": "img/products/vega-gang-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "JYcOv",
+   "slug": "0dte-roulette",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "JYcOv.jpg",
+   "title": "0DTE ROULETTE",
+   "subtitle": "ONE SPIN. ZERO DAYS.",
+   "slogan": "0DTE ROULETTE / ONE SPIN. ZERO DAYS.",
+   "slogan_as_printed": "ODTE ROULETTE / ONE SPIN. ZERO DAYS.",
+   "series": "loss",
+   "group": "unique (ROULETTE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-roulette.webp",
+    "detail": "img/products/0dte-roulette-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "JzgXc",
+   "slug": "0dte-deep-throat",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "JzgXc.jpg",
+   "title": "0DTE DEEP THROAT",
+   "subtitle": "",
+   "slogan": "0DTE DEEP THROAT",
+   "slogan_as_printed": "ODTE DEEP THROAT",
+   "series": "innuendo",
+   "group": "unique (DEEP THROAT)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-deep-throat.webp",
+    "detail": "img/products/0dte-deep-throat-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "DEEP THROAT, THROAT (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "k7EXT",
+   "slug": "0dte-lottery-loser",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "k7EXT.jpg",
+   "title": "0DTE LOTTERY LOSER",
+   "subtitle": "",
+   "slogan": "0DTE LOTTERY LOSER",
+   "slogan_as_printed": "ODTE LOTTERY LOSER",
+   "series": "loss",
+   "group": "unique (LOTTERY)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-lottery-loser.webp",
+    "detail": "img/products/0dte-lottery-loser-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "print_quality=busy"
+    ]
+   }
+  },
+  {
+   "id": "Kj9Pn",
+   "slug": "0dte-pain",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "Kj9Pn.jpg",
+   "title": "0DTE PAIN",
+   "subtitle": "Send Help",
+   "slogan": "0DTE PAIN / Send Help",
+   "slogan_as_printed": "ODTE PAIN / Send Help",
+   "series": "loss",
+   "group": "unique (ODTE PAIN)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-pain.webp",
+    "detail": "img/products/0dte-pain-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "KRnCO",
+   "slug": "midterms-or-riot",
+   "status": "preview",
+   "category": "political",
+   "source_file": "KRnCO.jpg",
+   "title": "MIDTERMS OR RIOT",
+   "subtitle": "",
+   "slogan": "MIDTERMS OR RIOT",
+   "slogan_as_printed": "MIDTERMS OR RIOT",
+   "series": "other",
+   "group": "unique (MIDTERMS OR RIOT)",
+   "featured": null,
+   "images": {
+    "main": "img/products/midterms-or-riot.webp",
+    "detail": "img/products/midterms-or-riot-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "RIOT (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "kU5qL",
+   "slug": "i-sold-the-top",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "kU5qL.jpg",
+   "title": "I SOLD THE TOP",
+   "subtitle": "\"My Wife Is So Proud\"",
+   "slogan": "I SOLD THE TOP / \"My Wife Is So Proud\"",
+   "slogan_as_printed": "I SOLD THE TOP / \"My Wife Is So Proud\"",
+   "series": "loss",
+   "group": "unique (SOLD THE TOP)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-sold-the-top.webp",
+    "detail": "img/products/i-sold-the-top-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "mN0Ug",
+   "slug": "account-balance-emotional-damage",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "mN0Ug.jpg",
+   "title": "ACCOUNT BALANCE: EMOTIONAL DAMAGE",
+   "subtitle": "",
+   "slogan": "ACCOUNT BALANCE: EMOTIONAL DAMAGE",
+   "slogan_as_printed": "ACCOUNT BALANCE: EMOTIONAL DAMAGE",
+   "series": "loss",
+   "group": "unique (EMOTIONAL DAMAGE)",
+   "featured": 5,
+   "images": {
+    "main": "img/products/account-balance-emotional-damage.webp",
+    "detail": "img/products/account-balance-emotional-damage-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "nH5vB",
+   "slug": "executive-dysfunction",
+   "status": "preview",
+   "category": "adhd",
+   "source_file": "nH5vB.jpg",
+   "title": "EXECUTIVE DYSFUNCTION",
+   "subtitle": "Brain Loading...",
+   "slogan": "EXECUTIVE DYSFUNCTION / Brain Loading...",
+   "slogan_as_printed": "EXECUTIVE DYSFUNCTION / Brain Loading...",
+   "series": "other",
+   "group": "unique (EXECUTIVE DYSFUNCTION)",
+   "featured": null,
+   "images": {
+    "main": "img/products/executive-dysfunction.webp",
+    "detail": "img/products/executive-dysfunction-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": [
+     "print_quality=busy"
+    ]
+   }
+  },
+  {
+   "id": "nTV6M",
+   "slug": "i-came-for-the-candle",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "nTV6M.jpg",
+   "title": "I CAME FOR THE CANDLE",
+   "subtitle": "",
+   "slogan": "I CAME FOR THE CANDLE",
+   "slogan_as_printed": "I CAME FOR THE CANDLE",
+   "series": "innuendo",
+   "group": "unique (CAME FOR THE CANDLE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-came-for-the-candle.webp",
+    "detail": "img/products/i-came-for-the-candle-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "CAME (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "nVgxY",
+   "slug": "covered-call-club",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "nVgxY.jpg",
+   "title": "COVERED CALL CLUB",
+   "subtitle": "",
+   "slogan": "COVERED CALL CLUB",
+   "slogan_as_printed": "COVERED CALL CLUB",
+   "series": "other",
+   "group": "unique (COVERED CALL CLUB)",
+   "featured": null,
+   "images": {
+    "main": "img/products/covered-call-club.webp",
+    "detail": "img/products/covered-call-club-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "oAJcI",
+   "slug": "i-blew-up-on-0dte",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "oAJcI.jpg",
+   "title": "I BLEW UP ON 0DTE",
+   "subtitle": "",
+   "slogan": "I BLEW UP ON 0DTE",
+   "slogan_as_printed": "I BLEW UP ON ØDTE",
+   "series": "loss",
+   "group": "unique (BLEW UP)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-blew-up-on-0dte.webp",
+    "detail": "img/products/i-blew-up-on-0dte-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "no: slashed zero Ø (per catalog notes)",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "ooaNa",
+   "slug": "theta-decay-is-my-love-language",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "ooaNa.jpg",
+   "title": "THETA DECAY IS MY LOVE LANGUAGE",
+   "subtitle": "",
+   "slogan": "THETA DECAY IS MY LOVE LANGUAGE",
+   "slogan_as_printed": "THETA DECAY IS MY LOVE LANGUAGE",
+   "series": "other",
+   "group": "unique (THETA LOVE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/theta-decay-is-my-love-language.webp",
+    "detail": "img/products/theta-decay-is-my-love-language-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "P9qpn",
+   "slug": "green-candle-0dte",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "P9qpn.jpg",
+   "title": "GREEN CANDLE 0DTE",
+   "subtitle": "",
+   "slogan": "GREEN CANDLE 0DTE",
+   "slogan_as_printed": "GREEN CANDLE ODTE",
+   "series": "innuendo",
+   "group": "unique (GREEN CANDLE ODTE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/green-candle-0dte.webp",
+    "detail": "img/products/green-candle-0dte-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "pF9td",
+   "slug": "0dte-deep-throat-champ",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "pF9td.jpg",
+   "title": "0DTE DEEP THROAT CHAMP",
+   "subtitle": "",
+   "slogan": "0DTE DEEP THROAT CHAMP",
+   "slogan_as_printed": "ODTE DEEP THROAT CHAMP",
+   "series": "innuendo",
+   "group": "unique (DEEP THROAT CHAMP)",
+   "featured": 8,
+   "images": {
+    "main": "img/products/0dte-deep-throat-champ.webp",
+    "detail": "img/products/0dte-deep-throat-champ-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "DEEP THROAT, THROAT (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "rjkfm",
+   "slug": "the-greeks",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "rjkfm.jpg",
+   "title": "THE GREEKS",
+   "subtitle": "",
+   "slogan": "THE GREEKS",
+   "slogan_as_printed": "THE GREEKS",
+   "series": "other",
+   "group": "unique (THE GREEKS)",
+   "featured": null,
+   "images": {
+    "main": "img/products/the-greeks.webp",
+    "detail": "img/products/the-greeks-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "rttzi",
+   "slug": "0dte-is-a-death-wish",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "rttzi.jpg",
+   "title": "0DTE IS A DEATH WISH",
+   "subtitle": "",
+   "slogan": "0DTE IS A DEATH WISH",
+   "slogan_as_printed": "ODTE IS A DEATH WISH",
+   "series": "loss",
+   "group": "unique (DEATH WISH)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-is-a-death-wish.webp",
+    "detail": "img/products/0dte-is-a-death-wish-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "TLcJG",
+   "slug": "i-sold-my-soul-for-0dte",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "TLcJG.jpg",
+   "title": "I SOLD MY SOUL FOR 0DTE",
+   "subtitle": "",
+   "slogan": "I SOLD MY SOUL FOR 0DTE",
+   "slogan_as_printed": "I SOLD MY SOUL FOR ODTE",
+   "series": "loss",
+   "group": "unique (SOLD MY SOUL)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-sold-my-soul-for-0dte.webp",
+    "detail": "img/products/i-sold-my-soul-for-0dte-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "tZu3d",
+   "slug": "0dte-full-throat",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "tZu3d.jpg",
+   "title": "0DTE FULL THROAT",
+   "subtitle": "",
+   "slogan": "0DTE FULL THROAT",
+   "slogan_as_printed": "ODTE FULL THROAT",
+   "series": "innuendo",
+   "group": "unique (FULL THROAT)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-full-throat.webp",
+    "detail": "img/products/0dte-full-throat-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "FULL THROAT, THROAT (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "uLMHL",
+   "slug": "0dte-mouth-full",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "uLMHL.jpg",
+   "title": "0DTE MOUTH FULL",
+   "subtitle": "",
+   "slogan": "0DTE MOUTH FULL",
+   "slogan_as_printed": "ODTE MOUTH FULL",
+   "series": "innuendo",
+   "group": "unique (MOUTH FULL)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-mouth-full.webp",
+    "detail": "img/products/0dte-mouth-full-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "MOUTH (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "Unfci",
+   "slug": "wheel-strategy",
+   "status": "preview",
+   "category": "options-gang",
+   "source_file": "Unfci.jpg",
+   "title": "WHEEL STRATEGY",
+   "subtitle": "CASH SECURED ONLY",
+   "slogan": "WHEEL STRATEGY / CASH SECURED ONLY",
+   "slogan_as_printed": "WHEEL STRATEGY / CASH SECURED ONLY",
+   "series": "other",
+   "group": "unique (WHEEL STRATEGY)",
+   "featured": null,
+   "images": {
+    "main": "img/products/wheel-strategy.webp",
+    "detail": "img/products/wheel-strategy-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "vUFEX",
+   "slug": "0dte-sucks",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "vUFEX.jpg",
+   "title": "0DTE SUCKS",
+   "subtitle": "",
+   "slogan": "0DTE SUCKS",
+   "slogan_as_printed": "ODTE SUCKS",
+   "series": "innuendo",
+   "group": "unique (ODTE SUCKS)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-sucks.webp",
+    "detail": "img/products/0dte-sucks-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "SUCK (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "wqmft",
+   "slug": "i-only-suck-on-green-candles",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "wqmft.jpg",
+   "title": "I ONLY SUCK ON GREEN CANDLES",
+   "subtitle": "",
+   "slogan": "I ONLY SUCK ON GREEN CANDLES",
+   "slogan_as_printed": "I ONLY SUCK ON GREEN CANDLES",
+   "series": "innuendo",
+   "group": "unique (ONLY SUCK ON GREEN CANDLES)",
+   "featured": 7,
+   "images": {
+    "main": "img/products/i-only-suck-on-green-candles.webp",
+    "detail": "img/products/i-only-suck-on-green-candles-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "SUCK (POD/payment rules unchecked)",
+    "other": []
+   }
+  },
+  {
+   "id": "wTkSQ",
+   "slug": "green-candle-energy",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "wTkSQ.jpg",
+   "title": "GREEN CANDLE ENERGY",
+   "subtitle": "That's What She Said",
+   "slogan": "GREEN CANDLE ENERGY / That's What She Said",
+   "slogan_as_printed": "GREEN CANDLE ENERGY / That's What She Said",
+   "series": "innuendo",
+   "group": "unique (GREEN CANDLE ENERGY)",
+   "featured": null,
+   "images": {
+    "main": "img/products/green-candle-energy.webp",
+    "detail": "img/products/green-candle-energy-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "WtWw8",
+   "slug": "0dte-deep-end",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "WtWw8.jpg",
+   "title": "0DTE DEEP END",
+   "subtitle": "",
+   "slogan": "0DTE DEEP END",
+   "slogan_as_printed": "ODTE DEEP END",
+   "series": "innuendo",
+   "group": "unique (DEEP END)",
+   "featured": null,
+   "images": {
+    "main": "img/products/0dte-deep-end.webp",
+    "detail": "img/products/0dte-deep-end-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "yes: catalog transcription reads 'ODTE' (letter O); art not visually verified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "X8Ayj",
+   "slug": "big-one",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "X8Ayj.jpg",
+   "title": "BIG ONE",
+   "subtitle": "",
+   "slogan": "BIG ONE",
+   "slogan_as_printed": "BIG ONE",
+   "series": "innuendo",
+   "group": "unique (BIG ONE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/big-one.webp",
+    "detail": "img/products/big-one-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "xmW5u",
+   "slug": "i-live-for-the-candle",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "xmW5u.jpg",
+   "title": "I LIVE FOR THE CANDLE",
+   "subtitle": "",
+   "slogan": "I LIVE FOR THE CANDLE",
+   "slogan_as_printed": "I LIVE FOR THE CANDLE",
+   "series": "innuendo",
+   "group": "unique (LIVE FOR THE CANDLE)",
+   "featured": null,
+   "images": {
+    "main": "img/products/i-live-for-the-candle.webp",
+    "detail": "img/products/i-live-for-the-candle-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "yn2aF",
+   "slug": "green-candle-lover",
+   "status": "preview",
+   "category": "green-candle",
+   "source_file": "yn2aF.jpg",
+   "title": "GREEN CANDLE LOVER",
+   "subtitle": "",
+   "slogan": "GREEN CANDLE LOVER",
+   "slogan_as_printed": "GREEN CANDLE LOVER",
+   "series": "innuendo",
+   "group": "unique (GREEN CANDLE LOVER)",
+   "featured": null,
+   "images": {
+    "main": "img/products/green-candle-lover.webp",
+    "detail": "img/products/green-candle-lover-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "ZGM8W",
+   "slug": "account-down-80",
+   "status": "preview",
+   "category": "0dte-losses",
+   "source_file": "ZGM8W.jpg",
+   "title": "ACCOUNT DOWN 80%",
+   "subtitle": "",
+   "slogan": "ACCOUNT DOWN 80%",
+   "slogan_as_printed": "ACCOUNT DOWN 80%",
+   "series": "loss",
+   "group": "unique (ACCOUNT DOWN)",
+   "featured": null,
+   "images": {
+    "main": "img/products/account-down-80.webp",
+    "detail": "img/products/account-down-80-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  },
+  {
+   "id": "Zx4KL",
+   "slug": "short-legs-long-memory",
+   "status": "preview",
+   "category": "dachshund",
+   "source_file": "Zx4KL.jpg",
+   "title": "SHORT LEGS LONG MEMORY",
+   "subtitle": "ONLY 250 MADE",
+   "slogan": "SHORT LEGS LONG MEMORY / ONLY 250 MADE",
+   "slogan_as_printed": "SHORT LEGS LONG MEMORY / ONLY 250 MADE",
+   "series": "other",
+   "group": "unique (SHORT LEGS)",
+   "featured": null,
+   "images": {
+    "main": "img/products/short-legs-long-memory.webp",
+    "detail": "img/products/short-legs-long-memory-detail.webp"
+   },
+   "img_size": [
+    600,
+    894
+   ],
+   "pod_url": "",
+   "_review": {
+    "odte_letter_o": "none in transcribed slogan; small print on art unverified",
+    "stamp_cut_off": "not noted; unverified",
+    "risky_words": "none detected in slogan (unverified)",
+    "other": []
+   }
+  }
+ ]
 }

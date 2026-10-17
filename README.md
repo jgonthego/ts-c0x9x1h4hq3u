@@ -1,14 +1,12 @@
-# Tee shop (preview): limited-drop black tees for options traders
+# Tee shop (preview): limited-drop black tees
 
 Static site, HTML/CSS/vanilla JS, built by `build.py` (Python stdlib only) into `docs/`.
-**Preview only.** No repo, store, or account exists yet. All product art is an unapproved,
-watermarked draft placeholder.
+**Preview only.** No store or checkout exists. Product images are the owner's real designs as
+watermarked web copies; nothing is approved for sale and prices are placeholders.
 
 ## Quick start
 ```bash
-python3 build.py                                  # -> docs/
-python3 -m http.server 8473 -d docs --bind 127.0.0.1   # open http://localhost:8473
-/tmp/pwv/bin/python tools/check_site.py http://localhost:8473   # QA + screenshots
+python3 build.py      # -> docs/   (see "Local preview" below for serving)
 ```
 
 ## Where to change things
@@ -17,26 +15,32 @@ python3 -m http.server 8473 -d docs --bind 127.0.0.1   # open http://localhost:8
 | **Brand name** (placeholder `[Brand TBD]`) | `src/data/site.json` → `BRAND` (the only place) |
 | Drop date / countdown | `site.json` → `DROP_AT` (ISO 8601 with offset; empty = "Date TBA") |
 | Email signup | `site.json` → `FORM_ID` (empty = form disabled). `FORM_ACTION_TEMPLATE` defaults to Formspree |
-| Products | `src/data/products.json` (`collection`, `art`: `artwork`/`typographic`, optional `tm_check`, `type_spec`) |
-| Collections / filter tabs | `site.json` → `COLLECTIONS` |
-| Buy button | per product: `status: "approved"` **and** `pod_url` set (Printful/Printify/Shopify/Etsy link). Otherwise the button reads "Coming soon" and is disabled |
+| Placeholder price | `site.json` → `PRICE_PLACEHOLDER` (shown as "… placeholder · not final") |
+| Categories / filter chips | `site.json` → `CATEGORIES` (`slug` is the shareable `?cat=` value; `adult: true` shows 18+ notices) |
+| Products | `src/data/products.json`, **generated** by `tools/import_library.py` |
+| Buy button | per product: `status: "approved"`, a final `price`, **and** `pod_url`. Otherwise "Coming soon", disabled. No cart/checkout exists |
 | Hosting path | `PATH_PREFIX` / `SITE_URL` (env vars or `site.json`). GitHub Actions sets these automatically |
 
-## Swapping in approved designs
-1. Put final images in `src/img/products/` (`<slug>-mockup.jpg`, `<slug>-print.jpg`, roughly 4:5).
-2. In `products.json`: set `status` to `"approved"`, remove `draft_source`, fill `pod_url`.
-3. `python3 build.py`. The build fails if an approved product still points at a draft source,
-   if an image is missing, or if anyone tries to use blocked drafts #01/#05.
+## Products come from the merch library
+```bash
+python3 tools/import_library.py /workspace/merch/library   # needs Pillow; ~1 min
+python3 build.py
+```
+The importer reads `catalog.csv`, keeps one product per concept (`best_in_group = yes`), skips the
+five garbled mockups, maps rows to categories (rules at the top of the script; anything unmatched goes
+to **Other**), writes 600px-wide watermarked WebP copies (`PREVIEW · NOT FOR SALE`) to
+`src/img/products/` (originals are never modified), sets the featured top 8, and writes the internal
+**`REVIEW.md`** (per-product flags: ODTE letter-O, stamp cut off, risky words). The `_review` data in
+`products.json` and `REVIEW.md` are never rendered on public pages.
 
-## Draft placeholders
-`tools/make_draft_images.py` reads the raw mockups named by each product's `draft_source` under
-`/workspace/merch/` (kept **outside** the repo) and writes watermarked "DRAFT — NOT APPROVED" JPGs.
-`tools/make_type_mockups.py` renders free typographic black-tee mockups (Python/PIL, open fonts,
-simple vector shapes, no AI/paid tools, no real-person likenesses) for text-only concepts from
-`type_spec`, with the same watermark.
-Space Roadster v2 #01/#05 (car resembles a Corvette) and v1 #03/#07 (drone-ship landing) carry
-`tm_check` and show an internal "trademark check needed" badge; `build.py` refuses to approve a
-product while `tm_check` is set.
+## Local preview
+`PATH_PREFIX` is `/ts-c0x9x1h4hq3u`, so serve the parent of a symlink:
+```bash
+mkdir -p /tmp/teeshop-serve && ln -sfn "$PWD/docs" /tmp/teeshop-serve/ts-c0x9x1h4hq3u
+python3 -m http.server 8473 -d /tmp/teeshop-serve --bind 127.0.0.1
+# open http://127.0.0.1:8473/ts-c0x9x1h4hq3u/
+/tmp/pwv/bin/python tools/check_site.py http://127.0.0.1:8473/ts-c0x9x1h4hq3u   # QA + screenshots
+```
 
 ## Deploy later (not done)
 `.github/workflows/pages.yml` builds and deploys `docs/` to GitHub Pages once the repo is

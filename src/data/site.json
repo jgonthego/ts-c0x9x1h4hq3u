@@ -13,27 +13,63 @@
   "_FORM_help": "Email form stays disabled until FORM_ID is set. Any provider that accepts a POST with an 'email' field works; change FORM_ACTION_TEMPLATE to match.",
   "CONTACT_EMAIL": "",
   "CURRENCY": "USD",
-  "COLLECTIONS": [
+  "PRICE_PLACEHOLDER": "$34–$45",
+  "_PRICE_help": "Placeholder price range shown on every product, always labelled 'placeholder · not final'. No checkout exists.",
+  "CATEGORIES": [
     {
-      "key": "space-roadster",
-      "name": "Space Roadster",
-      "blurb": "Lost in orbit with a red convertible and a bad position."
+      "key": "0dte-losses",
+      "slug": "0dte",
+      "name": "0DTE Losses",
+      "blurb": "Zero days to expiration. Zero dollars remaining."
     },
     {
-      "key": "trader-pain",
-      "name": "Trader Pain / Expired Worthless",
-      "short": "Trader Pain",
-      "blurb": "0DTE, the wheel, IV crush, max pain. Weekly suffering, wearable."
+      "key": "green-candle",
+      "slug": "green-candle",
+      "name": "Green Candle",
+      "adult": true,
+      "blurb": "Innuendo about green candles. Adult humor."
     },
     {
-      "key": "pizza",
-      "name": "Pizza",
-      "blurb": "Feelings, boundaries, and marinara."
+      "key": "options-gang",
+      "slug": "options-gang",
+      "name": "Options Gang",
+      "blurb": "Theta, iron condors, the wheel, and the Greeks."
     },
     {
-      "key": "political-pain",
-      "name": "Political Pain",
-      "blurb": "Midterms, markets, and the people who trade both. Text only, no likenesses."
+      "key": "political",
+      "slug": "political",
+      "name": "Political",
+      "blurb": "Midterms, markets, and the people who trade both."
+    },
+    {
+      "key": "gym",
+      "slug": "gym",
+      "name": "Gym",
+      "blurb": "Deadlifts and Hyrox. No spotter needed."
+    },
+    {
+      "key": "night-nurse",
+      "slug": "night-shift-nurse",
+      "name": "Night Shift Nurse",
+      "blurb": "For the people who work nights so you can live."
+    },
+    {
+      "key": "dachshund",
+      "slug": "dachshund",
+      "name": "Dachshund",
+      "blurb": "Long dog energy."
+    },
+    {
+      "key": "adhd",
+      "slug": "adhd",
+      "name": "ADHD",
+      "blurb": "Too many tabs open."
+    },
+    {
+      "key": "other",
+      "slug": "other",
+      "name": "Other",
+      "blurb": "Green lights, momentum, and up-only delusions."
     }
   ]
 }

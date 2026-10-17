@@ -42,26 +42,38 @@
     });
   });
 
-  // Collection filter tabs (all cards show without JS)
+  // Category filter chips. Chips are plain links (?cat=<slug>), so a filtered view is shareable.
+  // With JS the grid filters in place; without JS every design still shows.
   var fbox = document.querySelector("[data-filters]"), grid = document.querySelector("[data-grid]");
   if (fbox && grid) {
     var note = document.querySelector("[data-filter-note]");
+    var valid = function (k) { return k && fbox.querySelector('[data-filter="' + k + '"]') ? k : "all"; };
     var apply = function (key) {
       var n = 0;
       grid.querySelectorAll(".card").forEach(function (c) {
-        var show = key === "all" || c.getAttribute("data-collection") === key;
+        var show = key === "all" || c.getAttribute("data-cat") === key;
         c.hidden = !show; if (show) n++;
       });
-      fbox.querySelectorAll(".ftab").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.filter === key ? "true" : "false"); });
+      fbox.querySelectorAll(".ftab").forEach(function (b) {
+        if (b.dataset.filter === key) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current");
+      });
+      document.querySelectorAll("[data-cat-note]").forEach(function (el) { el.hidden = el.getAttribute("data-cat-note") !== key; });
       if (note) note.textContent = "Showing " + n + " design" + (n === 1 ? "" : "s");
     };
+    var fromUrl = function () {
+      var k = null;
+      try { k = new URLSearchParams(location.search).get("cat"); } catch (x) {}
+      if (!k) { var m = /^#c-([a-z0-9-]+)$/.exec(location.hash); if (m) k = m[1]; } // old links
+      return valid(k);
+    };
     fbox.addEventListener("click", function (ev) {
-      var b = ev.target.closest(".ftab"); if (!b) return;
-      apply(b.dataset.filter);
-      try { history.replaceState(null, "", b.dataset.filter === "all" ? location.pathname : "#c-" + b.dataset.filter); } catch (x) {}
+      var b = ev.target.closest(".ftab"); if (!b || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+      ev.preventDefault();
+      var k = b.dataset.filter; apply(k);
+      try { history.pushState(null, "", location.pathname + (k === "all" ? "" : "?cat=" + encodeURIComponent(k))); } catch (x) {}
     });
-    var m = /^#c-([a-z0-9-]+)$/.exec(location.hash);
-    if (m && fbox.querySelector('[data-filter="' + m[1] + '"]')) apply(m[1]);
+    window.addEventListener("popstate", function () { apply(fromUrl()); });
+    apply(fromUrl());
   }
 
   // Belt and braces: never submit the signup form when it's not configured
