@@ -104,7 +104,7 @@ def page(title, body, path="", desc=None, og_image=None):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(full_title)}</title>
 <meta name="description" content="{e(desc)}">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="theme-color" content="#000000">
 <meta property="og:title" content="{e(full_title)}">
 <meta property="og:description" content="{e(desc)}">

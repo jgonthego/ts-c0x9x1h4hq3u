@@ -31,7 +31,8 @@ jobs:
           # Project pages live under /<repo>; a custom domain or user site uses "".
           # Override with repo variables PATH_PREFIX / SITE_URL / FORM_ID if needed.
           PATH_PREFIX: ${{ vars.PATH_PREFIX != '' && vars.PATH_PREFIX || steps.pages.outputs.base_path }}
-          SITE_URL: ${{ vars.SITE_URL != '' && vars.SITE_URL || steps.pages.outputs.origin }}
+          # Hidden preview: no SITE_URL, so no canonical / absolute og URLs are emitted.
+          SITE_URL: ${{ vars.SITE_URL }}
           FORM_ID: ${{ vars.FORM_ID }}
         run: python build.py
       - uses: actions/upload-pages-artifact@v3
