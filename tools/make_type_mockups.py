@@ -338,6 +338,105 @@ def m_decay(d, box, im):
     d.line((cx, cy, cx, cy - 40), fill=BONE, width=5); d.line((cx, cy, cx + 30, cy + 10), fill=BONE, width=5)
 
 
+GREY = (150, 150, 150, 255)
+
+
+def drips(d, x0, x1, y, maxlen, seed=5, n=8):
+    r = random.Random(seed)
+    for i in range(n):
+        x = x0 + i * (x1 - x0) / (n - 1); L = r.randint(15, int(maxlen)); w = r.randint(8, 16)
+        d.rectangle((x - w / 2, y, x + w / 2, y + L), fill=RED); d.ellipse((x - w * .8, y + L - w * .6, x + w * .8, y + L + w), fill=RED)
+
+
+def m_desk(d, box, im):  # Political #1: skull + long red tie at cracked desk, 3 monitors, $0.00 ticker
+    x0, y0, x1, y1 = box; cx = (x0 + x1) / 2; mw = (x1 - x0 - 80) / 3; mh = (y1 - y0) * .3
+    for k in range(3):
+        a = x0 + 20 + k * (mw + 20); d.rectangle((a, y0, a + mw, y0 + mh), outline=BONE, width=5)
+        candles(d, (a + 12, y0 + 12, a + mw - 12, y0 + mh - 12), 7, seed=k + 11)
+        drips(d, a + 20, a + mw - 20, y0 + mh, 40, seed=k, n=4)
+    sy = y0 + mh + 95; skull(d, cx, sy, 62)
+    d.polygon([(cx - 14, sy + 70), (cx + 14, sy + 70), (cx + 22, y1 - 62), (cx, y1 - 46), (cx - 22, y1 - 62)], fill=RED)
+    dy = y1 - 88; d.rectangle((x0 + 20, dy, x1 - 20, dy + 22), fill=BONE)
+    d.line((cx + 120, dy, cx + 150, dy + 22), fill=INK, width=5); d.line((cx - 200, dy, cx - 180, dy + 22), fill=INK, width=4)
+    d.polygon([(cx - 14, sy + 70), (cx + 14, sy + 70), (cx + 22, y1 - 62), (cx, y1 - 46), (cx - 22, y1 - 62)], fill=RED)  # tie over desk
+    tb = (x0 + 20, y1 - 40, x1 - 20, y1); d.rectangle(tb, fill=INK, outline=RED, width=3)
+    ctext(d, cx, y1 - 20, "ACCOUNT VALUE: $0.00  ▼ -100.00%", F("spacemono", 24), RED, "mm")
+
+
+def m_coffin(d, box, im):  # #2: coffin ballot box + giant red candle stake, red drip
+    x0, y0, x1, y1 = box; cx = (x0 + x1) / 2; h = y1 - y0
+    drips(d, x0 + 120, x1 - 120, y0, h * .12, seed=8, n=9)
+    t = y0 + h * .2
+    pts = [(cx - 70, t), (cx + 70, t), (cx + 130, t + h * .25), (cx + 85, y1), (cx - 85, y1), (cx - 130, t + h * .25)]
+    d.polygon(pts, fill=BONE); d.line(pts + [pts[0]], fill=INK, width=4)
+    d.rectangle((cx - 50, t + h * .12, cx + 50, t + h * .16), fill=INK)  # ballot slot
+    ctext(d, cx, t + h * .42, "BALLOTS", F("alfa", 34), INK, "mm")
+    ctext(d, cx, t + h * .55, "11 · 03", F("spacemono", 26), INK, "mm")
+    d.line((cx + 20, y0 + h * .02, cx + 20, t + h * .5), fill=RED, width=8)
+    d.rectangle((cx - 4, y0 + h * .1, cx + 44, t + h * .3), fill=RED)
+
+
+def m_wallet(d, box, im):  # #3: empty wallet nailed to wall of red candles, skull in cash slot, SERIES 01 check
+    x0, y0, x1, y1 = box; cx = (x0 + x1) / 2
+    candles(d, (x0 + 10, y0, x1 - 10, y1), 20, seed=21)
+    w, h = (x1 - x0) * .32, (y1 - y0) * .3; wy = (y0 + y1) / 2 - 10
+    d.rounded_rectangle((cx - w, wy - h, cx + w, wy + h), radius=22, fill=(40, 30, 26, 255), outline=BONE, width=6)
+    d.rectangle((cx - w * .8, wy - h * .55, cx + w * .8, wy - h * .3), fill=INK)
+    skull(d, cx, wy - h * .38, 26)
+    d.rectangle((cx - w * .8, wy - h * .55, cx + w * .8, wy - h * .45), fill=(40, 30, 26, 255))
+    d.ellipse((cx - 12, wy + h * .25, cx + 12, wy + h * .25 + 24), fill=GREY); d.line((cx, wy + h * .3, cx - 30, wy + h * .1), fill=GREY, width=5)
+    ctext(d, cx, wy + h * .62, "EMPTY", F("spacemono", 22), BONE, "mm")
+    kx, ky = x1 - 150, y1 - 40
+    d.line((kx - 70, ky - 40, kx - 25, ky, kx + 70, ky - 110), fill=RED, width=26, joint="curve")
+    ctext(d, kx + 10, ky + 8, "SERIES 01", F("anton", 26), BONE, "mt")
+
+
+def m_house(d, box, im):  # #4: house in chains, ASSIGNED stamp on door, skull + candle in window
+    x0, y0, x1, y1 = box; cx = (x0 + x1) / 2; w = (y1 - y0) * .55; top = y0 + 20; wall = y0 + (y1 - y0) * .38
+    d.polygon([(cx - w - 30, wall), (cx, top), (cx + w + 30, wall)], fill=RED)
+    d.rectangle((cx - w, wall, cx + w, y1 - 10), fill=BONE)
+    d.rectangle((cx - 45, y1 - 150, cx + 45, y1 - 10), fill=(60, 60, 60, 255))
+    wx = cx - w * .6; d.rectangle((wx - 55, wall + 30, wx + 55, wall + 130), fill=INK)
+    skull(d, wx, wall + 82, 26); candle(d, wx + 38, wall + 128, 26, 10)
+    d.rectangle((cx + w * .6 - 55, wall + 30, cx + w * .6 + 55, wall + 130), fill=INK)
+    for k in range(-6, 7):  # chain across the house
+        x = cx + k * 44; y = wall + 170 + abs(k) * 6
+        d.ellipse((x - 24, y - 12, x + 24, y + 12), outline=GREY, width=7)
+    st = rot_text("ASSIGNED", F("anton", 40), RED, 12, pad=8)
+    im.alpha_composite(st, (int(cx - st.width / 2), int(y1 - 110 - st.height / 2)))
+
+
+def m_cliff(d, box, im):  # #5: tiny green candle, red cliff, skydiving skull, no parachute
+    x0, y0, x1, y1 = box; L = x0 + 40; top = y0 + 70
+    d.rectangle((L + 30, top - 30, L + 50, top + 10), fill=(60, 200, 90, 255)); d.line((L + 40, top - 45, L + 40, top + 22), fill=(60, 200, 90, 255), width=3)
+    d.polygon([(L, top + 22), (L + 230, top + 22), (L + 260, y1), (L, y1)], fill=RED)
+    for k in range(5):
+        x = L + 270 + k * 70; yy = top + 60 + k * 55
+        d.line((x, yy - 30, x, yy + 70), fill=RED, width=4); d.rectangle((x - 14, yy - 10, x + 14, yy + 50), fill=RED)
+    sx, sy = x1 - 170, y0 + 150; skull(d, sx, sy, 46)
+    for a, b2 in (((sx - 40, sy + 40), (sx - 110, sy - 10)), ((sx + 40, sy + 40), (sx + 110, sy - 10)), ((sx - 20, sy + 60), (sx - 60, sy + 140)), ((sx + 20, sy + 60), (sx + 60, sy + 140))):
+        d.line((a, b2), fill=BONE, width=12)
+    for k in range(3): d.line((sx - 30 + k * 30, sy - 110, sx - 30 + k * 30, sy - 70), fill=BONE, width=3)  # speed lines
+    ctext(d, sx, sy + 175, "NO PARACHUTE", F("spacemono", 20), BONE, "mt")
+
+
+def m_cake(d, box, im):  # #6: skull in party hat with sparkler, ballot-box birthday cake of red candles
+    x0, y0, x1, y1 = box; cx = (x0 + x1) / 2
+    sx, sy = x0 + 190, y0 + 170; skull(d, sx, sy, 60)
+    d.polygon([(sx - 40, sy - 58), (sx + 40, sy - 58), (sx + 6, sy - 175)], fill=RED)
+    for k in range(4): d.line((sx - 32 + k * 12, sy - 70 - k * 25, sx + 24 - k * 6, sy - 70 - k * 25), fill=BONE, width=5)
+    px, py = sx + 120, sy - 40; d.line((sx + 50, sy + 30, px, py), fill=GREY, width=5)
+    for a in range(0, 360, 30):
+        r = math.radians(a); d.line((px, py, px + math.cos(r) * 34, py + math.sin(r) * 34), fill=BONE, width=3)
+    bx0, bx1, bt = cx - 30, x1 - 40, y0 + (y1 - y0) * .48
+    d.rectangle((bx0, bt, bx1, y1 - 10), fill=BONE); d.rectangle((bx0, bt, bx1, bt + 20), fill=RED)
+    d.rectangle(((bx0 + bx1) / 2 - 50, bt + 45, (bx0 + bx1) / 2 + 50, bt + 57), fill=INK)
+    ctext(d, (bx0 + bx1) / 2, bt + 100, "VOTE", F("alfa", 40), INK, "mm")
+    for k in range(5):
+        x = bx0 + 35 + k * (bx1 - bx0 - 70) / 4; d.line((x, bt - 80, x, bt), fill=RED, width=3); d.rectangle((x - 11, bt - 66, x + 11, bt - 4), fill=RED)
+        d.polygon([(x, bt - 112), (x - 7, bt - 88), (x + 7, bt - 88)], fill=BONE)
+
+
 MOTIFS = {k[2:]: v for k, v in globals().items() if k.startswith("m_")}
 MOTIF_H = 380
 

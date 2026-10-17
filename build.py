@@ -213,7 +213,7 @@ def product_card(p, i):
       <p class="card-coll">{e(coll_name(p, True))}{' · type mockup' if p.get('art') == 'typographic' else ''}</p>
       <h3 class="card-title">{e(p['title'])}</h3>
       <p class="card-slogan">“{e(p['slogan_top'])} {e(p['slogan_bottom'])}”</p>
-      <div class="card-meta"><span>Target {money(p['target_price'])}<small> · not final</small></span><span class="edition">Planned run /{p['edition_size']}</span></div>
+      <div class="card-meta"><span>{'Target ' + money(p['target_price']) + '<small> · not final</small>' if p['target_price'] is not None else 'Price TBD'}</span><span class="edition">Planned run /{p['edition_size']}</span></div>
     </div>
   </a>
   <div class="card-cta">{buy_button(p)}</div>
@@ -296,6 +296,8 @@ def product_page(p, i):
         draft_note = """<div class="draft-note"><strong>Draft, not approved.</strong> This artwork is a placeholder concept and is watermarked on purpose. It may change completely or never be produced.</div>"""
         if p.get("art") == "typographic":
             draft_note += """<div class="draft-note"><strong>Type-only mockup.</strong> This concept has no finished illustration yet. The image is a quick slogan layout with simple placeholder shapes.</div>"""
+    for n in p.get("notes", []):
+        draft_note += f"""<div class="draft-note tm-note"><strong>Internal note:</strong> {e(n)}</div>"""
     if p.get("tm_check"):
         draft_note += f"""<div class="draft-note tm-note"><strong>Internal note: trademark check needed.</strong> {e((lambda t: t[:1].upper() + t[1:])(p["tm_check"].split(": ", 1)[-1]))}. Not cleared for sale.</div>"""
     sizes = "".join(f"<option>{s}</option>" for s in ["S", "M", "L", "XL", "2XL", "3XL"])
@@ -317,7 +319,7 @@ def product_page(p, i):
       <h1 class="product-title distress slab">{e(p['title'])}</h1>
       <div class="card-tags">{badge(p)}</div>
       <p class="product-slogan"><span>{e(p['slogan_top'])}</span> <span class="red">{e(p['slogan_bottom'])}</span></p>
-      <p class="product-price">{money(p['target_price'])} <small>target price · not final</small></p>
+      <p class="product-price">{money(p['target_price']) + ' <small>target price · not final</small>' if p['target_price'] is not None else 'Price TBD <small>no price set yet</small>'}</p>
       {draft_note}
       <p class="product-blurb">{e(p['blurb'])}</p>
       <form class="buy-form" onsubmit="return false">
@@ -447,6 +449,8 @@ def validate():
         slugs.add(p.get("slug"))
         if COLLECTIONS and p.get("collection") not in COLL:
             errs.append(f"{p['id']}: unknown collection {p.get('collection')!r}")
+        if p.get("status") == "approved" and p.get("target_price") is None:
+            errs.append(f"{p['id']}: approved product needs a target_price")
         if p.get("status") == "approved" and p.get("tm_check"):
             errs.append(f"{p['id']}: approved product still has an open trademark check")
         for img in p.get("images", {}).values():

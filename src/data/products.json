@@ -1458,6 +1458,293 @@
         "motif_at": 1,
         "scarcity": "Expires cold."
       }
+    },
+    {
+      "id": "pol-01",
+      "slug": "let-trump-manage-my-roth",
+      "status": "draft",
+      "collection": "political-pain",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, Trump/midterms set #1",
+      "title": "I Let Trump Manage My Roth",
+      "slogan_top": "I let Trump",
+      "slogan_bottom": "manage my Roth.",
+      "blurb": "A skull in a too-long red tie at a cracked trading desk, three monitors dripping red candles. Account value: $0.00.",
+      "tags": [
+        "politics",
+        "retirement",
+        "red candles"
+      ],
+      "target_price": null,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/let-trump-manage-my-roth-mockup.jpg",
+        "print": "img/products/let-trump-manage-my-roth-print.jpg"
+      },
+      "pod_url": "",
+      "notes": [
+        "Uses a candidate's name — check print-on-demand/Shopify rules before uploading"
+      ],
+      "type_spec": {
+        "lines": [
+          [
+            "I LET TRUMP",
+            "anton",
+            "bone",
+            1
+          ],
+          [
+            "MANAGE MY ROTH",
+            "anton",
+            "red",
+            1
+          ]
+        ],
+        "motif": "desk",
+        "motif_at": 2,
+        "scarcity": "No. ___/100. No refunds. No bailouts."
+      }
+    },
+    {
+      "id": "pol-02",
+      "slug": "midterm-max-pain",
+      "status": "draft",
+      "collection": "political-pain",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, Trump/midterms set #2",
+      "title": "Midterm Max Pain",
+      "slogan_top": "Midterm",
+      "slogan_bottom": "max pain.",
+      "blurb": "A coffin-shaped ballot box with a giant red candlestick driven through the lid like a stake.",
+      "tags": [
+        "midterms",
+        "max pain",
+        "expiry"
+      ],
+      "target_price": null,
+      "edition_size": 150,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/midterm-max-pain-mockup.jpg",
+        "print": "img/products/midterm-max-pain-print.jpg"
+      },
+      "pod_url": "",
+      "notes": [
+        "Election-dated: stops selling after Nov 3, 2026"
+      ],
+      "type_spec": {
+        "lines": [
+          [
+            "MIDTERM",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "MAX PAIN",
+            "alfa",
+            "red",
+            1.05
+          ]
+        ],
+        "motif": "coffin",
+        "motif_at": 2,
+        "scarcity": "Expires 11/03. Just like my calls."
+      }
+    },
+    {
+      "id": "pol-03",
+      "slug": "vote-red-my-account-did",
+      "status": "draft",
+      "collection": "political-pain",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, Trump/midterms set #3",
+      "title": "Vote Red. My Account Already Did.",
+      "slogan_top": "Vote red.",
+      "slogan_bottom": "My account already did.",
+      "blurb": "An empty wallet nailed to a wall of red candles, a skull peeking out of the cash slot. Series 01.",
+      "tags": [
+        "politics",
+        "red candles"
+      ],
+      "target_price": null,
+      "edition_size": 100,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/vote-red-my-account-did-mockup.jpg",
+        "print": "img/products/vote-red-my-account-did-print.jpg"
+      },
+      "pod_url": "",
+      "notes": [],
+      "type_spec": {
+        "lines": [
+          [
+            "VOTE RED.",
+            "shrikhand",
+            "red",
+            1
+          ],
+          [
+            "MY ACCOUNT",
+            "anton",
+            "bone",
+            0.85
+          ],
+          [
+            "ALREADY DID.",
+            "anton",
+            "bone",
+            0.85
+          ]
+        ],
+        "motif": "wallet",
+        "motif_at": 1,
+        "scarcity": "One run. Then it's liquidated."
+      }
+    },
+    {
+      "id": "pol-04",
+      "slug": "assigned-by-the-president",
+      "status": "draft",
+      "collection": "political-pain",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, Trump/midterms set #4",
+      "title": "Assigned By The President",
+      "slogan_top": "Assigned",
+      "slogan_bottom": "by the president.",
+      "blurb": "A suburban house in chains with a red ASSIGNED stamp on the door and a skull with a candle in the window.",
+      "tags": [
+        "assigned",
+        "politics"
+      ],
+      "target_price": null,
+      "edition_size": 75,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/assigned-by-the-president-mockup.jpg",
+        "print": "img/products/assigned-by-the-president-print.jpg"
+      },
+      "pod_url": "",
+      "notes": [],
+      "type_spec": {
+        "lines": [
+          [
+            "ASSIGNED",
+            "alfa",
+            "bone",
+            1
+          ],
+          [
+            "BY THE PRESIDENT",
+            "alfa",
+            "red",
+            0.8
+          ]
+        ],
+        "motif": "house",
+        "motif_at": 2,
+        "scarcity": "75 contracts. All exercised."
+      }
+    },
+    {
+      "id": "pol-05",
+      "slug": "trump-said-buy-the-dip",
+      "status": "draft",
+      "collection": "political-pain",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, Trump/midterms set #5",
+      "title": "Trump Said Buy The Dip",
+      "slogan_top": "Trump said buy the dip.",
+      "slogan_bottom": "I did. Every. Single. One.",
+      "blurb": "One tiny green candle, then a red cliff, and a cartoon skull skydiving off it without a parachute.",
+      "tags": [
+        "buy the dip",
+        "politics"
+      ],
+      "target_price": null,
+      "edition_size": 120,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/trump-said-buy-the-dip-mockup.jpg",
+        "print": "img/products/trump-said-buy-the-dip-print.jpg"
+      },
+      "pod_url": "",
+      "notes": [
+        "Uses a candidate's name — check print-on-demand/Shopify rules before uploading"
+      ],
+      "type_spec": {
+        "lines": [
+          [
+            "TRUMP SAID",
+            "anton",
+            "bone",
+            0.9
+          ],
+          [
+            "BUY THE DIP",
+            "anton",
+            "red",
+            1
+          ],
+          [
+            "I DID. EVERY. SINGLE. ONE.",
+            "spacemono",
+            "bone",
+            0.6
+          ]
+        ],
+        "motif": "cliff",
+        "motif_at": 2,
+        "scarcity": "Numbered on the way down."
+      }
+    },
+    {
+      "id": "pol-06",
+      "slug": "0dte-on-election-night",
+      "status": "draft",
+      "collection": "political-pain",
+      "art": "typographic",
+      "concept_source": "Merch Drop Designer chat, Trump/midterms set #6",
+      "title": "0DTE On Election Night",
+      "slogan_top": "0DTE",
+      "slogan_bottom": "on election night.",
+      "blurb": "A skull in a party hat with a sparkler, and red candles stuck in a ballot-box birthday cake.",
+      "tags": [
+        "0DTE",
+        "election",
+        "expiry"
+      ],
+      "target_price": null,
+      "edition_size": 69,
+      "tee_color": "Black",
+      "images": {
+        "mockup": "img/products/0dte-on-election-night-mockup.jpg",
+        "print": "img/products/0dte-on-election-night-print.jpg"
+      },
+      "pod_url": "",
+      "notes": [
+        "Election-dated: stops selling after Nov 3, 2026"
+      ],
+      "type_spec": {
+        "lines": [
+          [
+            "0DTE",
+            "alfa",
+            "red",
+            1.1
+          ],
+          [
+            "ON ELECTION NIGHT",
+            "anton",
+            "bone",
+            0.85
+          ]
+        ],
+        "motif": "cake",
+        "motif_at": 2,
+        "scarcity": "Expired worthless at 11:59 PM."
+      }
     }
   ]
 }

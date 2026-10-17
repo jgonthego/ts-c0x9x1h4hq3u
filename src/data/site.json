@@ -29,6 +29,11 @@
       "key": "pizza",
       "name": "Pizza",
       "blurb": "Feelings, boundaries, and marinara."
+    },
+    {
+      "key": "political-pain",
+      "name": "Political Pain",
+      "blurb": "Midterms, markets, and the people who trade both. Text only, no likenesses."
     }
   ]
 }
