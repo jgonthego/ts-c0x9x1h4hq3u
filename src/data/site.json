@@ -42,30 +42,6 @@
       "blurb": "Midterms, markets, and the people who trade both."
     },
     {
-      "key": "gym",
-      "slug": "gym",
-      "name": "Gym",
-      "blurb": "Deadlifts and Hyrox. No spotter needed."
-    },
-    {
-      "key": "night-nurse",
-      "slug": "night-shift-nurse",
-      "name": "Night Shift Nurse",
-      "blurb": "For the people who work nights so you can live."
-    },
-    {
-      "key": "dachshund",
-      "slug": "dachshund",
-      "name": "Dachshund",
-      "blurb": "Long dog energy."
-    },
-    {
-      "key": "adhd",
-      "slug": "adhd",
-      "name": "ADHD",
-      "blurb": "Too many tabs open."
-    },
-    {
       "key": "other",
       "slug": "other",
       "name": "Other",

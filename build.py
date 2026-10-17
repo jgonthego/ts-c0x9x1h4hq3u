@@ -281,7 +281,7 @@ def hero(feat):
         <span class="ht-2 distress script">worthless</span>
         <span class="ht-3 distress">&amp; dressed for it.</span>
       </h1>
-      <p class="hero-sub">{e(CFG['TAGLINE'])} Black tees for 0DTE degenerates, theta gang, gym rats, night-shift nurses, dachshund people, and anyone with too many tabs open.</p>
+      <p class="hero-sub">{e(CFG['TAGLINE'])} Black tees for 0DTE degenerates, theta gang, green-candle chasers, and anyone who's been assigned at 4:01.</p>
     </div>
     <div class="hero-ctas"><a class="btn btn-red btn-lg" href="#shop">Shop the preview</a><a class="btn btn-ghost btn-lg" href="#drop-list">Join the drop list</a></div>
     <div class="hero-cd">{countdown_block()}</div>

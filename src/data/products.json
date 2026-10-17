@@ -209,29 +209,6 @@
    "pod_url": ""
   },
   {
-   "id": "2RbvR",
-   "slug": "deadlift-or-die",
-   "status": "preview",
-   "category": "gym",
-   "source_file": "2RbvR.jpg",
-   "title": "DEADLIFT OR DIE",
-   "subtitle": "No Spotter Needed",
-   "slogan": "DEADLIFT OR DIE / No Spotter Needed",
-   "slogan_as_printed": "DEADLIFT OR DIE / No Spotter Needed",
-   "series": "other",
-   "group": "G10 DEADLIFT OR DIE",
-   "featured": null,
-   "images": {
-    "main": "img/products/deadlift-or-die.webp",
-    "detail": "img/products/deadlift-or-die-detail.webp"
-   },
-   "img_size": [
-    600,
-    894
-   ],
-   "pod_url": ""
-  },
-  {
    "id": "NwtP7",
    "slug": "i-have-a-problem",
    "status": "preview",
@@ -439,29 +416,6 @@
    "pod_url": ""
   },
   {
-   "id": "0PFbs",
-   "slug": "long-dog-energy",
-   "status": "preview",
-   "category": "dachshund",
-   "source_file": "0PFbs.jpg",
-   "title": "LONG DOG ENERGY",
-   "subtitle": "ONLY 250 MADE",
-   "slogan": "LONG DOG ENERGY / ONLY 250 MADE",
-   "slogan_as_printed": "LONG DOG ENERGY / ONLY 250 MADE",
-   "series": "other",
-   "group": "G20 LONG DOG ENERGY",
-   "featured": null,
-   "images": {
-    "main": "img/products/long-dog-energy.webp",
-    "detail": "img/products/long-dog-energy-detail.webp"
-   },
-   "img_size": [
-    600,
-    894
-   ],
-   "pod_url": ""
-  },
-  {
    "id": "9xr3w",
    "slug": "i-lost-it-all-on-0dte",
    "status": "preview",
@@ -615,29 +569,6 @@
    "images": {
     "main": "img/products/0dte-murdered-my-account.webp",
     "detail": "img/products/0dte-murdered-my-account-detail.webp"
-   },
-   "img_size": [
-    600,
-    894
-   ],
-   "pod_url": ""
-  },
-  {
-   "id": "oFwqc",
-   "slug": "i-work-nights-so-you-can-live",
-   "status": "preview",
-   "category": "night-nurse",
-   "source_file": "oFwqc.jpg",
-   "title": "I WORK NIGHTS SO YOU CAN LIVE",
-   "subtitle": "Night Shift Club",
-   "slogan": "I WORK NIGHTS SO YOU CAN LIVE / Night Shift Club",
-   "slogan_as_printed": "I WORK NIGHTS SO YOU CAN LIVE / Night Shift Club",
-   "series": "other",
-   "group": "G29 NIGHT SHIFT",
-   "featured": null,
-   "images": {
-    "main": "img/products/i-work-nights-so-you-can-live.webp",
-    "detail": "img/products/i-work-nights-so-you-can-live-detail.webp"
    },
    "img_size": [
     600,
@@ -899,29 +830,6 @@
    "pod_url": ""
   },
   {
-   "id": "r6lJB",
-   "slug": "too-many-tabs-open",
-   "status": "preview",
-   "category": "adhd",
-   "source_file": "r6lJB.jpg",
-   "title": "TOO MANY TABS OPEN",
-   "subtitle": "Brain.exe has stopped responding",
-   "slogan": "TOO MANY TABS OPEN / Brain.exe has stopped responding",
-   "slogan_as_printed": "TOO MANY TABS OPEN / Brain.exe has stopped responding",
-   "series": "other",
-   "group": "G42 TOO MANY TABS",
-   "featured": null,
-   "images": {
-    "main": "img/products/too-many-tabs-open.webp",
-    "detail": "img/products/too-many-tabs-open-detail.webp"
-   },
-   "img_size": [
-    600,
-    894
-   ],
-   "pod_url": ""
-  },
-  {
    "id": "CC3Yd",
    "slug": "0dte-took-everything",
    "status": "preview",
@@ -1144,29 +1052,6 @@
    "images": {
     "main": "img/products/0dte-mouth-destroyed.webp",
     "detail": "img/products/0dte-mouth-destroyed-detail.webp"
-   },
-   "img_size": [
-    600,
-    894
-   ],
-   "pod_url": ""
-  },
-  {
-   "id": "4o1Wg",
-   "slug": "hyrox-or-die",
-   "status": "preview",
-   "category": "gym",
-   "source_file": "4o1Wg.jpg",
-   "title": "HYROX OR DIE",
-   "subtitle": "No Excuses",
-   "slogan": "HYROX OR DIE / No Excuses",
-   "slogan_as_printed": "HYROX OR DIE / No Excuses",
-   "series": "other",
-   "group": "unique (HYROX OR DIE)",
-   "featured": null,
-   "images": {
-    "main": "img/products/hyrox-or-die.webp",
-    "detail": "img/products/hyrox-or-die-detail.webp"
    },
    "img_size": [
     600,
@@ -2003,29 +1888,6 @@
    "pod_url": ""
   },
   {
-   "id": "nH5vB",
-   "slug": "executive-dysfunction",
-   "status": "preview",
-   "category": "adhd",
-   "source_file": "nH5vB.jpg",
-   "title": "EXECUTIVE DYSFUNCTION",
-   "subtitle": "Brain Loading...",
-   "slogan": "EXECUTIVE DYSFUNCTION / Brain Loading...",
-   "slogan_as_printed": "EXECUTIVE DYSFUNCTION / Brain Loading...",
-   "series": "other",
-   "group": "unique (EXECUTIVE DYSFUNCTION)",
-   "featured": null,
-   "images": {
-    "main": "img/products/executive-dysfunction.webp",
-    "detail": "img/products/executive-dysfunction-detail.webp"
-   },
-   "img_size": [
-    600,
-    894
-   ],
-   "pod_url": ""
-  },
-  {
    "id": "nTV6M",
    "slug": "i-came-for-the-candle",
    "status": "preview",
@@ -2478,29 +2340,6 @@
    "images": {
     "main": "img/products/account-down-80.webp",
     "detail": "img/products/account-down-80-detail.webp"
-   },
-   "img_size": [
-    600,
-    894
-   ],
-   "pod_url": ""
-  },
-  {
-   "id": "Zx4KL",
-   "slug": "short-legs-long-memory",
-   "status": "preview",
-   "category": "dachshund",
-   "source_file": "Zx4KL.jpg",
-   "title": "SHORT LEGS LONG MEMORY",
-   "subtitle": "ONLY 250 MADE",
-   "slogan": "SHORT LEGS LONG MEMORY / ONLY 250 MADE",
-   "slogan_as_printed": "SHORT LEGS LONG MEMORY / ONLY 250 MADE",
-   "series": "other",
-   "group": "unique (SHORT LEGS)",
-   "featured": null,
-   "images": {
-    "main": "img/products/short-legs-long-memory.webp",
-    "detail": "img/products/short-legs-long-memory-detail.webp"
    },
    "img_size": [
     600,

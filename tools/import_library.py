@@ -25,6 +25,7 @@ MARK = "PREVIEW · NOT FOR SALE"
 WIDTH = 600
 
 EXCLUDE = ["7pA43", "lo9YF", "hcijd", "YFVtD", "Zpzj7"]          # garbled text
+REMOVED_CATS = {"gym", "night-nurse", "dachshund", "adhd"}
 FEATURED = ["8QBc5", "9rz6l", "4Tnuh", "9P2Ix", "zc3Yh", "mN0Ug", "wsdNu", "wqmft", "pF9td"]
 STAMP_CUT = ["9rz6l", "heark"]                                    # known: edition stamp cut off
 
@@ -102,6 +103,8 @@ def main():
         fid = r["filename"].rsplit(".", 1)[0]
         hay = " ".join([r["slogan_text"], r["key_visuals"], r["notes"]]).lower()
         cat = next((k for k, rx, ser in RULES if (ser is None or r["series"] == ser) and re.search(rx, hay)), "other")
+        if cat in REMOVED_CATS:  # owner removed these lines (Oct 17, 2026)
+            continue
         if cat == "other":
             unmapped.append(r)
         parts = [p.strip() for p in r["slogan_text"].split(" / ")]
