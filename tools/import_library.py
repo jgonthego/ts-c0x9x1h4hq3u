@@ -25,7 +25,7 @@ MARK = "PREVIEW · NOT FOR SALE"
 WIDTH = 600
 
 EXCLUDE = ["7pA43", "lo9YF", "hcijd", "YFVtD", "Zpzj7"]          # garbled text
-FEATURED = ["9rz6l", "4Tnuh", "9P2Ix", "zc3Yh", "mN0Ug", "wsdNu", "wqmft", "pF9td"]
+FEATURED = ["8QBc5", "9rz6l", "4Tnuh", "9P2Ix", "zc3Yh", "mN0Ug", "wsdNu", "wqmft", "pF9td"]
 STAMP_CUT = ["9rz6l", "heark"]                                    # known: edition stamp cut off
 
 # category rules, first match wins; (key, regex over slogan+visuals+notes, required series or None)
